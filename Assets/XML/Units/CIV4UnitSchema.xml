@@ -794,6 +794,7 @@
 		<element type="PromotionInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="SpecialBuilding" content="textOnly"/>
+	<ElementType name="PediaUnitGraphics" content="textOnly"/>
 	<ElementType name="bWorkPlot" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCitizen" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWater" content="textOnly" dt:type="boolean"/>
@@ -828,6 +829,7 @@
 		<element type="Civilopedia"/>
 		<element type="Strategy"/>
 		<element type="Help" minOccurs="0" maxOccurs="*"/>
+		<element type="PediaUnitGraphics" minOccurs="0" />
 		<element type="Combat"/>
 		<element type="DefaultUnitAI"/>
 		<element type="SpecialBuilding"/>

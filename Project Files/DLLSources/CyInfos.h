@@ -189,6 +189,7 @@ BOOST_STATIC_ASSERT(sizeof(CyPromotionInfo) == sizeof(CvPromotionInfo));
 class CyProfessionInfo : public CvProfessionInfo
 {
 public:
+	int getPediaUnitGraphics() const;
 };
 BOOST_STATIC_ASSERT(sizeof(CyProfessionInfo) == sizeof(CvProfessionInfo));
 

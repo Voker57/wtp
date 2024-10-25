@@ -1,6 +1,10 @@
 #include "CvGameCoreDLL.h"
 #include "CyInfos.h"
 
+int CyProfessionInfo::getPediaUnitGraphics() const
+{
+	return CvProfessionInfo::getPediaUnitGraphics();
+}
 
 int CyUnitInfo::getDefaultProfession() const
 {

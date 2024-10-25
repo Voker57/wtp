@@ -495,6 +495,7 @@ void CyInfoPythonInterface3()
 		;
 	python::class_<CyProfessionInfo, boost::noncopyable, python::bases<CvInfoBase> >("CvProfessionInfo")
 		.def("getUnitCombatType", &CvProfessionInfo::getUnitCombatType, "int ()")
+		.def("getPediaUnitGraphics", &CyProfessionInfo::getPediaUnitGraphics, "int ()")
 		// TAC - LbD - Ray - START
 		.def("LbD_isUsed", &CvProfessionInfo::LbD_isUsed, "bool ()")
 		.def("LbD_getExpert", &CvProfessionInfo::LbD_getExpert, "int ()")

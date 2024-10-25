@@ -1525,6 +1525,7 @@ bool CvPromotionInfo::readPass2(CvXMLLoadUtility* pXML)
 //------------------------------------------------------------------------------------------------------
 CvProfessionInfo::CvProfessionInfo() :
 	m_eIndex(NO_PROFESSION),
+	m_ePediaUnitGraphics(NO_UNIT),
 	m_iUnitCombatType(NO_UNITCOMBAT),
 	// R&R, ray , MYCP partially based on code of Aymerick - START
 	// m_iYieldProduced(NO_YIELD),
@@ -1574,6 +1575,12 @@ CvProfessionInfo::~CvProfessionInfo()
 {
 	SAFE_DELETE_ARRAY(m_abFreePromotions);
 }
+
+UnitTypes CvProfessionInfo::getPediaUnitGraphics() const
+{
+	return m_ePediaUnitGraphics;
+}
+
 int CvProfessionInfo::getUnitCombatType() const
 {
 	return m_iUnitCombatType;
@@ -1891,6 +1898,7 @@ bool CvProfessionInfo::read(CvXMLLoadUtility* pXML)
 	m_iUnitCombatType = pXML->FindInInfoClass(szTextVal);
 	pXML->GetChildXmlValByName(szTextVal, "DefaultUnitAI");
 	m_iDefaultUnitAIType = pXML->FindInInfoClass(szTextVal);
+	pXML->GetEnum(getType(), m_ePediaUnitGraphics, "PediaUnitGraphics", false);
 	// R&R, ray , MYCP partially based on code of Aymerick - START
 	// pXML->GetChildXmlValByName(szTextVal, "YieldProduced");
 	// m_iYieldProduced = pXML->FindInInfoClass(szTextVal);

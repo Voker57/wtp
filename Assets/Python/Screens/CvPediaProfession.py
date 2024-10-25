@@ -119,12 +119,14 @@ class CvPediaProfession:
 		screen.addDDSGFC(self.top.getNextWidgetName(), gc.getProfessionInfo(self.iProfession).getButton(), self.X_ICON + self.W_ICON / 2 - self.ICON_SIZE / 2, self.Y_ICON + self.H_ICON / 2 - self.ICON_SIZE / 2, self.ICON_SIZE, self.ICON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		#Find the Best Unit fit for this Profession
-		iExpertUnit = -1
 		Profession = gc.getProfessionInfo(iProfession)
-		for iUnit in range(gc.getNumUnitInfos()):
-			if (gc.getUnitInfo(iUnit).getDefaultProfession() == iProfession):
-				iExpertUnit = iUnit
-				break
+		iExpertUnit = Profession.getPediaUnitGraphics()
+		
+		if iExpertUnit == -1:
+			for iUnit in range(gc.getNumUnitInfos()):
+				if (gc.getUnitInfo(iUnit).getDefaultProfession() == iProfession):
+					iExpertUnit = iUnit
+					break
 ##MultipleYieldsProduced Start
 		if (iExpertUnit == -1 and Profession.getYieldsProduced(0) != YieldTypes.NO_YIELD):
 			HighestBonus = 0

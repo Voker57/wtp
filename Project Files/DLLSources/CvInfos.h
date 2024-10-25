@@ -365,6 +365,7 @@ public:
 	DllExport CvProfessionInfo();
 	virtual ~CvProfessionInfo();
 	ProfessionTypes getIndex() const { return m_eIndex; }
+	UnitTypes getPediaUnitGraphics() const;
 	int getUnitCombatType() const;
 	// TAC - LbD - Ray - START
 	bool LbD_isUsed() const;
@@ -420,6 +421,7 @@ public:
 	//---------------------------------------PROTECTED MEMBER VARIABLES---------------------------------
 protected:
 	ProfessionTypes m_eIndex;
+	UnitTypes m_ePediaUnitGraphics;
 	int m_iUnitCombatType;
 	int m_iDefaultUnitAIType;
 	// R&R, ray , MYCP partially based on code of Aymerick - START

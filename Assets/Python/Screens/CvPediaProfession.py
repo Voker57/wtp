@@ -120,8 +120,20 @@ class CvPediaProfession:
 
 		#Find the Best Unit fit for this Profession
 		Profession = gc.getProfessionInfo(iProfession)
+		
+		# First priority, whatever is set in PediaUnitGraphics in xml (if anything)
 		iExpertUnit = Profession.getPediaUnitGraphics()
 		
+		# Use whatever LbD results in
+		if iExpertUnit == -1:
+			UnitClass = Profession.LbD_getExpert()
+			if UnitClass != -1:
+				Civilization = gc.getCivilizationInfo(0)
+				# test if the profession is valid for the first civ as the alternative is likely native only and those units will otherwise show up incorrectly
+				if Civilization.isValidProfession(iProfession):
+					iExpertUnit = Civilization.getCivilizationUnits(UnitClass)
+
+		# rely on default profession if it's useful 
 		if iExpertUnit == -1:
 			for iUnit in range(gc.getNumUnitInfos()):
 				if (gc.getUnitInfo(iUnit).getDefaultProfession() == iProfession):

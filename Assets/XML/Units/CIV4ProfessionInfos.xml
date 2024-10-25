@@ -3972,7 +3972,6 @@
 			<Civilopedia>TXT_KEY_PROFESSION_RANCHER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROFESSION_RANCHER_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROFESSION_RANCHER_HELP</Help>
-			<PediaUnitGraphics>UNIT_RANCHER</PediaUnitGraphics>
 			<Combat>NONE</Combat>
 			<DefaultUnitAI>NONE</DefaultUnitAI>
 			<SpecialBuilding>NONE</SpecialBuilding>

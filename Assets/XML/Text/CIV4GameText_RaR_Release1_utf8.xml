@@ -554,7 +554,7 @@
 		<English>Teacher List Pop-up Screen</English>
 		<French>Liste des formateurs</French>
 		<German>Ausbildungs-Screen</German>
-		<Russian>Всплывающее окно списка учителей</Russian>
+		<Russian>Окно списка учителей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EDIT_TEACHER_LIST_POPUP_TEXT</Tag>
@@ -612,7 +612,7 @@
 		<English>Custom House Pop-up Screen</English>
 		<French>Determiner les paramètres du poste de douane</French>
 		<German>Zollhaus-Einstellungen</German>
-		<Russian>Всплывающее окно таможни</Russian>
+		<Russian>Окно таможни</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EDIT_CUSTOM_HOUSE_TEXT</Tag>

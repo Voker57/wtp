@@ -511,6 +511,9 @@
     <ClCompile Include="DLLSources\TxtReader.cpp">
       <Filter>CV\CPP</Filter>
     </ClCompile>
+    <ClCompile Include="DLLSources\Info\EventTriggerInfo.cpp">
+      <Filter>Classes\Info\CPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DLLSources\CvArea.h">
@@ -984,6 +987,12 @@
     <ClInclude Include="DLLSources\TxtReader.h">
       <Filter>CV\Header</Filter>
     </ClInclude>
+    <ClInclude Include="DLLSources\Info\EventTriggerInfo.h">
+      <Filter>Classes\Info\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DLLSources\Info\InfoHelpers.h">
+      <Filter>Classes\Info\Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DLLSources\FVariableSystem.inl">
@@ -1107,6 +1116,15 @@
     </Filter>
     <Filter Include="Classes\Threads">
       <UniqueIdentifier>{377a1ef5-15db-4ee1-a141-c494df09db44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Info">
+      <UniqueIdentifier>{378233eb-41ae-4898-a595-e23f9c34d5c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Info\CPP">
+      <UniqueIdentifier>{5b35ee6a-ba3e-4199-874c-656d7b401322}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Info\Header">
+      <UniqueIdentifier>{2fc681f6-d297-43c9-9bc0-b8c82b2c1540}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

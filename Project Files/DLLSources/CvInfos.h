@@ -4422,6 +4422,10 @@ private:
 //
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#include "Info\EventTriggerInfo.h"
+#include "Info\InfoHelpers.h"
+
 class CvEventTriggerInfo : public CvInfoBase
 {
 	friend class CvXMLLoadUtility;
@@ -4489,6 +4493,8 @@ public:
 	bool isPrereqEventCity() const;
 	bool isFrontPopup() const;
 
+	const InfoHelperVector<EventTriggerUnitCount>& getRequiredUnits() const;
+
 	const char* getPythonCallback() const;
 	const char* getPythonCanDo() const;
 	const char* getPythonCanDoCity() const;
@@ -4540,6 +4546,9 @@ private:
 	std::vector<int> m_aiTextEra;
 	std::vector<CvWString> m_aszText;
 	std::vector<CvWString> m_aszWorldNews;
+
+	InfoHelperVector<EventTriggerUnitCount> m_vector_UnitCount;
+
 	// Start EmperorFool: Events with Images
 	CvString m_szEventArt;
 	// End EmperorFool: Events with Images

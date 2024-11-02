@@ -14380,6 +14380,83 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 		}
 	}
 
+	if (kTriggeredData.m_eTrigger != NO_EVENTTRIGGER)
+	{
+		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(kTriggeredData.m_eTrigger);
+		const InfoHelperVector<EventTriggerUnitCount>& ReqUnits = kTriggerInfo.getRequiredUnits();
+		if (ReqUnits.getVector().size() > 0)
+		{
+			const unsigned int iMax = ReqUnits.getVector().size();
+			for (unsigned int iLoopCount = 0; iLoopCount < iMax; ++iLoopCount)
+			{
+				const EventTriggerUnitCount& kTriggerInfo = ReqUnits.getVector()[iLoopCount];
+				int iCount = 0;
+				const int iCountGoal = kTriggerInfo.getCount();
+				const UnitClassTypes eUnitClass = kTriggerInfo.getUnitClass();
+				const bool bPlotCheck = kTriggerInfo.getPlotNoOwner();
+
+				if (kTriggerInfo.getCountCitizens())
+				{
+					int iLoop;
+					for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
+					{
+						const int iMax = pLoopCity->getPopulation();
+						for (int i = 0; i < iMax; ++i)
+						{
+							const CvUnit* pUnit = pLoopCity->getPopulationUnitByIndex(i);
+							if (pUnit->getUnitClassType() != eUnitClass)
+							{
+								continue;
+							}
+							++iCount;
+							if (iCount >= iCountGoal)
+							{
+								break;
+							}
+						}
+					}
+				}
+				
+					
+				if (iCount < iCountGoal && kTriggerInfo.getCountUnitsOnMap())
+				{
+					CvUnit* pUnit = NULL;
+					int iLoop;
+					for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
+					{
+						if (pLoopUnit->getUnitClassType() != eUnitClass)
+						{
+							continue;
+						}
+
+						if (bPlotCheck)
+						{
+							const CvPlot* pPlot = pLoopUnit->plot();
+							if (pPlot != NULL)
+							{
+								const PlayerTypes eOwner = pPlot->getOwnerINLINE();
+								if (kTriggerInfo.getPlotNoOwner() && eOwner != NO_PLAYER)
+								{
+									continue;
+								}
+							}
+						}
+						++iCount;
+						if (iCount >= iCountGoal)
+						{
+							break;
+						}
+					}
+				}
+
+				if (iCount < iCountGoal)
+				{
+					return false;
+				}
+			}
+		}
+	}
+
 	if (!isEmpty(kEvent.getPythonCanDo()))
 	{
 		// Fastpath for event trigger callbacks:

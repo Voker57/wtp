@@ -14978,6 +14978,12 @@ bool CvEventTriggerInfo::isFrontPopup() const
 {
 	return m_bFrontPopup;
 }
+
+const InfoHelperVector<EventTriggerUnitCount>& CvEventTriggerInfo::getRequiredUnits() const
+{
+	return m_vector_UnitCount;
+}
+
 const char* CvEventTriggerInfo::getPythonCallback() const
 {
 	return m_szPythonCallback;
@@ -15267,6 +15273,13 @@ bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 		}
 		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
 	}
+
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(), "RequirementLists"))
+	{
+		m_vector_UnitCount.read(pXML, getType(), "RequiredUnitList");
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+
 	// Begin EmperorFool: Events with Images
 	pXML->GetChildXmlValByName(m_szEventArt, "EventArt");
 	// End EmperorFool: Events with Images

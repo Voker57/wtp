@@ -193,6 +193,24 @@
 	<ElementType name="ClearEvents" content="eltOnly">
 		<element type="EventChance" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="RequiredUnitClass" content="textOnly"/>
+	<ElementType name="iRequiredCount" content="textOnly" dt:type="int"/>
+	<ElementType name="bCountCitizens" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCountUnitsOnMap" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bUnownedPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="RequiredUnit" content="eltOnly">
+		<element type="RequiredUnitClass" />
+		<element type="iRequiredCount" />
+		<element type="bCountCitizens" />
+		<element type="bCountUnitsOnMap" />
+		<element type="bUnownedPlot" minOccurs="0" />
+	</ElementType>
+	<ElementType name="RequiredUnitList" content="eltOnly">
+		<element type="RequiredUnit" maxOccurs="*" />
+	</ElementType>
+	<ElementType name="RequirementLists" content="eltOnly">
+		<element type="RequiredUnitList" minOccurs="0" />
+	</ElementType>
 	<ElementType name="bPrereqEventPlot" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFrontPopup" content="textOnly" dt:type="boolean"/>
 	<ElementType name="EventTriggerInfo" content="eltOnly">
@@ -225,6 +243,7 @@
 		<element type="BuildingsRequired"/>
 		<element type="iNumBuildings"/>
 		<element type="iNumBuildingsGlobal"/>
+		<element type="RequirementLists" minOccurs="0"/>
 		<element type="iNumPlotsRequired"/>
 		<element type="bOwnPlot"/>
 		<element type="ePlotType"/>

@@ -229,9 +229,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SECONDCOLONY_2_HELP</Tag>
-		<English>[COLOR_FONT_GOLD]His Majesty is offering blades for the town guard of your colony.[COLOR_REVERT]</English>
+		<English>[COLOR_FONT_GOLD]His Majesty is offering blades and provisions for two town guards of your colonies.[COLOR_REVERT]</English>
 		<French>[COLOR_FONT_GOLD]Votre Roi vous offre des armes pour défendre votre colonie.[COLOR_REVERT]</French>
-		<German>[COLOR_FONT_GOLD]Seine Majestät bietet Euch Klingen für die Stadtwache an, damit Ihr die Kolonie verteidigen könnt.[COLOR_REVERT]</German>
+		<German>[COLOR_FONT_GOLD]Seine Majestät bietet Euch Klingen und Ausrüstung für zwei Stadtwachen an, damit Ihr Eure Kolonien verteidigen könnt.[COLOR_REVERT]</German>
 		<Russian>[COLOR_FONT_GOLD]Его Величество предлагает вам клинки городских стражников для экипирования защитников колонии.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -6219,7 +6219,6 @@
 		<German>Ein [COLOR_HIGHLIGHT_TEXT]%s1:3_civ_adjective[COLOR_REVERT] Walfänger ist in See gestochen, um den legendären weißen Wal zu finden.</German>
 		<Russian>Китобои [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] отправились на поиски легендарного белого кита.</Russian>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WHALING_TRIP_DONE_1</Tag>
 		<English>Milord, our very best lookout couldn't find the great white whale. We did see [COLOR_HIGHLIGHT_TEXT]plenty of whales[COLOR_REVERT] in the area. It seems the fishermen were right about that at least. If we stay around here for a while maybe we'll find the whale - or it will find us.</English>
@@ -6273,6 +6272,51 @@
 		<English>Milord, another whaling boat is ready to go to work.</English>
 		<German>Milord, ein weiteres [COLOR_HIGHLIGHT_TEXT]Walfangschiff[COLOR_REVERT] wurde erworben und ausgerüstet.</German>
 		<Russian>Милорд, еще одно [COLOR_HIGHLIGHT_TEXT]китобойное судно[COLOR_REVERT] приобретено и готово к отплытию.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MOUNTED_CONQUISTADOR_HELP</Tag>
+		<English>[ICON_BULLET]Mounted conquistadores join one of your treasure transports.</English>
+		<German>[ICON_BULLET]Berittene Konquistadoren machen sich auf den Weg und beschützen Euer Gold.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MILITIA_HELP</Tag>
+		<English>[ICON_BULLET]Some charioteers and attendants in the treasure transport arm themselves and form a militia.</English>
+		<German>[ICON_BULLET]Einige Wagenlenker und Begleiter eines Schatztransports bewaffnen sich und bilden eine Miliz.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TREASURE_PROTECTION</Tag>
+		<English>Milord, many of our [COLOR_HIGHLIGHT_TEXT]treasures[COLOR_REVERT] are out in the wilderness unprotected. Some adventurers would set out for some hand money and escort them safely to the nearest colony.</English>
+		<German>Milord, viele unserer [COLOR_HIGHLIGHT_TEXT]Schätze[COLOR_REVERT] sind in der Wildnis ungeschützt unterwegs. Einige Abenteurer würden sich gegen ein Handgeld auf den Weg machen und sie sicher in die nächste Kolonie geleiten.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_1</Tag>
+		<English>Very well, we should definitely hire a few [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] and they should be on their way right away.</English>
+		<German>Sehr schön, wir sollten unbedingt ein paar [COLOR_HIGHLIGHT_TEXT]Berittene Konquistadoren[COLOR_REVERT] anheuern und sie sollten sich gleich auf den Weg machen.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_2</Tag>
+		<English>I see the problem, but arming a few workers and temporarily forming a [COLOR_HIGHLIGHT_TEXT]militia[COLOR_REVERT] will do just fine.</English>
+		<German>Ich sehe das Problem, aber es reicht vollkommen aus, wenn wir ein paar Arbeiter bewaffnen und vorübergehend eine [COLOR_HIGHLIGHT_TEXT]Miliz[COLOR_REVERT] bilden lassen.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_3</Tag>
+		<English>Oh well, the wagons have to get by like this. I can't spare a man or a piece of gold for that.</English>
+		<German>Ach was, die Wagen müssen sich so durchschlagen. Dafür kann ich keinen Mann und kein Goldstück entbehren.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_1_News</Tag>
+		<English>Some [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] now accompany your treasures safely to the colonies.</English>
+		<German>Einige [COLOR_HIGHLIGHT_TEXT]Berittene Konquistadoren[COLOR_REVERT] begleiten Eure Schätze nun sicher in die Kolonien.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_2_News</Tag>
+		<English>Some [COLOR_HIGHLIGHT_TEXT]militias[COLOR_REVERT] now accompany your treasures safely to the colonies.</English>
+		<German>Einige [COLOR_HIGHLIGHT_TEXT]Milizionäre[COLOR_REVERT] begleiten Eure Schätze nun sicher in die Kolonien.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_3_News</Tag>
+		<English>Some of your treasures have to make their way through the wilderness without protection.</English>
+		<German>Einige Eurer Schätze müssen sich schutzlos durch die Wildnis einen Weg bahnen.</German>
 	</TEXT>
 </Civ4GameText>
 

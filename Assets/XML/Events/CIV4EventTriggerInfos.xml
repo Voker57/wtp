@@ -37044,7 +37044,7 @@
 			<iMinOurLandmass>0</iMinOurLandmass>
 			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<eMinDifficulty>NONE</eMinDifficulty>
-			<UnitsRequired> 
+			<UnitsRequired>
 				<UnitClass>UNITCLASS_ECCENTRIC_ARCHITECT</UnitClass>
 			</UnitsRequired>
 			<iNumUnits>1</iNumUnits>
@@ -37117,7 +37117,7 @@
 			<iMinOurLandmass>0</iMinOurLandmass>
 			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<eMinDifficulty>NONE</eMinDifficulty>
-			<UnitsRequired> 
+			<UnitsRequired>
 				<UnitClass>UNITCLASS_ECCENTRIC_ARCHITECT</UnitClass>
 			</UnitsRequired>
 			<iNumUnits>1</iNumUnits>
@@ -37627,7 +37627,7 @@
 			<iNumPlotsRequired>0</iNumPlotsRequired>
 			<bOwnPlot>0</bOwnPlot>
 			<ePlotType>NONE</ePlotType>
-			<FeaturesRequired/> 
+			<FeaturesRequired/>
 			<TerrainsRequired/>
 			<ImprovementsRequired/>
 			<RoutesRequired/>
@@ -37704,7 +37704,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>0</bOwnPlot>
 			<ePlotType>NONE</ePlotType>
-			<FeaturesRequired/> 
+			<FeaturesRequired/>
 			<TerrainsRequired/>
 			<ImprovementsRequired/>
 			<RoutesRequired/>
@@ -37781,7 +37781,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>0</bOwnPlot>
 			<ePlotType>NONE</ePlotType>
-			<FeaturesRequired/> 
+			<FeaturesRequired/>
 			<TerrainsRequired/>
 			<ImprovementsRequired/>
 			<RoutesRequired/>
@@ -38102,7 +38102,7 @@
 			<PythonCanDoCity/>
 			<PythonCanDoUnit/>
 			<PythonCallback/>
-		</EventTriggerInfo>	
+		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FAILED_MISSIONARY_1</Type>
 			<WorldNewsTexts>
@@ -38792,7 +38792,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>0</bOwnPlot>
 			<ePlotType>NONE</ePlotType>
-			<FeaturesRequired/> 
+			<FeaturesRequired/>
 			<TerrainsRequired/>
 			<ImprovementsRequired/>
 			<RoutesRequired/>
@@ -40596,7 +40596,7 @@
 			<PythonCanDoCity/>
 			<PythonCanDoUnit/>
 			<PythonCallback/>
-		</EventTriggerInfo>		
+		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_STIRRED_UP_NATIVES_LANDGRABBING</Type>
 			<WorldNewsTexts/>
@@ -40804,6 +40804,92 @@
 			<bFrontPopup>0</bFrontPopup>
 			<iCityFoodWeight>0</iCityFoodWeight>
 			<PythonCanDo>hasNoBonus</PythonCanDo>
+			<PythonCanDoCity/>
+			<PythonCanDoUnit/>
+			<PythonCallback/>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_TREASURE_PROTECTION</Type>
+			<WorldNewsTexts/>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_TREASURE_PROTECTION</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<bTutorial>0</bTutorial>
+			<bSinglePlayer>0</bSinglePlayer>
+			<EventArt>,Art/achievements/first_conquistador.dds</EventArt>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>-1</iWeight>
+			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
+			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
+			<eCivic>NONE</eCivic>
+			<iMinTreasury>1000</iMinTreasury>
+			<iMinPopulation>0</iMinPopulation>
+			<iMaxPopulation>0</iMaxPopulation>
+			<iMinMapLandmass>0</iMinMapLandmass>
+			<iMinOurLandmass>0</iMinOurLandmass>
+			<iMaxOurLandmass>-1</iMaxOurLandmass>
+			<eMinDifficulty>NONE</eMinDifficulty>
+			<UnitsRequired>
+				<UnitClass>UNITCLASS_TREASURE</UnitClass>
+			</UnitsRequired>
+			<iNumUnits>6</iNumUnits>
+			<iNumUnitsGlobal>0</iNumUnitsGlobal>
+			<iUnitDamagedWeight>0</iUnitDamagedWeight>
+			<iUnitDistanceWeight>0</iUnitDistanceWeight>
+			<iUnitExperienceWeight>0</iUnitExperienceWeight>
+			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<BuildingsRequired>
+				<BuildingClass>BUILDINGCLASS_LANDING_STAGE</BuildingClass>
+				<BuildingClass>BUILDINGCLASS_DOCK</BuildingClass>
+				<BuildingClass>BUILDINGCLASS_DRYDOCK</BuildingClass>
+				<BuildingClass>BUILDINGCLASS_SHIPYARD</BuildingClass>
+				<BuildingClass>BUILDINGCLASS_GREAT_SHIPYARD</BuildingClass>
+			</BuildingsRequired>
+			<iNumBuildings>1</iNumBuildings>
+			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
+			<RequirementLists>
+				<RequiredUnitList>
+					<RequiredUnit>  
+						<RequiredUnitClass>UNITCLASS_TREASURE</RequiredUnitClass>
+						<iRequiredCount>6</iRequiredCount>
+						<bCountCitizens>0</bCountCitizens>
+						<bCountUnitsOnMap>1</bCountUnitsOnMap>
+						<bUnownedPlot>1</bUnownedPlot>
+					</RequiredUnit>  
+				</RequiredUnitList>
+			</RequirementLists>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>0</bOwnPlot>
+			<ePlotType>NONE</ePlotType>
+			<FeaturesRequired/>
+			<TerrainsRequired/>
+			<ImprovementsRequired/>
+			<RoutesRequired/>
+			<Events>
+				<Event>EVENT_TREASURE_PROTECTION_1</Event>
+				<Event>EVENT_TREASURE_PROTECTION_2</Event>
+				<Event>EVENT_TREASURE_PROTECTION_3</Event>
+			</Events>
+			<PrereqEvents/>
+			<bPrereqEventPlot>0</bPrereqEventPlot>
+			<bRecurring>0</bRecurring>
+			<bTeam>0</bTeam>
+			<bGlobal>0</bGlobal>
+			<bPickPlayer>0</bPickPlayer>
+			<bOtherPlayerWar>0</bOtherPlayerWar>
+			<bOtherPlayerAI>0</bOtherPlayerAI>
+			<bOtherPlayerNative>0</bOtherPlayerNative>
+			<bOtherPlayerPlayable>0</bOtherPlayerPlayable>
+			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
+			<bPickCity>0</bPickCity>
+			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
+			<bShowPlot>1</bShowPlot>
+			<bFrontPopup>0</bFrontPopup>
+			<iCityFoodWeight>0</iCityFoodWeight>
+			<PythonCanDo>canTriggerIsPlayableWithTriggerChance</PythonCanDo>
 			<PythonCanDoCity/>
 			<PythonCanDoUnit/>
 			<PythonCallback/>

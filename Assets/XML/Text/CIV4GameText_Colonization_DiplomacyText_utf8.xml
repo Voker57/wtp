@@ -6973,7 +6973,7 @@
 		<German>Seine Eminenz hat in Eurer Sache mit [COLOR_HIGHLIGHT_TEXT]Eurem König[COLOR_REVERT] gesprochen.</German>
 		<Italian>Sua Eminenza ha parlato al [COLOR_HIGHLIGHT_TEXT]vostro Re[COLOR_REVERT] in vostro favore.</Italian>
 		<Spanish>Su Eminencia ha hablado con [COLOR_HIGHLIGHT_TEXT]su Rey[COLOR_REVERT] en su nombre.</Spanish>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]Его Высокопреосвященство[COLOR_REVERT] замолвил слово за вас перед [COLOR_HIGHLIGHT_TEXT]вашим Королем[COLOR_REVERT].</Russian>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Его Высокопреосвященство[COLOR_REVERT] улучшил отношение [COLOR_HIGHLIGHT_TEXT]вашего Короля[COLOR_REVERT] к колониям.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHURCH_SPOKE_FAVOUR_EUROPEAN</Tag>

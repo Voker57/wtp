@@ -337,6 +337,8 @@ def applySecondCity2(argsList):
 	Speed = gc.getGameSpeedInfo(CyGame().getGameSpeedType())
 	iYield1 = gc.getInfoTypeForString("YIELD_BLADES")
 	city.changeYieldStored(iYield1, event.getGenericParameter(1)*Speed.getTrainPercent()/100)
+	iYield2 = gc.getInfoTypeForString("YIELD_BAKERY_GOODS")
+	city.changeYieldStored(iYield2, event.getGenericParameter(2)*Speed.getTrainPercent()/100)
 
 def getHelpSecondCity2(argsList):
 	eEvent = argsList[0]
@@ -348,14 +350,21 @@ def getHelpSecondCity2(argsList):
 	city = player.getCity(kTriggeredData.iCityId)
 	Speed = gc.getGameSpeedInfo(CyGame().getGameSpeedType())
 	iYield1 = gc.getInfoTypeForString("YIELD_BLADES")
+	iYield2 = gc.getInfoTypeForString("YIELD_BAKERY_GOODS")
 	szHelp = localText.getText("TXT_KEY_EVENT_SECONDCOLONY_2_HELP", (king.getCivilizationAdjectiveKey(), ))
 	if event.getGenericParameter(1) <> 0 :
 		szHelp += "\n" + localText.getText("TXT_KEY_EVENT_YIELD_GAIN", (event.getGenericParameter(1)*Speed.getTrainPercent()/100,  gc.getYieldInfo(iYield1).getChar(), city.getNameKey()))
+	if event.getGenericParameter(2) <> 0 :
+		szHelp += "\n" + localText.getText("TXT_KEY_EVENT_YIELD_GAIN", (event.getGenericParameter(2)*Speed.getTrainPercent()/100,  gc.getYieldInfo(iYield2).getChar(), city.getNameKey()))
+	if event.getGenericParameter(1) <> 0 :
 		overflow = event.getGenericParameter(1)*Speed.getTrainPercent()/100 + city.getYieldStored(iYield1) - city.getMaxYieldCapacity()
 		if overflow > 0:
 			szHelp += "\n" + localText.getText("TXT_KEY_EVENT_YIELD_OVERFLOW", (overflow,  gc.getYieldInfo(iYield1).getChar(), city.getNameKey()))
+	if event.getGenericParameter(2) <> 0 :
+		overflow = event.getGenericParameter(2)*Speed.getTrainPercent()/100 + city.getYieldStored(iYield2) - city.getMaxYieldCapacity()
+		if overflow > 0:
+			szHelp += "\n" + localText.getText("TXT_KEY_EVENT_YIELD_OVERFLOW", (overflow,  gc.getYieldInfo(iYield2).getChar(), city.getNameKey()))
 	return szHelp
-
 
 ######## THIRD CITY ###########
 
@@ -8312,6 +8321,11 @@ getHelpDiscoveryFailedTraderChange = get_simple_help("TXT_KEY_EVENT_DISCOVERY_EV
 
 getHelpDiscoveryFailedMissionaryChange = get_simple_help("TXT_KEY_EVENT_DISCOVERY_EVENTS_FALIED_MISSIONARY_CHANGE_HELP")
 
+######## Treasure Protection Event  ###########
+
+getHelpNewMountedConquistador = get_simple_help("TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MOUNTED_CONQUISTADOR_HELP")
+
+getHelpNewMilitia = get_simple_help("TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MILITIA_HELP")
 
 ######## Slave Hunter Offers Service ###########
 

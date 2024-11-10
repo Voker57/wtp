@@ -10,17 +10,20 @@
 		<English>WTP - Credits</English>
 		<French>WTP - Crédits</French>
 		<Russian>WTP - Спасибо</Russian>
+		<German>WTP - Credits</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_HEAD</Tag>
 		<English>We The People - Credits</English>
 		<French>We The People - Crédits</French>
 		<Russian>We The People - Благодарности</Russian>
+		<German>We The People - Credits</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_WTP</Tag>
 		<English>[H1]"We The People" (WTP)[\H1]</English>
 		<Russian>[H1]Команда "We The People" (WTP)[\H1]</Russian>
+		<German>[H1]"We The People" (WTP)[\H1]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_SPECIAL</Tag>
@@ -35,24 +38,28 @@
 		<English>[H1]"Religion and Revolution" (RaR)[\H1] has been developed by an international mod-team at CivFanatics.</English>
 		<French>[H1]"Religion and Revolution" (RaR)[\H1]a été développé par une équipe internationale de moddeurs sur le site de CivFanatics.</French>
 		<Russian>[H1]"Religion and Revolution" (RaR)[\H1] разработаный международной командой моддеров CivFanatics</Russian>
+		<German>[H1]"Religion and Revolution" (RaR)[\H1] wurde von einem internationalen Mod-Team bei CivFanatics entwickelt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_TAC</Tag>
 		<English>[H1]Special Credits to "The Authentic Colonization" (TAC), including former members:[\H1]</English>
 		<French>[H1]Nous tenons à remercier tout particulièrement les membres de l'équipe de développement du mod TAC ("The Authentic Colonization") y compris les anciens membres[\H1]</French>
 		<Russian>[H1]Особенная благодарность команде "The Authentic Colonization" (TAC), включая бывших участников:[\H1]</Russian>
+		<German>[H1]Besondere Anerkennung für "The Authentic Colonization" (TAC), einschließlich ehemaliger Mitglieder:[\H1]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_MUSIC</Tag>
 		<English>[H1]Special Credits for our Soundtrack to Rene Osmanczyk who allowed us to use his fantastic work.[\H1]</English>
 		<French>[H1]Nous remercions chaleureusement Rene Osmanczyk pour a bande-son extraordinaire.[\H1]</French>
 		<Russian>[H1]Особая благодарность за наш саундтрек Rene Osmanczyk, который позволил нам использовать его фантастическую работу.[\H1]</Russian>
+		<German>[H1]Besondere Anerkennung für unseren Soundtrack geht an Rene Osmanczyk, der uns erlaubt hat, seine fantastische Arbeit zu verwenden.[\H1]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_OTHER_PROJECTS</Tag>
 		<English>[H1]Credits to artists, modders and projects for work included:[\H1]</English>
 		<French>[H1]Nous remercions aussi les artistes, moddeurs ou projets dont les travaux ont été inclus:[\H1]</French>
 		<Russian>[H1]Наша благодарность художникам, моддерам и сторонникам за их работу:[\H1]</Russian>
+		<German>[H1]Danksagungen an Künstler, Modder und Projekte für enthaltene Arbeiten:[\H1]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CREDITS_OTHER_PROJECTS_TAC</Tag>
@@ -98,6 +105,27 @@
 [ICON_BULLET] L'équipe de Fall for Heaven (graphismes du désert)
 [ICON_BULLET] Marry Harrsch (photo)
 [ICON_BULLET] Aeterna (Traduction française)</French>
+		<German>[H1]Weitere Credits gehen an andere Künstler, Modder und Projekte für Arbeiten, die durch TAC:[\H1]
+[ICON_BULLET] Netbandit (Netbandit's balance MOD)
+[ICON_BULLET] Dale (Age of Discovery II; Achievements v1.00)
+[ICON_BULLET] cgtextures.com (Texturen)
+[ICON_BULLET] the_suebian (Hintergrundbilder)
+[ICON_BULLET] cephalo (Skript  Faire Weather)
+[ICON_BULLET] ledat (Skript  Hemispherical)
+[ICON_BULLET] Ekmek (leaderheads)
+[ICON_BULLET] Mangammal (leaderhead model)
+[ICON_BULLET] Aymerick (Plantagegrafiken, Teile des Walfangs, Teile der Routenplanung)
+[ICON_BULLET] Deliverator &amp; BLU-Mod-Team (Einheiten)
+[ICON_BULLET] oleg153 (Einheitengrafiken)
+[ICON_BULLET] charle88 (Einheitengrafiken)
+[ICON_BULLET] Kailric (Einheitengrafiken, Teile der Walfangfunktion)
+[ICON_BULLET] jdog5000 (Angriffscode der KI)
+[ICON_BULLET] hrochland (Tornadografiken)
+[ICON_BULLET] Fierabras (Tornado und Vulkanereignisse)
+[ICON_BULLET] Kissa (Gebirgsgrafiken)
+[ICON_BULLET] Team of Fall for Heaven (Wüstengrafiken)
+[ICON_BULLET] Marry Harrsch (Foto)
+[ICON_BULLET] Aeterna (Französische Übersetzung)</German>
 		<Russian>[H1]Отдельная благодарность другим художникам, моддерам и сторонникам за их работу, включенную в TAC:[\H1]
 [ICON_BULLET] Netbandit (Netbandit's balance MOD)
 [ICON_BULLET] Dale (Age of Discovery II; Достижения v1.00)
@@ -136,6 +164,10 @@ Quelques textures de nos modèles 3D ont été créées avec des images de CGTex
 RaR est un projet à but non commercial. Si vous utilisez ou distribuez RaR, merci de faire attention à ces droits de reproduction. Nous autorisons l'utilisation et la distribution qu'à la condition que RaR reste à usage non-commercial.[NEWLINE]
 Il est par ailleurs permis d'utiliser RAR pour d'autres projets de mods à la condition que les droits de reproduction soient respectés, et s'il s'agit également de projets non-commerciaux. Si vous utilisez RaR pour un projet personnel, vous devez spécifier qu'il s'agit d'une version modifiée des projets TAC et RaR. Si vous souhaitez utiliser des graphismes, nous pouvons vous donner plus d'informations sur leurs créateurs de façon à les mentionner dans vos crédits.[NEWLINE]
 Vous pouvez contacter TAC, RaR et WtP via le site "CivFanatics forum" (vous trouverez le lien dans le fichier readme) ; ou par e-mail : writing.bull@gmx.de.</French>
+		<German>Und wir wollen nicht vergessen, Firaxis und 2Kgames für ihr Meisterwerk Civ4/BtS zu danken. Wir verwenden eine Menge Material aus diesen Spielen.[NEWLINE]
+		Das Copyright dieser Materialien liegt bei den jeweiligen Eigentümern. In den meisten Fällen haben wir die Erlaubnis erhalten, ihr Material zu verwenden, in einigen Fällen jedoch nicht. Wir bitten diese Autoren, sich mit uns in Verbindung zu setzen, ob wir ihr Material verwenden dürfen. Das Urheberrecht an den Änderungen, die das TAC-Team an diesen Materialien vorgenommen hat, liegt bei TAC. Das Urheberrecht an den Änderungen, die das RaR-Team an diesen Materialien vorgenommen hat, liegt bei RaR. Das Copyright der Änderungen, die das WtP-Team an diesem Material vorgenommen hat, liegt bei WtP. Das Copyright von "Sid Meier's Civilisation IV: Colonization" liegt bei Take Two Interactive. Sid Meier's Civilization IV: Colonization, Civ, Civilization, 2K Games, das 2K-Logo, Firaxis Games, das Firaxis-Spiellogo und Take-Two Interactive Software sind eingetragene Marken von Take-Two Interactive Software, Inc. Entwickelt von Firaxis Games[NEWLINE] Einige Texturen auf unseren 3D-Modellen wurden mit Bildern von CGTextures.com erstellt. Diese Bilder dürfen standardmäßig nicht weiterverteilt werden. Bitte besuchen Sie www.cgtextures.com für weitere Informationen.[NEWLINE] RaR ist ein nicht-kommerzielles Mod-Projekt. Wenn Sie RaR verwenden oder weitergeben, achten Sie bitte auf das Copyright. Wir erlauben die Verwendung und Weitergabe, solange RaR nicht kommerziell ist.[NEWLINE] 
+		Selbstverständlich ist es erlaubt, RaR in einem eigenen Mod-Projekt zu verwenden, solange die Copyrights nicht verletzt werden und es ein nicht-kommerzielles Projekt bleibt. Wenn Sie RaR in einem eigenen Mod-Projekt verwenden, müssen Sie deutlich machen, dass Sie Änderungen an der ursprünglichen TAC und an RaR vorgenommen haben. Wenn du Artwork verwenden möchtest, können wir dir mehr Informationen über die Schöpfer geben, so dass du sie in den Credits deiner eigenen Modifikation erwähnen kannst.[NEWLINE] 
+		Du kannst TAC, RaR und WtP über das CivFanatics-Forum (den Link findest du in der Readme-Datei) oder per E-Mail an writing.bull@gmx.de kontaktieren.[NEWLINE][NEWLINE]</German>
 		<Russian>Мы также благодарны Firaxis и 2Kgames за их шедевр Civ4/BtS. Мы используем много материала из этих игр.[NEWLINE]Авторские права на эти материалы принадлежат соответствующим правообладателям. В большинстве случаев мы получили разрешение на использование их материалов, но в некоторых случаях мы этого не сделали. Мы просим этих авторов связаться с нами, чтобы узнать, можем ли мы использовать их материалы. Авторские права на изменения, внесенные командой TAC в эти материалы, принадлежат TAC. Авторские права на изменения, внесенные командой RaR в эти материалы, принадлежат RaR.Авторские права на изменения, внесенные командой WtP в эти материалы, принадлежат WtP.[NEWLINE]Авторские права на "Sid Meier's Civilization IV: Colonization" принадлежат Take Two Interactive. Sid Meier's Civilization IV: Colonization, Civ, Civilization, 2K Games, 2K-Logo, Firaxis Games, игровой логотип Firaxis и Take-Two Interactive Software являются зарегистрированными товарными знаками Take-Two Interactive Software, Inc., разработанными Firaxis Games.[NEWLINE]Некоторые текстуры на наших 3D-моделях созданы с использованием изображений с сайта CGTextures.com. Эти изображения не могут распространяться по умолчанию. Посетите сайт www.cgtextures.com для получения дополнительной информации.[NEWLINE]WtP — это некоммерческий мод-проект. Если вы используете или распространяете WtP, обратите внимание на авторские права. Мы разрешаем использование и распространение, пока WtP остается некоммерческим.[NEWLINE]Разумеется, разрешено использовать WtP в собственном мод-проекте, если не нарушаются авторские права и он остается некоммерческим проектом. Если вы используете WtP в собственном проекте мода, вы должны четко указать, что вы внесли изменения в исходный TAC, RaR и WtP. Если вы хотите использовать обложку, мы можем предоставить вам больше информации о создателях, чтобы вы могли упомянуть их в титрах своей модификации.[NEWLINE]Вы можете связаться с командой WtP через форум CivFanatics или группу ВК (ссылки есть в Readme).</Russian>
 	</TEXT>
 	<TEXT>
@@ -149,7 +181,7 @@ Vous pouvez contacter TAC, RaR et WtP via le site "CivFanatics forum" (vous trou
 		<TEXT>
 		<Tag>TXT_KEY_CREDITS_f1rpo</Tag>
 		<English>f1rpo (continous support related to coding)</English>
-		<German>f1rpo (wiederholte Unterstützung zu Code)</German>
+		<German>f1rpo (Wiederholte Unterstützung beim Coden)</German>
 		<Spanish>f1rpo (ayuda repetida con código)</Spanish>
 		<Russian>f1rpo (постоянная поддержка, связанная с кодированием)</Russian>
 	</TEXT>
@@ -240,145 +272,173 @@ Viel Spass![NEWLINE]
 		<Tag>TXT_KEY_QUOTE_1</Tag>
 		<English>Once vigorous measures appear to be the only means left of bringing the Americans to a due submission to the mother country, the colonies will submit.[NEWLINE]--- George III, King of Great Britain in the period 1760-1820</English>
 		<French>Lorsque des mesures vigoureuses sembleront être le seul moyen qu'il reste pour ramener les américains à leur soumission légitime envers leur mère patrie, les colonies se soummettront.[NEWLINE]--- George III, Roi de Grande-Bretagne dans la période 1760-1820</French>
-		<German>Once vigorous measures appear to be the only means left of bringing the Americans to a due submission to the mother country, the colonies will submit.[NEWLINE]--- George III, König von Großbritannien in der Zeit von 1760-1820</German>
+		<German>Sobald energische Maßnahmen als einziges Mittel erscheinen, um die Amerikaner zu einer gebührenden Unterwerfung unter das Mutterland zu bringen, werden sich die Kolonien fügen.[NEWLINE]--- Georg III, König von Großbritannien in der Zeit von 1760-1820</German>
 		<Russian>Как только решительные меры окажутся единственным средством приведения американцев к должному подчинению метрополии, колонии подчинятся.[NEWLINE]--- Георг III, король Великобритании в период 1760-1820 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_2</Tag>
 		<English>A traitor is everyone who does not agree with me.[NEWLINE]--- George III, King of Great Britain in the period 1760-1820</English>
 		<French>Un traître est quiconque n'est pas d'accord avec moi.[NEWLINE]--- George III, Roi de Grande-Bretagne dans la période 1760-1820</French>
-		<German>A traitor is everyone who does not agree with me.[NEWLINE]--- George III, König von Großbritannien in der Zeit von 1760-1820</German>
+		<German>Ein Verräter ist jeder, der nicht mit mir übereinstimmt.[NEWLINE]--- George III, König von Großbritannien in der Zeit von 1760-1820</German>
 		<Russian>Каждый, кто не согласен со мной, предатель.[NEWLINE]--- Георг III, король Великобритании в период 1760-1820 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_3</Tag>
 		<English>America owes most of its social prejudices to the exaggerated religious opinions of the different sects which were so instrumental in establishing the colonies.[NEWLINE]--- James Fenimore Cooper (1789 - 1851), novelist</English>
 		<French>L'Amérique doit la plupart de ses préjugés sociaux aux opinions religieuses si prévalentes des différentes chapelles qui furent si fondamentales à l'établissement des colonies.[NEWLINE]--- James Fenimore Cooper (1789 - 1851), romancier.</French>
+		<German>Amerika verdankt die meisten seiner sozialen Vorurteile den übertriebenen religiösen Ansichten der verschiedenen Sekten, die bei der Gründung der Kolonien so wichtig waren..[NEWLINE]--- James Fenimore Cooper (1789 - 1851), Romanautor</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_4</Tag>
 		<English>Slavery is no more sinful, by the Christian code, than it is sinful to wear a whole coat, while another is in tatters, to eat a better meal than a neighbour, or otherwise to enjoy ease and plenty, while our fellow creatures are suffering and in want.[NEWLINE]--- James Fenimore Cooper (1789 - 1851), novelist</English>
 		<French>L'esclavage n'est pas plus un pêché, selon le code de conduite chrétien, que ne le sont le fait de porter un manteau confortable, quand un autre est en lambeaux, de mieux manger que son voisin, ou jouir de l'abondance et d'une vie facile, quand nos frères souffrent et manquent de tout.[NEWLINE]--- James Fenimore Cooper (1789 - 1851), romancier.</French>
+		<German>Die Sklaverei ist nach dem christlichen Gesetzbuch ebenso wenig eine Sünde, wie es eine Sünde ist, einen ganzen Mantel zu tragen, während ein anderer in Fetzen liegt, eine bessere Mahlzeit als der Nachbar zu sich zu nehmen oder sich anderweitig der Bequemlichkeit und des Überflusses zu erfreuen, während unsere Mitgeschöpfe leiden und in Not sind..[NEWLINE]--- James Fenimore Cooper (1789 - 1851), Romanautor</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_5</Tag>
 		<English>The Indian Corn, or Maiz, proves the most useful Grain in the World; and had it not been for the Fruitfulness of this Species, it would have proved very difficult to have settled some of the Plantations in America.[NEWLINE]--- John Lawson (1674 - 1711), British explorer</English>
 		<French>Le blé indien, ou maïs, s'est montré la meilleure céréale dans ce monde, et sans l'abondance et la fertilité de cette plante, l'établissement des Plantations en Amériques se serait avéré bien difficile.[NEWLINE]--- John Lawson (1674 - 1711), explorateur britannique</French>
+		<German>Der indische Mais erweist sich als das nützlichste Getreide der Welt, und ohne die Fruchtbarkeit dieser Art wäre es sehr schwierig gewesen, einige der Plantagen in Amerika zu besiedeln.[NEWLINE]--- John Lawson (1674 - 1711), Britischer Entdecker</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_6</Tag>
 		<English>There are not enough Indians in the world to defeat the Seventh Cavalry.[NEWLINE]--- George Armstrong Custer, Seventh Cavalry Commander, prior to being massacred by the Sioux at the Battle of Little Bighorn (June 25-26, 1876)</English>
 		<French>Il n'y a pas assez d'indiens dans ce monde pour battre la Septième Cavalerie.[NEWLINE]--- George Armstrong Custer, Commandant de la Septième Cavalerie, avant de se faire massacrer avec ses troupes par les Sioux à la bataille de Little Bighorn (25-26 juin 1876)</French>
+		<German>Es gibt nicht genug Indianer auf der Welt, um die Siebte Kavallerie zu besiegen.[NEWLINE]--- George Armstrong Custer, Kommandeur der Siebten Kavallerie, bevor er in der Schlacht am Little Bighorn von den Sioux massakriert wurde (June 25-26, 1876)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_7</Tag>
 		<English>The Indians gave up the land of their own free will, and for it received brass kettles, blankets, guns, shirts, flints, tobacco, rum and many trinkets in which their simple hearts delighted.[NEWLINE]--- Patrick Gordon (1635 - 1699), Scottish explorer</English>
 		<French>Les Indiens ont cédé leurs terres de leur plein gré, et ils ont reçu en échange des bouilloires, des couvertures, des fusils, des vêtements, du tabac, du rhum, et biens des babioles qui ont ravi leur esprit simple.[NEWLINE]--- Patrick Gordon (1635 - 1699), Explorateur écossais</French>
+		<German>Die Indianer gaben das Land aus freien Stücken auf und erhielten dafür Messingkessel, Decken, Gewehre, Hemden, Feuersteine, Tabak, Rum und viele Kleinigkeiten, die ihr einfaches Herz erfreuten.[NEWLINE]--- Patrick Gordon (1635 - 1699), Schottischer Entdecker</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_8</Tag>
 		<English>It affords me sincere pleasure to be able to apprise you of the entire removal of the Cherokee Nation of Indians to their new homes west of the Mississippi.[NEWLINE]--- Martin Van Buren, 8th President of the United States</English>
 		<French>J'ai le plus grand plaisir de pouvoir vous annoncer la déportation de toute la nation indienne des Cherokees vers leur nouveau domicile à l'ouest du Mississippi.[NEWLINE]--- Martin Van Buren, 8e président des États-Unis</French>
+		<German>Es ist mir eine aufrichtige Freude, Sie über den vollständigen Umzug der Cherokee-Indianer in ihre neue Heimat westlich des Mississippi informieren zu können.[NEWLINE]--- Martin Van Buren, 8. Präsident der Vereinigten Staaten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_9</Tag>
 		<English>We derive our authority from God and the West India Company, not from the pleasure of a few ignorant subjects.[NEWLINE]--- Peter Stuyvesant, directeur-generaal of Nieuw-Nederland in the period 1647-1664</English>
 		<French>Nous tenons notre autorité de Dieu et de la Companie des Indes Occidentales, et non du bon-vouloir d'une poignée de sujets idiots.[NEWLINE]--- Peter Stuyvesant, directeur-général de la Nouvelle-Néerlande dans la période 1647-1664</French>
+		<German>Wir leiten unsere Autorität von Gott und der Westindischen Kompanie ab, nicht vom Wohlgefallen einiger weniger unwissenden Untertanen.[NEWLINE]--- Peter Stuyvesant, Generaldirektor von Neu-Niederlande im Zeitraum von 1647-1664</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_10</Tag>
 		<English>We pray that the deceitful race - such hateful enemies and blasphemers of the name of Christ - be not allowed to further infect and trouble this new colony.[NEWLINE]--- Peter Stuyvesant, directeur-generaal of Nieuw-Nederland in the period 1647-1664, on Jewish citizens of Nieuw-Amsterdam</English>
 		<French>Nous prions que cette race perfide - des ennemis haineux et blasphémateurs envers le Christ - ne soit pas autorisé à infester davantage et gâter cette nouvelle colonie[NEWLINE]--- Peter Stuyvesant, directeur-général de la Nouvelle-Néerlande dans la période 1647-1664, au sujet des juifs établis à la Nouvelle-Amsterdam</French>
+		<German>Wir beten, dass die betrügerische Ethnie - diese hasserfüllten Feinde und Lästerer des Namens Christi - diese neue Kolonie nicht weiter infizieren und belästigen darf.[NEWLINE]--- Peter Stuyvesant, Generaldirektor von Neu-Niederlande im Zeitraum von 1647-1664, über jüdische Bürger von Nieuw-Amsterdam</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_11</Tag>
 		<English>Money is the father of luxury, lasciviousness, intrigues, trickery, lies, betrayal, insincerity – of all the world's worst behaviour. Fathers sell their children, husbands their wives, wives betray their husbands, brothers kill each other, friends are false, and all because of money. In the light of all this, tell me that we Wendat are not right in refusing to touch, or so much to look at silver?[NEWLINE]--- Kondiaronk, Wendat Chief, 1703</English>
 		<French>L'argent, la monnaie est la source de la luxure, de la débauche, des intrigues, des tromperies, des mensonges, des trahisons, et de la fausseté - des pires comportements au monde. Des pères vendent leurs enfants, des maris leur femmes, les femmes trompent leur mari, les frères s'entretuent, les amis sont faux, et tout à cause de l'argent. En voyant tout cela, dites-moi que nous, Wendats, avons tort de refuser à toucher, et même de regarder l'argent?[NEWLINE]--- Kondiaronk, chef des Wendats, 1703  </French>
+		<German>Geld ist der Vater des Luxus, der Lüsternheit, der Intrigen, des Betrugs, der Lüge, des Verrats, der Unaufrichtigkeit - des schlimmsten Verhaltens in der Welt. Väter verkaufen ihre Kinder, Ehemänner ihre Frauen, Ehefrauen betrügen ihre Männer, Brüder bringen sich gegenseitig um, Freunde sind falsch, und alles wegen des Geldes. Sagen Sie mir, dass wir Wendat in Anbetracht all dessen nicht Recht haben, wenn wir uns weigern, Silber anzufassen oder auch nur anzuschauen?[NEWLINE]--- Kondiaronk, Häuptling der Wendat, 1703</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_12</Tag>
 		<English>The attack did not succeed as well as I had hoped, no small impediment having been the loss of my right leg.[NEWLINE]--- Peter Stuyvesant, directeur-generaal of Nieuw-Nederland in the period 1647-1664</English>
 		<French>L'attaque ne réussit pas aussi bien que je ne l'avais espéré, un des coups du sort fut la perte de ma jambe droite.[NEWLINE]--- Peter Stuyvesant, directeur-général de la Nouvelle-Néerlande dans la période 1647-1664</French>
+		<German>Der Angriff verlief nicht so erfolgreich, wie ich gehofft hatte, denn der Verlust meines rechten Beins war kein geringes Hindernis.[NEWLINE]--- Peter Stuyvesant, Generaldirektor von Neu-Niederlande im Zeitraum von 1647-1664</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_13</Tag>
 		<English>I value the blood of one Christian more than that of a hundred Indians.[NEWLINE]--- Peter Stuyvesant, directeur-generaal of Nieuw-Nederland in the period 1647-1664</English>
 		<French>J'estime davantage le sang d'un seul chrétien que celui de cent Indiens [NEWLINE]--- Peter Stuyvesant, directeur-général de la Nouvelle-Néerlande dans la période 1647-1664</French>
+		<German>Ich schätze das Blut eines einzigen Christen mehr als das von hundert Indianern.[NEWLINE]--- Peter Stuyvesant, Generaldirektor von Neu-Niederlande im Zeitraum von 1647-1664</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_14</Tag>
 		<English>There are apothecaries' shops, where prepared medicines, liquids, ointments, and plasters are sold; barbers' shops, where they wash and shave the head; and restaurateurs, that furnish food and drink at a certain price.[NEWLINE]--- Hernán Cortés, Spanish conquistador, on the Aztec capital of Tenochtitlan (November 8, 1519)</English>
 		<French>Il y a des boutiques d'apothiquaires, où l'on vent des remèdes tout prêts, des liquides, des onguents, et des cataplames; des barbiers, où ils lavent et rasent la têtes, et des restaurateurs; qui fournissent nourritures et boisson à un certain prix.[NEWLINE]--- Hernán Cortés, Conquistador espagnol, au sujet de la capitale aztèque de Tenochtitlan, le 9 novembre 1519</French>
+		<German>Es gibt Apotheken, in denen zubereitete Medikamente, Flüssigkeiten, Salben und Pflaster verkauft werden, Friseurläden, in denen der Kopf gewaschen und rasiert wird, und Gastronomen, die Essen und Trinken zu einem bestimmten Preis anbieten.[NEWLINE]--- Hernán Cortés, Spanischer Eroberer, über die aztekische Hauptstadt Tenochtitlan (November 8, 1519)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_15</Tag>
 		<English>The city is as large as Sevilla or Córdoba; its streets, I speak of the principal ones, are very wide and straight; some of these, and all the inferior ones, are half land and half water, and are navigated by canoes.[NEWLINE]--- Hernán Cortés, Spanish conquistador, on the Aztec capital of Tenochtitlan (November 8, 1519)</English>
 		<French>La cité est aussi grande que Séville ou Cordoue; ses artères principales sont très larges et droites, et les secondaires, sont mi-rues, mi-canaux, et il y navigue des canoës.[NEWLINE]--- Hernán Cortés, Conquistador espagnol, au sujet de la capitale aztèque de Tenochtitlan, le 9 novembre 1519</French>
+		<German>Die Stadt ist so groß wie Sevilla oder Córdoba; ihre Straßen, ich spreche von den Hauptstraßen, sind sehr breit und geradlinig; einige von ihnen und alle untergeordneten sind halb Land und halb Wasser und werden mit Kanus befahren.[NEWLINE]--- Hernán Cortés, Spanischer Eroberer, über die aztekische Hauptstadt Tenochtitlan (November 8, 1519)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_16</Tag>
 		<English>Among these temples there is one which far surpasses all the rest, whose grandeur of architectural details no human tongue is able to describe; for within its precincts, surrounded by a lofty wall, there is room enough for a town of five hundred families.[NEWLINE]--- Hernán Cortés, Spanish conquistador, on the Aztec capital of Tenochtitlan (November 8, 1519)</English>
 		<French>Parmi ces temples il y en a un qui surpasse tous les autres, dont la grandeur des détails d'architecture surpasse toute description ; En son sein, entouré d'un mur imposant, il y a assez de place pour une ville de cinq cents familles.[NEWLINE]--- Hernán Cortés, Conquistador espagnol, au sujet de la capitale aztèque de Tenochtitlan, le 9 novembre 1519</French>
+		<German>Among these temples there is one which far surpasses all the rest, whose grandeur of architectural details no human tongue is able to describe; for within its precincts, surrounded by a lofty wall, there is room enough for a town of five hundred families.[NEWLINE]--- Hernán Cortés, Spanischer Eroberer, über die aztekische Hauptstadt Tenochtitlan (November 8, 1519)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_17</Tag>
 		<English>If the freedom of speech is taken away then dumb and silent we may be led, like sheep to the slaughter.[NEWLINE]--- George Washington (1732 - 1799), Commander-in-Chief of the Continental Army and first President of the United States</English>
 		<French>Si la liberté de la presse est retirée, alors nous pourrions être menés aveuglement et sans bruit comme des moutons à l'abattoir.[NEWLINE]--- George Washington (1732 - 1799), Commandeur-en-Chef de l'Armée Continentale et Premier président des États-Unis</French>
+		<German>Wenn uns die Redefreiheit genommen wird, werden wir stumm und schweigend wie Schafe zur Schlachtbank geführt.[NEWLINE]--- George Washington (1732 - 1799), Oberbefehlshaber der Kontinentalarmee und erster Präsident der Vereinigten Staaten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_18</Tag>
 		<English>The marvel of all history is the patience with which men and women submit to burdens unnecessarily laid upon them by their governments.[NEWLINE]--- George Washington (1732 - 1799), Commander-in-Chief of the Continental Army and first President of the United States</English>
 		<French>Une des merveilles de l'histoire et la patience avec laquelle hommes et femmes subissent les tracas superflus que leur imposent leurs gouvernements.[NEWLINE]--- George Washington (1732 - 1799), Commandeur-en-Chef de l'Armée Continentale et Premier président des États-Unis</French>
+		<German>Das Wunder der Geschichte ist die Geduld, mit der Männer und Frauen unnötige Lasten auf sich nehmen, die ihnen von ihren Regierungen aufgebürdet werden.[NEWLINE]--- George Washington (1732 - 1799), Oberbefehlshaber der Kontinentalarmee und erster Präsident der Vereinigten Staaten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_19</Tag>
 		<English>The alternate domination of one faction over another, sharpened by the spirit of revenge, natural to party dissension, which in different ages and countries has perpetrated the most horrid enormities, is itself a frightful despotism. But this leads at length to a more formal and permanent despotism. The disorders and miseries which result gradually incline the minds of men to seek security and repose in the absolute power of an individual; and sooner or later the chief of some prevailing faction, more able or more fortunate than his competitors, turns this disposition to the purposes of his own elevation, on the ruins of public liberty.[NEWLINE]--- George Washington (1732 - 1799), President of the United States farewell address, 1796</English>
 		<French>L'alternance au pouvoir d'une faction puis de l'autre, aiguisée par l'esprit de revanche accompagnant les désaccords entre les partis, ce qui a perpétué les pires horreurs en d'autres temps et d'autres pays, est en elle même un despotisme atroce. Mais cela mène avec le temps à un autre despotisme de droit plus permanent. Les désordres et les malheurs qui en découlent poussent peu à peu l'esprit des hommes à chercher la sécurité et la quiétude dans le pouvoir absolu d'un seul individu ; tôt ou tard le chef d'une des factions importantes, plus chanceux ou plus abile que ses concurrents, tirera parti de cette tendance pour son propre profit, sur les ruines des libertés publiques.[NEWLINE]--- George Washington (1732 - 1799), Discours d'adieu en tant que président des États-Unis, 1796</French>
+		<German>Die wechselseitige Herrschaft einer Fraktion über eine andere, verschärft durch den Rachegeist, der dem Parteienstreit eigen ist und der in verschiedenen Zeitaltern und Ländern die schrecklichsten Ungeheuerlichkeiten verübt hat, ist an sich schon ein schrecklicher Despotismus. Aber dies führt schließlich zu einem formelleren und dauerhaften Despotismus. Die Unruhen und das Elend, die sich daraus ergeben, neigen allmählich den Geist der Menschen dazu, Sicherheit und Ruhe in der absoluten Macht eines Einzelnen zu suchen; und früher oder später wendet das Oberhaupt irgendeiner vorherrschenden Fraktion, das fähiger oder glücklicher ist als seine Konkurrenten, diese Veranlagung zu den Zwecken seiner eigenen Erhebung auf den Ruinen der öffentlichen Freiheit an.[NEWLINE]--- George Washington (1732 - 1799), Abschiedsrede des Präsidenten der Vereinigten Staaten, 1796</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_20</Tag>
 		<English>Rebellion to tyrants is obedience to God.[NEWLINE]--- William Penn (1644 - 1718), Founder of Pennsylvania</English>
 		<French>La rébellion face aux tyrans est obéir à Dieu[NEWLINE]--- William Penn (1644 - 1718), Fondateur de la Pennsylvanie</French>
+		<German>Rebellion gegen Tyrannen ist Gehorsam gegenüber Gott.[NEWLINE]--- William Penn (1644 - 1718), Gründer von Pennsylvania</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_21</Tag>
 		<English>This land is naturally fruitful, and capable of supporting a large population, if it were judiciously allotted according to location. The air is pleasant, and more temperate than in Netherland.[NEWLINE]--- Adriaen van der Donck (c.1618 - 1655), Dutch lawyer, on Nieuw-Nederland</English>
+		<German>Dieses Land ist von Natur aus fruchtbar und könnte eine große Bevölkerung ernähren, wenn es je nach Lage vernünftig aufgeteilt würde. Die Luft ist angenehm und gemäßigter als in den Niederlanden.[NEWLINE]--- Adriaen van der Donck (c.1618 - 1655), niederländischer Rechtsanwalt, von Neu-Niederlande</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_22</Tag>
 		<English>Why does Maxixcatzin deem these people gods, who seem more like ravenous monsters thrown up by the intemperate sea to blight us, gorging themselves on gold, silver, stones and pearls; sleeping in their own clothes; and generally acting in the manner of those who would one day make cruel masters?[NEWLINE]--- Xicotencatl, Tlatoani (elder) of Tlaxcatl (almost one hundred years old), 1520</English>
+		<German>Warum hält Maxixcatzin diese Menschen für Götter, die eher wie gefräßige Ungeheuer erscheinen, die das unmäßige Meer aufgeworfen hat, um uns zu verderben, die sich an Gold, Silber, Steinen und Perlen laben, in ihren eigenen Kleidern schlafen und sich im Allgemeinen so verhalten, wie diejenigen, die eines Tages grausame Herren sein werden?[NEWLINE]--- Xicotencatl, Tlatoani (Ältester) von Tlaxcatl (fast einhundert Jahre alt), 1520</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_23</Tag>
 		<English>The natives are generally well-set in their limbs, slender round the waist, broad across the shoulders, and have black hair and dark eyes. They are very nimble and active, well adapted to travel on foot and to drag heavy burdens. They are divided into different tribes and languages, each tribe living generally by itself, and having one of its number as a chief, though he has not much power or distinction except in their dances or in time of wars. Among some there is not the least knowledge of God, and among others very little, though they relate very strange fables concerning Him.[NEWLINE]--- Adriaen van der Donck (c.1618 - 1655), Dutch lawyer</English>
+		<German>Die Eingeborenen sind im Allgemeinen gut gebaut, schlank in der Taille und breit in den Schultern, haben schwarzes Haar und dunkle Augen. Sie sind sehr flink und aktiv und können gut zu Fuß reisen und schwere Lasten schleppen. Sie sind in verschiedene Stämme und Sprachen unterteilt, wobei jeder Stamm im Allgemeinen für sich lebt und einen Häuptling aus seinen Reihen hat, der jedoch außer bei ihren Tänzen oder in Kriegszeiten nicht viel Macht oder Ansehen genießt. Die einen wissen nicht das Geringste von Gott, die anderen nur sehr wenig, obwohl sie sehr seltsame Fabeln über ihn erzählen.[NEWLINE]--- Adriaen van der Donck (c.1618 - 1655), niederländischer Rechtsanwalt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_24</Tag>
 		<English>A state too expensive in itself, or by virtue of its dependencies, ultimately falls into decay; its free government is transformed into a tyranny; it disregards the principles which it should preserve, and finally degenerates into despotism. The distinguishing characteristic of small republics is stability: the character of large republics is mutability.[NEWLINE]--- Simón Bolívar, Latin American Revolutionary, "Letter from Jamaica" (Summer 1815)</English>
+		<German>Ein Staat, der an sich oder aufgrund seiner Abhängigkeiten zu teuer ist, verfällt schließlich; seine freie Regierung verwandelt sich in eine Tyrannei; er missachtet die Grundsätze, die er bewahren sollte, und entartet schließlich zur Despotie. Das Kennzeichen der kleinen Republiken ist die Stabilität, das der großen Republiken die Veränderlichkeit.[NEWLINE]--- Simón Bolívar, Lateinamerikanischer Revolutionär, "Brief aus Jamaika" (Summer 1815)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_25</Tag>
 		<English>Colombians! My last wish is for the happiness of the patria. If my death contributes to the end of partisanship and the consolidation of the union, I shall be lowered in peace into my grave.[NEWLINE]--- Simón Bolívar, Latin American Revolutionary, "Final proclamation to the people of Colombia" (December 8, 1830)</English>
+		<German>Kolumbianer! Mein letzter Wunsch ist das Glück des Vaterlandes. Wenn mein Tod zur Beendigung der Parteilichkeit und zur Konsolidierung der Union beiträgt, werde ich in Frieden in mein Grab gesenkt werden.[NEWLINE]--- Simón Bolívar, Lateinamerikanischer Revolutionär, "Abschlussproklamation an das kolumbianische Volk" (December 8, 1830)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_26</Tag>
 		<English>I have fulfilled the sacred promises which I made Peru; I have witnessed the assembly of its representatives; the enemy's force threatens the independence of no place that wishes to be free, and that possesses the means of being so. A numerous army, under the direction of warlike chiefs, is ready to march in a few days to put an end to the war. Nothing is left for me to do, but to offer you my sincerest thanks, and to promise, that if the liberties of the Peruvians shall ever be attacked, I shall claim the honor of accompanying them to defend their freedom like a citizen.[NEWLINE]--- José de San Martín, Latin American Revolutionary, "Resignation address to the Peruvian Congress" (September 22, 1820)</English>
+		<German>Ich habe die heiligen Versprechen erfüllt, die ich Peru gegeben habe; ich war Zeuge der Versammlung seiner Vertreter; die feindliche Macht bedroht die Unabhängigkeit keines Ortes, der frei sein will und die Mittel dazu besitzt. Ein zahlreiches Heer unter der Führung von kriegerischen Häuptlingen ist bereit, in wenigen Tagen loszumarschieren, um dem Krieg ein Ende zu setzen. Es bleibt mir nichts anderes übrig, als Ihnen meinen aufrichtigen Dank auszusprechen und zu versprechen, dass ich, wenn die Freiheiten der Peruaner jemals angegriffen werden, die Ehre haben werde, sie zu begleiten, um ihre Freiheit wie ein Bürger zu verteidigen.[NEWLINE]--- José de San Martín, Lateinamerikanischer Revolutionär, "Rücktrittsrede vor dem peruanischen Kongress" (September 22, 1820)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_27</Tag>
 		<English>From this moment on, Peru is free and independent by the general will of its people and by the justice of its cause that God defends. Long live the nation! Long live the freedom! Long live the independence![NEWLINE]--- "Peruvian Declaration of Independence" (July 28, 1821)</English>
+		<German>Von diesem Moment an ist Peru frei und unabhängig durch den allgemeinen Willen seines Volkes und durch die Gerechtigkeit seiner Sache, die Gott verteidigt. Es lebe die Nation! Lang lebe die Freiheit! Lang lebe die Unabhängigkeit![NEWLINE]--- "Die peruanische Unabhängigkeitserklärung" (July 28, 1821)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_28</Tag>
 		<English>The Indians were totally deprived of their freedom and were put into the harshest, fiercest, most horrible servitude and captivity which no one who has not seen it can understand. Even beasts enjoy more freedom when they are allowed to graze in the field.[NEWLINE]--- Bartolomé de Las Casas, "History of the Indies" (1561)</English>
+		<German>Die Indianer wurden vollständig ihrer Freiheit beraubt und in die härteste, grausamste und schrecklichste Knechtschaft und Gefangenschaft versetzt, die niemand verstehen kann, der sie nicht gesehen hat. Selbst Tiere genießen mehr Freiheit, wenn sie auf der Weide grasen dürfen.[NEWLINE]--- Bartolomé de Las Casas, "Geschichte der Indigenen" (1561)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_29</Tag>
 		<English>Broken spears lie in the roads;[NEWLINE]We have torn our hair in our grief.[NEWLINE]The houses are roofless now, and their walls[NEWLINE]Are red with blood.[NEWLINE]--- Nahuatl poem (16th century)</English>
+		<German>Zerbrochene Speere liegen auf den Straßen;[NEWLINE]Wir haben uns in unserem Kummer die Haare ausgerissen.[NEWLINE]Die Häuser haben kein Dach mehr, und ihre Wände[NEWLINE]sind rot von Blut.[NEWLINE]--- Nahuatl-Gedicht (16th century)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_30</Tag>
 		<English>Who could conquer Tenochtitlán? Who could shake the foundation of heaven?[NEWLINE]--- Nahuatl poem (15th century)</English>
+		<German>Who could conquer Tenochtitlán? Who could shake the foundation of heaven?[NEWLINE]--- Nahuatl-Gedicht (15th century)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUOTE_31</Tag>

@@ -229,9 +229,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SECONDCOLONY_2_HELP</Tag>
-		<English>[COLOR_FONT_GOLD]His Majesty is offering blades for the town guard of your colony.[COLOR_REVERT]</English>
+		<English>[COLOR_FONT_GOLD]His Majesty is offering blades and provisions for two town guards of your colonies.[COLOR_REVERT]</English>
 		<French>[COLOR_FONT_GOLD]Votre Roi vous offre des armes pour défendre votre colonie.[COLOR_REVERT]</French>
-		<German>[COLOR_FONT_GOLD]Seine Majestät bietet Euch Klingen für die Stadtwache an, damit Ihr die Kolonie verteidigen könnt.[COLOR_REVERT]</German>
+		<German>[COLOR_FONT_GOLD]Seine Majestät bietet Euch Klingen und Ausrüstung für zwei Stadtwachen an, damit Ihr Eure Kolonien verteidigen könnt.[COLOR_REVERT]</German>
 		<Russian>[COLOR_FONT_GOLD]Его Величество предлагает вам клинки городских стражников для экипирования защитников колонии.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -1212,7 +1212,7 @@
 		<English>A rumour is spreading: A [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] whaling ship is being attacked by a whale seeking revenge.</English>
 		<French>Une rumeur se répend : Un baleinier [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] est attaqué par une baleine revancharde.</French>
 		<German>Ein Gerücht macht die Runde: Ein [COLOR_HIGHLIGHT_TEXT]%s1:4_civ_adjective[COLOR_REVERT] Walfangschiff wird von eime Rache suchenden Wal angegriffen.</German>
-		<Russian>Ходят слухи: [COLOR_HIGHLIGHT_TEXT]%s1:4_civ_adjective[COLOR_REVERT] китобойное судно подвергается нападению мстительного кита.</Russian>
+		<Russian>Ходят слухи: китобойное судно [COLOR_HIGHLIGHT_TEXT]%s1:4_civ_adjective[COLOR_REVERT] подверглось нападению мстительного кита.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WHALE_ATTACK_1</Tag>
@@ -2050,14 +2050,14 @@
 		<English>A [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] master carpenter wishes to bring his family over from Europe.</English>
 		<French>Un maître charpentier [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] souhaite que sa famille en Europe lui rende visite.</French>
 		<German>Ein [COLOR_HIGHLIGHT_TEXT]%s1:4_civ_adjective[COLOR_REVERT] Zimmermeister möchte seine Familie in die Neue Welt nachkommen lassen.</German>
-		<Russian>[COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] мастер-плотник хочет привезти свою семью из Европы.</Russian>
+		<Russian>Мастер-плотник из [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] хочет перевезти свою семью в Новый Свет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CARPENTER_FAMILY_1</Tag>
 		<English>A master carpenter wishes to send a letter to his family in Europe to tell them all about the wonderful New World. Milord, he asks you whether you could give him money to pay for the passage of one of his brothers.</English>
 		<French>Un maître charpentier souhaite envoyer une lettre à sa famille en Europe et leur dire à quel point le Nouveau Monde est beau. Milord, il vous demande si vous pourriez lui donner un peu d'argent pour le passage de l'un de ses frères.</French>
 		<German>Ein Zimmermeister will seiner Familie in der Heimat schreiben, wie sehr ihm das Leben in der Neuen Welt gefällt. Er fragt Euch, Milord, ob Ihr ihm etwas Geld geben möchtet. Er würde es seinen Angehörigen schicken, damit einer seiner Brüder in die Neue Welt nachkommen kann.</German>
-		<Russian>Мастер-плотник хочет послать письмо своей семье в Европу, чтобы рассказать им все о прекрасном Новом Свете. Милорд, он спрашивает вас, не могли бы вы дать ему денег на оплату проезда одного из его братьев.</Russian>
+		<Russian>Не так давно мастер-плотник писал письмо своей семье в Европу, в котором рассказывал о прекрасном Новом Свете. И теперь он спрашивает, Милорд, не могли бы вы оплатить проезд одного из его братьев в наши колонии.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BOOK_MORMON</Tag>
@@ -2809,7 +2809,7 @@
 		<English>Ensure that the priests are welcomed with a ceremony.</English>
 		<French>Assurez-vous que les prêtres soient accueillis avec cérémonie.</French>
 		<German>Stellt sicher, dass die Priester mit Feierlichkeiten willkommen geheißen werden.</German>
-		<Russian>Удостоверьтесь, что священники приветствуются должным образом.</Russian>
+		<Russian>Удостоверьтесь, что священников встретили должным образом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FIVE_BAKERIES</Tag>
@@ -5597,7 +5597,7 @@
 		<Tag>TXT_KEY_EVENT_REVOLUTIONARY_EVENTS_DRUNKEN_SPEECHES_2</Tag>
 		<English>Yes, but what should we do? If we ban people from whoring and drinking, there'll be a revolution on the spot. We just can't let it get too out of hand. Let's move the curfew forward by an hour.</English>
 		<German>Ja, nur was sollen wir tun. Wenn wir den Leuten das Huren und Trinken verbieten, haben wir auf der Stelle eine Revolution. Sorgen wir aber dafür, dass es nicht zu sehr ausartet und verlegen wir die Sperrstunde um eine Stunde nach vorne.</German>
-		<Russian>Да, но что нам делать? Если мы закроем трактиры, нас тут же поднимут на вилы. Но чтобы хоть как-то обезопаситься и держать ситуацию под контролем, давайте перенесем начало комендантского часа, допустим, на один час раньше.</Russian>
+		<Russian>Да, но что нам делать? Если мы закроем трактиры, нас тут же поднимут на вилы. Но чтобы хоть как-то обезопаситься и держать ситуацию под контролем, давайте введём комендантский час.</Russian>
 	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_REVOLUTIONARY_EVENTS_DRUNKEN_SPEECHES_3</Tag>
@@ -6219,7 +6219,6 @@
 		<German>Ein [COLOR_HIGHLIGHT_TEXT]%s1:3_civ_adjective[COLOR_REVERT] Walfänger ist in See gestochen, um den legendären weißen Wal zu finden.</German>
 		<Russian>Китобои [COLOR_HIGHLIGHT_TEXT]%s1_civ_adjective[COLOR_REVERT] отправились на поиски легендарного белого кита.</Russian>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WHALING_TRIP_DONE_1</Tag>
 		<English>Milord, our very best lookout couldn't find the great white whale. We did see [COLOR_HIGHLIGHT_TEXT]plenty of whales[COLOR_REVERT] in the area. It seems the fishermen were right about that at least. If we stay around here for a while maybe we'll find the whale - or it will find us.</English>
@@ -6273,6 +6272,60 @@
 		<English>Milord, another whaling boat is ready to go to work.</English>
 		<German>Milord, ein weiteres [COLOR_HIGHLIGHT_TEXT]Walfangschiff[COLOR_REVERT] wurde erworben und ausgerüstet.</German>
 		<Russian>Милорд, еще одно [COLOR_HIGHLIGHT_TEXT]китобойное судно[COLOR_REVERT] приобретено и готово к отплытию.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MOUNTED_CONQUISTADOR_HELP</Tag>
+		<English>[ICON_BULLET]Mounted conquistadores join one of your treasure transports.</English>
+		<German>[ICON_BULLET]Berittene Konquistadoren machen sich auf den Weg und beschützen Euer Gold.</German>
+		<Russian>[ICON_BULLET]Конные конкистадоры присоединяются к одному из ваших транспортов с сокровищами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MILITIA_HELP</Tag>
+		<English>[ICON_BULLET]Some charioteers and attendants in the treasure transport arm themselves and form a militia.</English>
+		<German>[ICON_BULLET]Einige Wagenlenker und Begleiter eines Schatztransports bewaffnen sich und bilden eine Miliz.</German>
+		<Russian>[ICON_BULLET]Некоторые возничие и сопровождающие транспорт с сокровищами вооружаются и формируют ополчение.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TREASURE_PROTECTION</Tag>
+		<English>Milord, many of our [COLOR_HIGHLIGHT_TEXT]treasures[COLOR_REVERT] are out in the wilderness unprotected. Some adventurers would set out for some hand money and escort them safely to the nearest colony.</English>
+		<German>Milord, viele unserer [COLOR_HIGHLIGHT_TEXT]Schätze[COLOR_REVERT] sind in der Wildnis ungeschützt unterwegs. Einige Abenteurer würden sich gegen ein Handgeld auf den Weg machen und sie sicher in die nächste Kolonie geleiten.</German>
+		<Russian>Милорд, многие из наших [COLOR_HIGHLIGHT_TEXT]сокровищ[COLOR_REVERT] находятся в глуши без защиты. Некоторые искатели приключений готовы отправиться туда и сопроводить их до ближайшей колонии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_1</Tag>
+		<English>Very well, we should definitely hire a few [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] and they should be on their way right away.</English>
+		<German>Sehr schön, wir sollten unbedingt ein paar [COLOR_HIGHLIGHT_TEXT]Berittene Konquistadoren[COLOR_REVERT] anheuern und sie sollten sich gleich auf den Weg machen.</German>
+		<Russian>Что же, нам определенно следует нанять несколько [COLOR_HIGHLIGHT_TEXT]конных конкистадоров[COLOR_REVERT]. И прикажите им отправляться как можно скорее!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_2</Tag>
+		<English>I see the problem, but arming a few workers and temporarily forming a [COLOR_HIGHLIGHT_TEXT]militia[COLOR_REVERT] will do just fine.</English>
+		<German>Ich sehe das Problem, aber es reicht vollkommen aus, wenn wir ein paar Arbeiter bewaffnen und vorübergehend eine [COLOR_HIGHLIGHT_TEXT]Miliz[COLOR_REVERT] bilden lassen.</German>
+		<Russian>Да, это проблема, но вооружить нескольких рабочих, сформировав временное [COLOR_HIGHLIGHT_TEXT]ополчение[COLOR_REVERT], будет вполне достаточно.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_3</Tag>
+		<English>Oh well, the wagons have to get by like this. I can't spare a man or a piece of gold for that.</English>
+		<German>Ach was, die Wagen müssen sich so durchschlagen. Dafür kann ich keinen Mann und kein Goldstück entbehren.</German>
+		<Russian>Как не прискорбно, но сейчас у нас нет ни людей, ни золота. Перевозчиками придётся полагаться только на свои силы.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_1_News</Tag>
+		<English>Some [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] now accompany your treasures safely to the colonies.</English>
+		<German>Einige [COLOR_HIGHLIGHT_TEXT]Berittene Konquistadoren[COLOR_REVERT] begleiten Eure Schätze nun sicher in die Kolonien.</German>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Конные конкистадоры[COLOR_REVERT] займутся охраной ваших сокровищ в пути.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_2_News</Tag>
+		<English>Some [COLOR_HIGHLIGHT_TEXT]militias[COLOR_REVERT] now accompany your treasures safely to the colonies.</English>
+		<German>Einige [COLOR_HIGHLIGHT_TEXT]Milizionäre[COLOR_REVERT] begleiten Eure Schätze nun sicher in die Kolonien.</German>
+		<Russian>Сокровища направляются в колонии под охраной [COLOR_HIGHLIGHT_TEXT]ополченцев[COLOR_REVERT].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_3_News</Tag>
+		<English>Some of your treasures have to make their way through the wilderness without protection.</English>
+		<German>Einige Eurer Schätze müssen sich schutzlos durch die Wildnis einen Weg bahnen.</German>
+		<Russian>Некоторым из ваших сокровищ придется пробираться через дикую местность без какой-либо защиты.</Russian>
 	</TEXT>
 </Civ4GameText>
 

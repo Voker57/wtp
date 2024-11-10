@@ -317,21 +317,21 @@
 		<English>Sure! His eldest brother, the blacksmith, is welcome.</English>
 		<French>Bien sûr ! Le frère ainé, le forgeron, est la bienvenue.</French>
 		<German>Aber sicher doch! Sein älterer Bruder, der Schmied, wäre hier gerne gesehen.</German>
-		<Russian>Конечно! Его старший брат, кузнец, нам тоже пригодится.</Russian>
+		<Russian>Конечно! Его старший брат, кузнец, нам очень бы пригодился.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARPENTER_FAMILY_2</Tag>
 		<English>Perhaps his youngest brother, a farmer at the parents' homestead, wants to come.</English>
 		<French>Peut-être son frère plus jeune souhaite venir, celui qui est fermier dans la propriété de ses parents.</French>
 		<German>Vielleicht möchte sein jüngerer Bruder, der noch auf dem elterlichen Hof arbeitet, nach Amerika kommen?</German>
-		<Russian>Возможно, его младший брат, фермер, тоже хочет приехать?</Russian>
+		<Russian>Мы бы с удовольствием приняли его младшего брата, фермера.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARPENTER_FAMILY_3</Tag>
 		<English>As I recall his cousin is on the run because he is a poacher. Does he want to come? Make it clear I won't pay for his passage.</English>
 		<French>Je crois que son cousin est un braconnier en fuite. Peut-être souhaite-t-il venir ? Mais je ne peux pas payer pour son passage.</French>
 		<German>Wurde sein Vetter nicht vom Landbüttel daheim als Wilderer gesucht? Nun, er kann hier gerne ein neues Leben anfangen. Für die Überfahrt hat er aber selber aufzukommen.</German>
-		<Russian>Насколько я помню, его двоюродный брат находится в бегах, потому что он браконьер. Он хочет прийти? Объясните, что я не буду платить за его проезд.</Russian>
+		<Russian>Мне докладывали, его двоюродный брат находится в бегах за браконьерство. Если он пожелает приехать, мы найдём ему работу. Но переезд будет за его счёт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CATTLETHIEF_1</Tag>
@@ -879,35 +879,35 @@
 		<English>Great idea! I would have done so myself.</English>
 		<French>Très bonne idée ! Je n'aurais pas proposé mieux.</French>
 		<German>Famoser Einfall! Hätte von mir sein können.</German>
-		<Russian>Отличная идея! Я бы и сам так сделал.</Russian>
+		<Russian>Отличная идея! Я хотел предложить то же самое, но они меня опередили.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRST_WHEELWRIGHT_2</Tag>
 		<English>They don't seem to know what to do with the tools I give them. Take everything from these wastrels. They don't need it!</English>
 		<French>Ils ne semblent pas savoir quoi faire de leurs outils. Reprenez tout à ces gaspilleurs, ils n'en ont pas besoin !</French>
 		<German>Die wissen wohl nicht wohin mit den Eisenwaren, die ich ihnen zuteile. Nehmt diesen Verschwendern weg, was sie nicht benötigen!</German>
-		<Russian>Кажется, они не знают, что делать с инструментами, которые я им даю. Заберите всё у этих бродяг. Им это не нужно!</Russian>
+		<Russian>Видимо, они не знают, что делать с инструментами, которые они получают. Заберите всё у этих бродяг. Им это не нужно!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRST_WHEELWRIGHT_3</Tag>
 		<English>What? Even more bread and beer? Nobody will become fat and lazy under my attendance. Tell these dawdlers to fast and pray!</English>
 		<French>Pour produire encore plus de pain et de bière ? Veulent-ils tous finir paresseux et obèses ? Dites à ces lambins de jeûner et prier !</French>
 		<German>Was? Noch mehr Brot und Bier? Fett und faul wollen die wohl werden. Sagt diesen Tagedieben, sie sollen fasten und beten.</German>
-		<Russian>Что? Еще больше хлеба и пива? Под моим наблюдением никто не станет толстым и ленивым. Скажи этим бездельникам поститься и молиться!</Russian>
+		<Russian>Что? Еще больше хлеба и пива? Пока я правитель колоний, никто здесь не станет толстым и ленивым. Прикажите этим бездельникам поститься и молиться!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRST_WHEELWRIGHT_4</Tag>
 		<English>Are they bored? These lazy dogs! I'll hurry them along!</English>
 		<French>Pourquoi proposent-ils ça, ils s'ennuient ? Je vais leur apprendre à travailler !</French>
 		<German>Langweilen sich diese faulen Hunde etwa? Die werde ich antreiben!</German>
-		<Russian>Им скучно? Ленивые собаки! Я потороплю их!</Russian>
+		<Russian>Им нечем заняться? Ленивые собаки! Назначить увеличенную норму выработки для этой мастерской!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRST_WHEELWRIGHT_5</Tag>
 		<English>Carts? For peasants? These meddlers will construct a magnificent carriage for me instead.</English>
 		<French>Des chariots ? Pour des paysans ? Ces entremetteurs vont plutôt construire une magnifique voiture pour moi !</French>
 		<German>Karren? Für Bauern? Diese Wichtigtuer sollen mir erst mal eine prachtvolle Amtskutsche bauen.</German>
-		<Russian>Тележки? Для крестьян? Вместо этого эти бездельники соорудят для меня великолепную карету.</Russian>
+		<Russian>Тележки? Крестьянам? С них и вёдер хватит, а мне нужен роскошный транспорт для встречи высокопоставленных гостей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIVE_CATHEDRALS</Tag>

@@ -6228,14 +6228,6 @@
 					<UnitClass>UNITCLASS_WEST_INDIAMAN</UnitClass>
 					<iChange>1</iChange>
 				</UnitMoveChange>
-				<UnitMoveChange>
-					<UnitClass>UNITCLASS_SMALL_COASTAL_SHIP</UnitClass>
-					<iChange>1</iChange>
-				</UnitMoveChange>
-				<UnitMoveChange>
-					<UnitClass>UNITCLASS_BIG_COASTAL_SHIP</UnitClass>
-					<iChange>1</iChange>
-				</UnitMoveChange>
 			</UnitMoveChanges>
 			<ProfessionMoveChanges/>
 			<BuildingProductionModifiers/>

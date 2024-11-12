@@ -1710,14 +1710,14 @@
 		<English>Well then, print some passages from the Bible. We shall spread the word of Jesus Christ and the Apostles.</English>
 		<French>Très bien, dans ce cas nous pourrions imprimer des passages de la Bible. Nous devons propager encore davantage la parole du Christ et de ses apôtres.</French>
 		<German>Dann druckt Passage aus der Bibel. Wir werden die Worte Jesus Christi und der Apostel verbreiten.</German>
-		<Russian>Ну тогда напечатайте несколько отрывков из Библии. Мы будем распространять слово Иисуса Христа и его апостолов.</Russian>
+		<Russian>Начните печатать отрывки из Библии. Будем распространять слово Иисуса Христа и его апостолов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PRINTING_PRESS_2</Tag>
 		<English>We could print some interesting colonial news. Maybe an entertaining story from time to time.</English>
 		<French>Nous pourrions imprimer les nouvelles truculantes de nos colonies. Des histoires plus légères et divertissantes.</French>
 		<German>Wir könnten Nachrichten aus den Kolonien drucken. Vielleicht auch eine unterhaltsame Geschichte von Zeit zu Zeit.</German>
-		<Russian>Мы могли бы напечатать кое-какие интересные новости из колоний. Возможно, время от времени будет появляться какая-нибудь занимательная история.</Russian>
+		<Russian>Мы могли бы печатать разные колониальные новости. Возможно, время от времени, будет появляться какая-нибудь интересная история.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PRIVATEER_1</Tag>
@@ -2107,7 +2107,7 @@
 		<English>The tavern is more important because it will help to bring the citizens closer together.</English>
 		<French>La taverne permettra de rassembler les citoyens ensemble. Il s'agit du choix le plus sensé.</French>
 		<German>Die Taverne ist wichtiger, da sie helfen wird, die Gemeinde näher zusammen zu bringen.</German>
-		<Russian>Таверна более важна, потому что она поможет сблизиться новым гражданам.</Russian>
+		<Russian>Таверна важнее, она помогает новым колонистам адаптироваться на новом месте.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TAVERN_VS_CHAPEL_3</Tag>

@@ -640,7 +640,7 @@
 		<English>Welcome [CT_NAME], to our country! I am [COLOR_HIGHLIGHT_TEXT][OUR_NAME][COLOR_REVERT], governor of the [COLOR_HIGHLIGHT_TEXT][OUR_EMPIRE][COLOR_REVERT]. Let us share some of the first vodka we've distilled here, and conclude a treaty of peace and friendship.</English>
 		<French>Bienvenue sur nos terres, [CT_NAME] ! Je suis [COLOR_HIGHLIGHT_TEXT][OUR_NAME][COLOR_REVERT], gouverneur des [COLOR_HIGHLIGHT_TEXT][OUR_EMPIRE][COLOR_REVERT]. Signons donc ensemble un traîté de paix autour d'une bouteille de vodka que nous avons distillée ici-même.</French>
 		<German>Willkommen in unserem Land, [CT_NAME]! Ich bin [COLOR_HIGHLIGHT_TEXT][OUR_NAME][COLOR_REVERT], Gouverneur der [COLOR_HIGHLIGHT_TEXT][OUR_EMPIRE][COLOR_REVERT]. Lassen Sie uns etwas von dem ersten Wodka teilen, den wir hier destilliert haben, und einen Vertrag über Frieden und Freundschaft schließen.</German>
-		<Russian>Добро пожаловать в нашу страну, [CT_NAME]! Я [COLOR_HIGHLIGHT_TEXT][OUR_NAME][COLOR_REVERT], губернатор [COLOR_HIGHLIGHT_TEXT][OUR_EMPIRE][COLOR_REVERT]. Давайте заключим договор о мире и дружбе и отметим это чаркой чудесной водки, которую мы недавно выгнали в этом чудесном краю.</Russian>
+		<Russian>Добро пожаловать в нашу страну, [CT_NAME]! Я [COLOR_HIGHLIGHT_TEXT][OUR_NAME][COLOR_REVERT], губернатор [COLOR_HIGHLIGHT_TEXT][OUR_EMPIRE][COLOR_REVERT]. Давайте заключим договор о мире и дружбе и отметим это чаркой прекрасной водки, которую мы недавно выгнали в этом чудесном краю.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_ERMAK_1</Tag>

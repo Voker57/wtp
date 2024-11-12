@@ -11520,7 +11520,7 @@
 		<German>%s1_CityName : Artilleriebeschuß durch [COLOR_HIGHLIGHT_TEXT]%s3_player[COLOR_REVERT] hat den Verteidigungsbonus auf %d2_NewVal%% gesenkt!</German>
 		<Italian>Le tue difese a %s1_CityName sono state ridotte a %d2_NewVal%% ([COLOR_HIGHLIGHT_TEXT]%s3_player[COLOR_REVERT])!</Italian>
 		<Spanish>Vuestras defensas en %s1_CityName han quedado reducidas al %d2_NewVal%% ([COLOR_HIGHLIGHT_TEXT]%s3_player[COLOR_REVERT]).</Spanish>
-		<Russian>%s1_CityName : Артиллерийский обстрел [COLOR_HIGHLIGHT_TEXT]%s3_player[COLOR_REVERT] уменьшил нашу защиту до %d2_NewVal%%!</Russian>
+		<Russian>[COLOR_WARNING_TEXT]%s1_CityName[COLOR_REVERT] : Артиллерийский обстрел [COLOR_HIGHLIGHT_TEXT]%s3_player[COLOR_REVERT] уменьшил нашу защиту до %d2_NewVal%%!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES</Tag>

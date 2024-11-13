@@ -2555,8 +2555,8 @@
 			<iLbDLearnLevel>2</iLbDLearnLevel>
 		</ProfessionInfo>
 		<ProfessionInfo>
-			<Type>PROFESSION_LEATHER_PADDER_COATS</Type>
-			<Description>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS</Description>
+			<Type>PROFESSION_LEATHER_PADDER_COATS_DOWNS</Type>
+			<Description>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_DOWNS</Description>
 			<Civilopedia>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_HELP</Help>
@@ -2595,8 +2595,88 @@
 			<iLbDLearnLevel>2</iLbDLearnLevel>
 		</ProfessionInfo>
 		<ProfessionInfo>
-			<Type>PROFESSION_LEATHER_PADDER_BOOTS</Type>
-			<Description>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS</Description>
+			<Type>PROFESSION_LEATHER_PADDER_COATS_WILD_FEATHERS</Type>
+			<Description>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_WILD_FEATHERS</Description>
+			<Civilopedia>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_HELP</Help>
+			<Combat>NONE</Combat>
+			<DefaultUnitAI>NONE</DefaultUnitAI>
+			<SpecialBuilding>SPECIALBUILDING_LEATHER_PADDER</SpecialBuilding>
+			<bWorkPlot>0</bWorkPlot>
+			<bCitizen>1</bCitizen>
+			<bWater>0</bWater>
+			<bScout>0</bScout>
+			<bCanCrossLargeRivers>0</bCanCrossLargeRivers>
+			<bCityDefender>0</bCityDefender>
+			<bCanFound>0</bCanFound>
+			<bUnarmed>0</bUnarmed>
+			<bNoDefensiveBonus>0</bNoDefensiveBonus>
+			<iCombatChange>0</iCombatChange>
+			<iMovesChange>0</iMovesChange>
+			<bMoveIntoPeak>0</bMoveIntoPeak>
+			<iWorkRate>0</iWorkRate>
+			<iMissionaryRate>0</iMissionaryRate>
+			<iNativeTradeRate>0</iNativeTradeRate>
+			<iPower>0</iPower>
+			<iAsset>300</iAsset>
+			<YieldEquipedNums/>
+			<FreePromotions/>
+			<YieldsProduced>
+				<YieldType>YIELD_PADDED_LEATHER_COATS</YieldType>
+			</YieldsProduced>
+			<YieldsConsumed>
+				<YieldType>YIELD_HIDES</YieldType>
+				<YieldType>YIELD_WILD_FEATHERS</YieldType>
+			</YieldsConsumed>
+			<Button>Art/interface/buttons/New_Profession_Buttons/Padded_Leather_Coats_Trader.dds</Button>
+			<bUseLbD>1</bUseLbD>
+			<ExpertUnit>UNITCLASS_LEATHER_TAYLOR</ExpertUnit>
+			<iLbDLearnLevel>2</iLbDLearnLevel>
+		</ProfessionInfo>
+		<ProfessionInfo>
+			<Type>PROFESSION_LEATHER_PADDER_BOOTS_DOWNS</Type>
+			<Description>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_DOWNS</Description>
+			<Civilopedia>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_HELP</Help>
+			<Combat>NONE</Combat>
+			<DefaultUnitAI>NONE</DefaultUnitAI>
+			<SpecialBuilding>SPECIALBUILDING_LEATHER_PADDER</SpecialBuilding>
+			<bWorkPlot>0</bWorkPlot>
+			<bCitizen>1</bCitizen>
+			<bWater>0</bWater>
+			<bScout>0</bScout>
+			<bCanCrossLargeRivers>0</bCanCrossLargeRivers>
+			<bCityDefender>0</bCityDefender>
+			<bCanFound>0</bCanFound>
+			<bUnarmed>0</bUnarmed>
+			<bNoDefensiveBonus>0</bNoDefensiveBonus>
+			<iCombatChange>0</iCombatChange>
+			<iMovesChange>0</iMovesChange>
+			<bMoveIntoPeak>0</bMoveIntoPeak>
+			<iWorkRate>0</iWorkRate>
+			<iMissionaryRate>0</iMissionaryRate>
+			<iNativeTradeRate>0</iNativeTradeRate>
+			<iPower>0</iPower>
+			<iAsset>300</iAsset>
+			<YieldEquipedNums/>
+			<FreePromotions/>
+			<YieldsProduced>
+				<YieldType>YIELD_GOAT_HIDE_BOOTS</YieldType>
+			</YieldsProduced>
+			<YieldsConsumed>
+				<YieldType>YIELD_GOAT_HIDES</YieldType>
+				<YieldType>YIELD_DOWNS</YieldType>
+			</YieldsConsumed>
+			<Button>Art/interface/buttons/New_Profession_Buttons/Goat_Hide_Boot_Maker.dds</Button>
+			<bUseLbD>1</bUseLbD>
+			<ExpertUnit>UNITCLASS_LEATHER_TAYLOR</ExpertUnit>
+			<iLbDLearnLevel>2</iLbDLearnLevel>
+		</ProfessionInfo>
+		<ProfessionInfo>															 
+			<Type>PROFESSION_LEATHER_PADDER_BOOTS_WILD_FEATHERS</Type>
+			<Description>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_WILD_FEATHERS</Description>
 			<Civilopedia>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_HELP</Help>
@@ -2634,7 +2714,7 @@
 			<ExpertUnit>UNITCLASS_LEATHER_TAYLOR</ExpertUnit>
 			<iLbDLearnLevel>2</iLbDLearnLevel>
 		</ProfessionInfo>
-		<ProfessionInfo>
+		<ProfessionInfo>													 
 			<Type>PROFESSION_FUR_TRADER</Type>
 			<Description>TXT_KEY_PROFESSION_FUR_TRADER</Description>
 			<Civilopedia>TXT_KEY_PROFESSION_FUR_TRADER_PEDIA</Civilopedia>
@@ -3377,8 +3457,8 @@
 			<iLbDLearnLevel>3</iLbDLearnLevel>
 		</ProfessionInfo>
 		<ProfessionInfo>
-			<Type>PROFESSION_PADDED_FURNITURE_MAKER</Type>
-			<Description>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER</Description>
+			<Type>PROFESSION_PADDED_FURNITURE_MAKER_DOWNS</Type>
+			<Description>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_DOWNS</Description>
 			<Civilopedia>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_HELP</Help>
@@ -3410,6 +3490,46 @@
 			<YieldsConsumed>
 				<YieldType>YIELD_VALUABLE_WOOD</YieldType>
 				<YieldType>YIELD_DOWNS</YieldType>
+			</YieldsConsumed>
+			<Button>Art/interface/buttons/New_Profession_Buttons/Padded_Furntiture_Maker.dds</Button>
+			<bUseLbD>1</bUseLbD>
+			<ExpertUnit>UNITCLASS_FURNITURE_MAKER</ExpertUnit>
+			<iLbDLearnLevel>3</iLbDLearnLevel>
+		</ProfessionInfo>
+		<ProfessionInfo>
+			<Type>PROFESSION_PADDED_FURNITURE_MAKER_WILD_FEATHERS</Type>
+			<Description>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_WILD_FEATHERS</Description>
+			<Civilopedia>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_STRATEGY</Strategy>
+			<Help>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_HELP</Help>
+			<Combat>NONE</Combat>
+			<DefaultUnitAI>NONE</DefaultUnitAI>
+			<SpecialBuilding>SPECIALBUILDING_FURNITURE</SpecialBuilding>
+			<bWorkPlot>0</bWorkPlot>
+			<bCitizen>1</bCitizen>
+			<bWater>0</bWater>
+			<bScout>0</bScout>
+			<bCanCrossLargeRivers>0</bCanCrossLargeRivers>
+			<bCityDefender>0</bCityDefender>
+			<bCanFound>0</bCanFound>
+			<bUnarmed>0</bUnarmed>
+			<bNoDefensiveBonus>0</bNoDefensiveBonus>
+			<iCombatChange>0</iCombatChange>
+			<iMovesChange>0</iMovesChange>
+			<bMoveIntoPeak>0</bMoveIntoPeak>
+			<iWorkRate>0</iWorkRate>
+			<iMissionaryRate>0</iMissionaryRate>
+			<iNativeTradeRate>0</iNativeTradeRate>
+			<iPower>0</iPower>
+			<iAsset>300</iAsset>
+			<YieldEquipedNums/>
+			<FreePromotions/>
+			<YieldsProduced>
+				<YieldType>YIELD_PADDED_FURNITURE</YieldType>
+			</YieldsProduced>
+			<YieldsConsumed>
+				<YieldType>YIELD_VALUABLE_WOOD</YieldType>
+				<YieldType>YIELD_WILD_FEATHERS</YieldType>
 			</YieldsConsumed>
 			<Button>Art/interface/buttons/New_Profession_Buttons/Padded_Furntiture_Maker.dds</Button>
 			<bUseLbD>1</bUseLbD>

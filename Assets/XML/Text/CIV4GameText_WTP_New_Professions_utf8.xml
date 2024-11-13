@@ -5,7 +5,7 @@
 <!-- -->
 <!-- Game Text Infos -->
 <Civ4GameText xmlns="http://www.firaxis.com">
-	<!-- Different Cloth Colouring -->
+ 	<!-- Different Cloth Colouring -->
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_DYER_LOGWOOD</Tag>
 		<English>Cloth Dyer (Logwood):Cloth Dyers (Logwood)</English>
@@ -1340,34 +1340,60 @@
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]distillatori di acquavite di frutta[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_DISTILLERS_HOUSE]casa del distillatore[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_HOOCH]acquavite di frutta[\LINK] da [LINK=YIELD_FRUITS]frutta[\LINK]. I [LINK=UNIT_DISTILLER]mastri distillatori[\LINK] eccellono in questo mestiere e possono aumentare notevolmente la produzione di acquavite di frutta.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]destiladores de aguardiente de fruta[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_DISTILLERS_HOUSE]casa del destilador[\LINK] o en una de sus mejoras para producir [LINK=YIELD_HOOCH]aguardiente de fruta[\LINK] a partir de [LINK=YIELD_FRUITS]fruta[\LINK]. Los [LINK=UNIT_DISTILLER]maestros destiladores[\LINK] destacan en este oficio y pueden aumentar enormemente tu producción de aguardiente de frutas.</Spanish>
 	</TEXT>
+	<!-- Different Furniture Padding -->
 	<TEXT>
-		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER</Tag>
+		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_DOWNS</Tag>
 		<English>
-			<Text>Upholsterer:Upholsterers</Text>
+			<Text>Upholsterer (Down):Upholsterers (Down)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</English>
 		<French>
-			<Text>Tapissier:Tapissiers</Text>
+			<Text>Tapissier (Plumes de duvet):Tapissiers (Plumes de duvet)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</French>
 		<German>
-			<Text>Polsterer (Möbel):Polsterer (Möbel)</Text>
+			<Text>Polsterer (Möbel, Daunen):Polsterer (Möbel, Daunen)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</German>
 		<Italian>
-			<Text>Tappezziere:Tappezzieri</Text>
+			<Text>Tappezziere (Piume di piuma):Tappezzieri (Piume di piuma)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Tapicero:Tapiceros</Text>
+			<Text>Tapicero (plumón):Tapiceros (plumón)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Russian>Производитель мягкой мебели:Производители мягкой мебели</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_WILD_FEATHERS</Tag>
+		<English>Upholsterer (Wild Bird Feathers):Upholsterers (Wild Bird Feathers)</English>
+		<French>
+			<Text>Tapissier (Plumes d'oiseaux sauvages):Tapissiers (Plumes d'oiseaux sauvages)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Polsterer (Möbel, Wildvogelfedern):Polsterer (Möbel, Wildvogelfedern)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</German>
+		<Italian>
+			<Text>Tappezziere (Piume di uccelli selvatici):Tappezzieri (Piume di uccelli selvatici)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tapicero (Plumas de aves silvestres):Tapiceros (Plumas de aves silvestres)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>Производитель мягкой мебели (Перья диких птиц):Производители мягкой мебели (Перья диких птиц)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_HELP</Tag>
@@ -1383,9 +1409,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_STRATEGY</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Upholsterers[COLOR_REVERT] can work in the [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]cabinetmaker's house[\LINK] or one of its upgrades to produce [LINK=YIELD_PADDED_FURNITURE]upholstered furniture[\LINK] from [LINK=YIELD_VALUABLE_WOOD]exotic wood[\LINK] and [LINK=YIELD_DOWNS]down[\LINK]. [LINK=UNIT_FURNITURE_MAKER]Master cabinetmakers[\LINK] excel at this craft, and can greatly boost your production of upholstered furniture.</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Upholsterers[COLOR_REVERT] can work in the [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]cabinetmaker's house[\LINK] or one of its upgrades to produce [LINK=YIELD_PADDED_FURNITURE]upholstered furniture[\LINK] from [LINK=YIELD_VALUABLE_WOOD]exotic wood[\LINK] and [LINK=YIELD_DOWNS]down[\LINK] or [LINK=YIELD_WILD_FEATHERS]wild bird feathers[\LINK]. [LINK=UNIT_FURNITURE_MAKER]Master cabinetmakers[\LINK] excel at this craft, and can greatly boost your production of upholstered furniture.</English>
 		<French>Les [COLOR_HIGHLIGHT_TEXT]tapissiers[COLOR_REVERT] peuvent travailler dans la [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]maison du fabricant de meubles[\LINK] ou l'une de ses améliorations pour produire des [LINK=YIELD_PADDED_FURNITURE]meubles rembourrés[\LINK] à partir de [LINK=YIELD_VALUABLE_WOOD]bois exotique[\LINK] et de [LINK=YIELD_DOWNS]duvet[\LINK]. Les [LINK=UNIT_FURNITURE_MAKER]maîtres ébenistes[\LINK] excellent dans ce domaine et peuvent considérablement augmenter votre production de meubles rembourrés.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Polsterer[COLOR_REVERT] können im [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]Haus des Möbelmachers[\LINK] oder einer seiner Erweiterungen arbeiten, um [LINK=YIELD_PADDED_FURNITURE]Polstermöbel[\LINK] aus [LINK=YIELD_VALUABLE_WOOD]Edelholz[\LINK] and [LINK=YIELD_DOWNS]Daunen[\LINK] herzustellen. [LINK=UNIT_FURNITURE_MAKER]Schreinermeister[\LINK] beherrschen dieses Handwerk hervorragend und können die Produktion von Polstermöbeln erheblich steigern.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Polsterer[COLOR_REVERT] können im [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]Haus des Möbelmachers[\LINK] oder einer seiner Erweiterungen arbeiten, um [LINK=YIELD_PADDED_FURNITURE]Polstermöbel[\LINK] aus [LINK=YIELD_VALUABLE_WOOD]Edelholz[\LINK] und [LINK=YIELD_DOWNS]Daunen[\LINK] oder [LINK=YIELD_WILD_FEATHERS]Wildvogelfedern[\LINK] herzustellen. [LINK=UNIT_FURNITURE_MAKER]Schreinermeister[\LINK] beherrschen dieses Handwerk hervorragend und können die Produktion von Polstermöbeln erheblich steigern.</German>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]tappezzieri[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]casa del mobiliere[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_PADDED_FURNITURE]mobili imbottiti[\LINK] in [LINK=YIELD_VALUABLE_WOOD]legno esotico[\LINK] e [LINK=YIELD_DOWNS]piuma[\LINK]. I [LINK=UNIT_FURNITURE_MAKER]mastri ebanisti[\LINK] eccellono in questo mestiere e possono incrementare notevolmente la produzione di mobili imbottiti.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]tapiceros[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]casa del fabricante de muebles[\LINK] o en una de sus mejoras para fabricar [LINK=YIELD_PADDED_FURNITURE]muebles tapizados[\LINK] de [LINK=YIELD_VALUABLE_WOOD]madera exótica[\LINK] y [LINK=YIELD_DOWNS]plumón[\LINK]. Los [LINK=UNIT_FURNITURE_MAKER]maestros ebanistas[\LINK] destacan en este oficio y pueden aumentar enormemente tu producción de muebles acolchados.</Spanish>
 	</TEXT>
@@ -2320,10 +2346,11 @@
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]Pasticcieri[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_CONFECTIONER_HOUSE]casa del pasticcere[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_VANILLA]delizie alla vaniglia[\LINK]. Per produrre delizie alla vaniglia, il pasticcere ha bisogno di [LINK=YIELD_VANILLA_PODS]baccelli di vaniglia verde[\LINK]. I [LINK=UNIT_CONFECTIONER]mastri pasticceri[\LINK] eccellono in questo mestiere. Aumentano drasticamente la produzione di torte e caramelle alla vaniglia.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]confiteros[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_CONFECTIONER_HOUSE]casa del confitero[\LINK] o en una de sus mejoras para producir [LINK=YIELD_VANILLA]delicias de vainilla[\LINK]. Para hacer delicias de vainilla, el pastelero necesita [LINK=YIELD_VANILLA_PODS]vainas de vainilla verde[\LINK]. Los [LINK=UNIT_CONFECTIONER]maestros confiteros[\LINK] destacan en este oficio. Aumentan drásticamente tu producción de pasteles y dulces de vainilla.</Spanish>
 	</TEXT>
+	<!-- Different Coat Padding -->
 	<TEXT>
-		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS</Tag>
+		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_DOWNS</Tag>
 		<English>
-			<Text>Coat Maker (Lined Leather):Coat Maker (Lined Leather)</Text>
+			<Text>Coat Maker (Lined Leather, Downs):Coat Maker (Lined Leather, Downs)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</English>
@@ -2333,7 +2360,7 @@
 			<Plural>0:1</Plural>
 		</French>
 		<German>
-			<Text>Polsterer (Ledermäntel):Polsterer (Ledermäntel)</Text>
+			<Text>Polsterer (Ledermäntel, Daunen):Polsterer (Ledermäntel, Daunen)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</German>
@@ -2350,6 +2377,31 @@
 		<Russian>Портной-кожевник (утепленные куртки):Портные-кожевники (утепленные куртки)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_WILD_FEATHERS</Tag>
+		<English>Coat Maker (Lined Leather, Wild Bird Feathers):Coat Makers (Lined Leather, Wild Bird Feathers)</English>
+		<French>
+			<Text>Manteau de cuir doublé (Plumes d'oiseaux sauvages):Manteaux en cuir doublés (Plumes d'oiseaux sauvages) </Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Polsterer (Ledermäntel, Wildvogelfedern):Polsterer (Ledermäntel, Wildvogelfedern)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</German>
+		<Italian>
+			<Text>Produttore di cappotti in pelle foderati (Piume di uccelli selvatici):Produttori di cappotti in pelle foderati (Piume di uccelli selvatici)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Marroquinero de cuerro forrado (Plumas de aves silvestres):Marroquineros de cuerro forrado (Plumas de aves silvestres)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>Портной-кожевник (Перья диких птиц):Портные-кожевники (Перья диких птиц)</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_HELP</Tag>
 		<English>????</English>
 	</TEXT>
@@ -2363,36 +2415,62 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_STRATEGY</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Lined leather coat makers[COLOR_REVERT] can work in the [LINK=BUILDING_LEATHER_PADDER_HOUSE]leatherworker's house[\LINK] or one of its upgrades to produce [LINK=YIELD_PADDED_LEATHER_COATS]lined leather coats[\LINK]. To make an insulated coat coat makers need [LINK=YIELD_HIDES]cowhides[\LINK] and [LINK=YIELD_DOWNS]down[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Master leatherworkers[\LINK] excel at this craft. They dramatically boost your production of coats with linings.</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Lined leather coat makers[COLOR_REVERT] can work in the [LINK=BUILDING_LEATHER_PADDER_HOUSE]leatherworker's house[\LINK] or one of its upgrades to produce [LINK=YIELD_PADDED_LEATHER_COATS]lined leather coats[\LINK]. To make an insulated coat coat makers need [LINK=YIELD_HIDES]cowhides[\LINK] and [LINK=YIELD_DOWNS]down[\LINK] or [LINK=YIELD_WILD_FEATHERS]wild bird feathers[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Master leatherworkers[\LINK] excel at this craft. They dramatically boost your production of coats with linings.</English>
 		<French>Les [COLOR_HIGHLIGHT_TEXT]manteaux en cuir doublés[COLOR_REVERT] peuvent travailler dans la [LINK=BUILDING_LEATHER_PADDER_HOUSE]maison du travailleur du cuir[\LINK] ou dans l'une de ses améliorations pour produire des [LINK=YIELD_PADDED_LEATHER_COATS]manteaux de cuir doublés[\LINK]. Pour fabriquer un manteau isolant, les fabricants de manteaux ont besoin de [LINK=YIELD_HIDES]peaux de vache[\LINK] et de [LINK=YIELD_DOWNS]duvet[\LINK]. Les [LINK=UNIT_LEATHER_TAYLOR]maîtres maroquiniers[\LINK] excellent dans ce domaine. Ils augmentent considérablement votre production de manteaux avec doublure.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Ledermantelmacher[COLOR_REVERT] können im [LINK=BUILDING_LEATHER_PADDER_HOUSE]Haus des Lederschneiders[\LINK] oder einer seiner Erweiterungen arbeiten, um [LINK=YIELD_PADDED_LEATHER_COATS]gefütterte Ledermäntel[\LINK] herzustellen. Um einen isolierten Mantel herzustellen, brauchen Lederarbeiter [LINK=YIELD_HIDES]Rindshäute[\LINK] und [LINK=YIELD_DOWNS]Daunen[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Meister-Lederer[\LINK] beherrschen dieses Handwerk hervorragend. Sie steigern die Produktion von gefütterten Mänteln dramatisch.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Ledermantelmacher[COLOR_REVERT] können im [LINK=BUILDING_LEATHER_PADDER_HOUSE]Haus des Lederschneiders[\LINK] oder einer seiner Erweiterungen arbeiten, um [LINK=YIELD_PADDED_LEATHER_COATS]gefütterte Ledermäntel[\LINK] herzustellen. Um einen isolierten Mantel herzustellen, brauchen Lederarbeiter [LINK=YIELD_HIDES]Rindshäute[\LINK] und [LINK=YIELD_DOWNS]Daunen[\LINK] oder [LINK=YIELD_WILD_FEATHERS]Wildvogelfedern[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Meister-Lederer[\LINK] beherrschen dieses Handwerk hervorragend. Sie steigern die Produktion von gefütterten Mänteln dramatisch.</German>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]produttori di cappotti in pelle foderati[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del lavoratore del cuoio[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_PADDED_LEATHER_COATS]cappotti di pelle foderati[\LINK]. Per realizzare un cappotto isolato, gli produttori di cappotti hanno bisogno di [LINK=YIELD_HIDES]pelli du mucca[\LINK] e [LINK=YIELD_DOWNS]piume[\LINK]. I [LINK=UNIT_LEATHER_TAYLOR]mastri pellettieri[\LINK] eccellono in questo mestiere. Aumentano drasticamente la produzione di cappotti con fodere.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]abrigos de piel forrados[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del marroquinero[\LINK] o en una de sus mejoras para producir [LINK=YIELD_PADDED_LEATHER_COATS]abrigos de cuero forrados[\LINK]. Para fabricar un abrigo aislante, los abrigadores necesitan [LINK=YIELD_HIDES]pieles de vaca[\LINK] y [LINK=YIELD_DOWNS]plumón[\LINK]. Los [LINK=UNIT_LEATHER_TAYLOR]maestros marroquineros[\LINK] destacan en este oficio. Aumentan drásticamente su producción de abrigos con forro.</Spanish>
 	</TEXT>
+	<!-- Different Boots Padding -->
 	<TEXT>
-	<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS</Tag>
-		<English>
-			<Text>Bootmaker (Lined):Bootmakers (Lined)</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</English>
+		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_DOWNS</Tag>
+		<English>Bootmaker (Downs): Bootmaker (Downs)</English>
 		<French>
-			<Text>Bottier (Fourré):Bottiers (Fourré)</Text>
+			<Text>Bottier (Duvet):Bottiers (Duvet) </Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</French>
 		<German>
-			<Text>Stiefelmacher (Gefüttert):Stiefelmacher (Gefüttert)</Text>
+			<Text>Stiefelmacher (Daunen):Stiefelmacher (Daunen)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</German>
 		<Italian>
-			<Text>Barcaio (Foderato):Barcaioli (Foderato)</Text>
+			<Text>Barcaio (Giù):Barcaioli (Giù)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Boteros (Forrado):Boteros (Forrado)</Text>
+			<Text>Botero (Plumón):Boteros (Plumón)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>Портной-кожевник (Пух):Портные-кожевники (Пух)</Russian>
+	</TEXT>	
+	<TEXT>
+	<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_WILD_FEATHERS</Tag>
+		<English>
+			<Text>Bootmaker (Wild Bird Feathers):Bootmakers (Wild Bird Feathers)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>
+			<Text>Bottier (Plumes sauvages):Bottiers (Plumes sauvages)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Stiefelmacher (Wildvogelfedern):Stiefelmacher (Wildvogelfedern)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</German>
+		<Italian>
+			<Text>Barcaio (Piume selvagge):Barcaioli (Piume selvagge)</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Boteros (Plumas salvajes):Boteros (Plumas salvajes)</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
@@ -2412,9 +2490,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_STRATEGY</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Bootmakers[COLOR_REVERT] can work in the [LINK=BUILDING_LEATHER_PADDER_HOUSE]leatherworker's house[\LINK] or one of its upgrades to produce [LINK=YIELD_GOAT_HIDE_BOOTS]goathide boots with linings[\LINK]. To make the boots leatherworkers need [LINK=YIELD_GOAT_HIDES]goatskins[\LINK] and [LINK=YIELD_WILD_FEATHERS]wild feathers[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Master leatherworkers[\LINK] excel at this craft. They dramatically boost your production of leather boots.</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Bootmakers[COLOR_REVERT] can work in the [LINK=BUILDING_LEATHER_PADDER_HOUSE]leatherworker's house[\LINK] or one of its upgrades to produce [LINK=YIELD_GOAT_HIDE_BOOTS]goathide boots with linings[\LINK]. To make the boots leatherworkers need [LINK=YIELD_GOAT_HIDES]goatskins[\LINK] and [LINK=YIELD_WILD_FEATHERS]wild bird feathers[\LINK] or [LINK=YIELD_DOWNS]down[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Master leatherworkers[\LINK] excel at this craft. They dramatically boost your production of leather boots.</English>
 		<French>Les [COLOR_HIGHLIGHT_TEXT]bottiers[COLOR_REVERT] peuvent travailler dans la [LINK=BUILDING_LEATHER_PADDER_HOUSE]maison du travailleur du cuir[\LINK] ou dans l'une de ses améliorations pour produire des [LINK=YIELD_GOAT_HIDE_BOOTS]bottes en cuir de chèvre avec doublure[\LINK]. Pour fabriquer ces bottes, les artisans du cuir ont besoin de [LINK=YIELD_GOAT_HIDES]peaux de chèvre[\LINK] et de [LINK=YIELD_WILD_FEATHERS]plumes[\LINK]. Les [LINK=UNIT_LEATHER_TAYLOR]Maîtres maroquiniers[\LINK] excellent dans ce domaine. Ils augmentent considérablement votre production de bottes en cuir.</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]Stiefelmacher[COLOR_REVERT] können im [LINK=BUILDING_LEATHER_PADDER_HOUSE]Haus des Lederschneiders[\LINK] oder einer seiner Erweiterungen arbeiten, um gefütterte [LINK=YIELD_GOAT_HIDE_BOOTS]gefütterte Ziegenlederstiefel[\LINK] herzustellen. Um die Stiefel herzustellen, benötigen Lederarbeiter [LINK=YIELD_GOAT_HIDES]Ziegenfelle[\LINK] und [LINK=YIELD_WILD_FEATHERS]Wildfedern[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Meister-Lederschneider[\LINK] beherrschen dieses Handwerk hervorragend. Sie steigern die Produktion von Lederstiefeln dramatisch.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Stiefelmacher[COLOR_REVERT] können im [LINK=BUILDING_LEATHER_PADDER_HOUSE]Haus des Lederschneiders[\LINK] oder einer seiner Erweiterungen arbeiten, um gefütterte [LINK=YIELD_GOAT_HIDE_BOOTS]gefütterte Ziegenlederstiefel[\LINK] herzustellen. Um die Stiefel herzustellen, benötigen Lederarbeiter [LINK=YIELD_GOAT_HIDES]Ziegenfelle[\LINK] und [LINK=YIELD_WILD_FEATHERS]Wildvogelfedern[\LINK] oder [LINK=YIELD_DOWNS]Daunen[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Meister-Lederschneider[\LINK] beherrschen dieses Handwerk hervorragend. Sie steigern die Produktion von Lederstiefeln dramatisch.</German>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]barcaioli[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del lavoratore del cuoio[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_GOAT_HIDE_BOOTS]stivali in pelle di capra[\LINK]. Per produrre gli stivali i pellettieri hanno bisogno di [LINK=YIELD_GOAT_HIDES]pelli di capra[\LINK] e [LINK=YIELD_WILD_FEATHERS]plumas[\LINK]. I [LINK=UNIT_LEATHER_TAYLOR]maestri pellettieri[\LINK] eccellono in questo mestiere. Aumentano drasticamente la produzione di stivali di cuoio.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]boteros[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del marroquinero[\LINK] o en una de sus mejoras para producir [LINK=YIELD_GOAT_HIDE_BOOTS]botas de piel de cabra[\LINK]. Para fabricar las botas, los marroquineros necesitan [LINK=YIELD_GOAT_HIDES]pieles de cabra[\LINK] y [LINK=YIELD_WILD_FEATHERS]plumas[\LINK]. Los [LINK=UNIT_LEATHER_TAYLOR]maestros marroquineros[\LINK] destacan en este oficio. Aumentan drásticamente tu producción de botas de cuero.</Spanish>
 	</TEXT>

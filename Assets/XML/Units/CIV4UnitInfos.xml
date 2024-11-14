@@ -54465,6 +54465,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -54835,6 +54839,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -55023,6 +55031,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -55204,6 +55216,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -55416,6 +55432,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -55610,6 +55630,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -55824,6 +55848,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -56134,6 +56162,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -57521,6 +57553,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -57791,6 +57827,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -58007,6 +58047,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -58202,6 +58246,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -58405,6 +58453,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -58787,6 +58839,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -59312,6 +59368,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -59872,6 +59932,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -60376,6 +60440,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -60904,6 +60972,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -61426,6 +61498,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -61958,6 +62034,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -62309,6 +62389,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -62507,6 +62591,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -62866,6 +62954,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -63232,6 +63324,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -63592,6 +63688,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -64131,6 +64231,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
@@ -64679,6 +64783,10 @@
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
 					<YieldType>YIELD_CHEESE</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
@@ -65188,6 +65296,10 @@
 			<YieldDemands>
 				<YieldDemand>
 					<YieldType>YIELD_COFFEE</YieldType>
+					<iYieldDemand>20</iYieldDemand>
+				</YieldDemand>
+				<YieldDemand>
+					<YieldType>YIELD_CIGARS</YieldType>
 					<iYieldDemand>20</iYieldDemand>
 				</YieldDemand>
 				<YieldDemand>

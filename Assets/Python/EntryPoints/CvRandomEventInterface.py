@@ -8633,3 +8633,19 @@ def isExpiredWhalingTrip(argsList):
 
 getHelpWhalingTripDone  = get_simple_help("TXT_KEY_EVENT_WHALING_TRIP_HELP")
 getHelpWhalingTripDone2  = get_simple_help("TXT_KEY_EVENT_WHALING_TRIP_DONE_PYTHON")
+
+
+######## Build Monastery Quest ###########
+
+def isExpiredBuildMonastery(argsList):
+	eEvent = argsList[0]
+	event = gc.getEventInfo(eEvent)
+	kTriggeredData = argsList[1]
+	player = gc.getPlayer(kTriggeredData.ePlayer)
+	if gc.getGame().getGameTurn() >= kTriggeredData.iTurn + event.getGenericParameter(1):
+		return True
+	if not player.isPlayable():
+		return True
+	return False
+
+getHelpBuildMonasteryDone  = get_simple_help("TXT_KEY_EVENT_BUILD_MONASTERY_HELP")

@@ -1368,7 +1368,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Производитель мягкой мебели:Производители мягкой мебели</Russian>
+		<Russian>Обивщик мебели (Пух):Обивщики мебели (Пух)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_WILD_FEATHERS</Tag>
@@ -1393,7 +1393,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Производитель мягкой мебели (Перья диких птиц):Производители мягкой мебели (Перья диких птиц)</Russian>
+		<Russian>Обивщик мебели (Перья):Обивщики мебели (Перья)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_HELP</Tag>
@@ -1406,6 +1406,7 @@
 		<German>Robuste Holzmöbel sind gut und schön für Siedler an der Grenze, aber Bürger, die sich ein wenig Komfort verdient haben, schätzen einen Sessel und eine große, weiche Couch, auf die sie sich legen können. Für dieses Vergnügen sind sie bereit, mehr zu bezahlen, und deshalb hat der Polsterer einen guten Beruf gewählt.</German>
 		<Italian>I robusti mobili in legno vanno bene per i coloni della frontiera, ma i cittadini che si sono guadagnati un po' di comfort apprezzano una poltrona e un divano grande e morbido in cui sprofondare. Pagheranno un extra per questo piacere, ed è per questo che il tappezziere ha scelto un buon mestiere.</Italian>
 		<Spanish>Los robustos muebles de madera están muy bien para los colonos de la frontera, pero los ciudadanos que se han ganado un poco de comodidad aprecian un sillón y un mullido sofá en el que tumbarse. Por eso el tapicero ha elegido un buen oficio.</Spanish>
+		<Russian>Грубая деревянная мебель хороша для поселенцев на фронтире, но граждане, которые предпочитают комфорт, ценят удобные кресла и большой мягкий диван, в которые так приятно садиться. Они готовы платить за это удовольствие большие деньги, поэтому обивщик никогда не будет жаловаться на выбор плохой профессии.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_STRATEGY</Tag>
@@ -1414,6 +1415,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Polsterer[COLOR_REVERT] können im [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]Haus des Möbelmachers[\LINK] oder einer seiner Erweiterungen arbeiten, um [LINK=YIELD_PADDED_FURNITURE]Polstermöbel[\LINK] aus [LINK=YIELD_VALUABLE_WOOD]Edelholz[\LINK] und [LINK=YIELD_DOWNS]Daunen[\LINK] oder [LINK=YIELD_WILD_FEATHERS]Wildvogelfedern[\LINK] herzustellen. [LINK=UNIT_FURNITURE_MAKER]Schreinermeister[\LINK] beherrschen dieses Handwerk hervorragend und können die Produktion von Polstermöbeln erheblich steigern.</German>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]tappezzieri[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]casa del mobiliere[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_PADDED_FURNITURE]mobili imbottiti[\LINK] in [LINK=YIELD_VALUABLE_WOOD]legno esotico[\LINK] e [LINK=YIELD_DOWNS]piuma[\LINK]. I [LINK=UNIT_FURNITURE_MAKER]mastri ebanisti[\LINK] eccellono in questo mestiere e possono incrementare notevolmente la produzione di mobili imbottiti.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]tapiceros[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]casa del fabricante de muebles[\LINK] o en una de sus mejoras para fabricar [LINK=YIELD_PADDED_FURNITURE]muebles tapizados[\LINK] de [LINK=YIELD_VALUABLE_WOOD]madera exótica[\LINK] y [LINK=YIELD_DOWNS]plumón[\LINK]. Los [LINK=UNIT_FURNITURE_MAKER]maestros ebanistas[\LINK] destacan en este oficio y pueden aumentar enormemente tu producción de muebles acolchados.</Spanish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Обивщики[COLOR_REVERT] могут работать в [LINK=BUILDING_FURNITURE_MAKERS_HOUSE]доме краснодеревщика[\LINK] или в одном из его улучшений для производства [LINK=YIELD_PADDED_FURNITURE]мягкой мебели[\LINK] из [LINK=YIELD_VALUABLE_WOOD]ценной древесины[\LINK] и [LINK=YIELD_DOWNS]пуха[\LINK] или [LINK=YIELD_WILD_FEATHERS]перьев диких птиц[\LINK]. [LINK=UNIT_FURNITURE_MAKER]Мастера[\LINK] преуспели в этом ремесле и могут значительно увеличить производство мягкой мебели.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_TANNER_PIG</Tag>
@@ -2374,7 +2376,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Портной-кожевник (утепленные куртки):Портные-кожевники (утепленные куртки)</Russian>
+		<Russian>Портной-кожевник (утепленные куртки, пух):Портные-кожевники (утепленные куртки, пух)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_WILD_FEATHERS</Tag>
@@ -2399,7 +2401,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Портной-кожевник (Перья диких птиц):Портные-кожевники (Перья диких птиц)</Russian>
+		<Russian>Портной-кожевник (утепленные куртки, перья):Портные-кожевники (утепленные куртки, перья)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_COATS_HELP</Tag>
@@ -2420,6 +2422,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Ledermantelmacher[COLOR_REVERT] können im [LINK=BUILDING_LEATHER_PADDER_HOUSE]Haus des Lederschneiders[\LINK] oder einer seiner Erweiterungen arbeiten, um [LINK=YIELD_PADDED_LEATHER_COATS]gefütterte Ledermäntel[\LINK] herzustellen. Um einen isolierten Mantel herzustellen, brauchen Lederarbeiter [LINK=YIELD_HIDES]Rindshäute[\LINK] und [LINK=YIELD_DOWNS]Daunen[\LINK] oder [LINK=YIELD_WILD_FEATHERS]Wildvogelfedern[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Meister-Lederer[\LINK] beherrschen dieses Handwerk hervorragend. Sie steigern die Produktion von gefütterten Mänteln dramatisch.</German>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]produttori di cappotti in pelle foderati[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del lavoratore del cuoio[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_PADDED_LEATHER_COATS]cappotti di pelle foderati[\LINK]. Per realizzare un cappotto isolato, gli produttori di cappotti hanno bisogno di [LINK=YIELD_HIDES]pelli du mucca[\LINK] e [LINK=YIELD_DOWNS]piume[\LINK]. I [LINK=UNIT_LEATHER_TAYLOR]mastri pellettieri[\LINK] eccellono in questo mestiere. Aumentano drasticamente la produzione di cappotti con fodere.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]abrigos de piel forrados[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del marroquinero[\LINK] o en una de sus mejoras para producir [LINK=YIELD_PADDED_LEATHER_COATS]abrigos de cuero forrados[\LINK]. Para fabricar un abrigo aislante, los abrigadores necesitan [LINK=YIELD_HIDES]pieles de vaca[\LINK] y [LINK=YIELD_DOWNS]plumón[\LINK]. Los [LINK=UNIT_LEATHER_TAYLOR]maestros marroquineros[\LINK] destacan en este oficio. Aumentan drásticamente su producción de abrigos con forro.</Spanish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Производители утеплённой одежды[COLOR_REVERT] могут работать в [LINK=BUILDING_LEATHER_PADDER_HOUSE]доме кожевника[\LINK] или в одном из его улучшений для производства [LINK=YIELD_PADDED_LEATHER_COATS]утеплённых курток[\LINK]. Для их изготовления понадобятся [LINK=YIELD_HIDES]коровьи шкуры[\LINK] и [LINK=YIELD_DOWNS]пух[\LINK] или [LINK=YIELD_WILD_FEATHERS]перья диких птиц[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Мастера кожевники[\LINK] преуспели в этом ремесле. Они значительно увеличивают производство утеплённой одежды.</Russian>
 	</TEXT>
 	<!-- Different Boots Padding -->
 	<TEXT>
@@ -2445,7 +2448,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Портной-кожевник (Пух):Портные-кожевники (Пух)</Russian>
+		<Russian>Сапожник (Пух):Сапожники (Пух)</Russian>
 	</TEXT>	
 	<TEXT>
 	<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_WILD_FEATHERS</Tag>
@@ -2474,7 +2477,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Портной-кожевник (кожаные сапоги):Портные-кожевники (кожаные сапоги)</Russian>
+		<Russian>Сапожник (перья):Сапожники (перья)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_HELP</Tag>
@@ -2487,6 +2490,7 @@
 		<German>Das Einnähen eines Futters in die Stiefel ist eine große Hilfe bei kaltem Wetter. Wer draußen arbeitet, hat es bequemer und kann länger arbeiten.</German>
 		<Italian>Cucire una fodera negli stivali è di grande aiuto quando fa freddo. Chi lavora all'aperto sarà più comodo e potrà lavorare più a lungo.</Italian>
 		<Spanish>Coser un forro en las botas es una gran ayuda cuando hace frío. Cualquiera que trabaje al aire libre estará más cómodo, y eso significa que podrá trabajar más tiempo.</Spanish>
+		<Russian>Сапоги с утеплённой подкладкой помогут в холодную погоду. Любой, кто работает на улице, будет чувствовать себя более комфортно, а значит, он сможет работать дольше.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_STRATEGY</Tag>
@@ -2495,6 +2499,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]Stiefelmacher[COLOR_REVERT] können im [LINK=BUILDING_LEATHER_PADDER_HOUSE]Haus des Lederschneiders[\LINK] oder einer seiner Erweiterungen arbeiten, um gefütterte [LINK=YIELD_GOAT_HIDE_BOOTS]gefütterte Ziegenlederstiefel[\LINK] herzustellen. Um die Stiefel herzustellen, benötigen Lederarbeiter [LINK=YIELD_GOAT_HIDES]Ziegenfelle[\LINK] und [LINK=YIELD_WILD_FEATHERS]Wildvogelfedern[\LINK] oder [LINK=YIELD_DOWNS]Daunen[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Meister-Lederschneider[\LINK] beherrschen dieses Handwerk hervorragend. Sie steigern die Produktion von Lederstiefeln dramatisch.</German>
 		<Italian>I [COLOR_HIGHLIGHT_TEXT]barcaioli[COLOR_REVERT] possono lavorare nella [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del lavoratore del cuoio[\LINK] o in uno dei suoi potenziamenti per produrre [LINK=YIELD_GOAT_HIDE_BOOTS]stivali in pelle di capra[\LINK]. Per produrre gli stivali i pellettieri hanno bisogno di [LINK=YIELD_GOAT_HIDES]pelli di capra[\LINK] e [LINK=YIELD_WILD_FEATHERS]plumas[\LINK]. I [LINK=UNIT_LEATHER_TAYLOR]maestri pellettieri[\LINK] eccellono in questo mestiere. Aumentano drasticamente la produzione di stivali di cuoio.</Italian>
 		<Spanish>Los [COLOR_HIGHLIGHT_TEXT]boteros[COLOR_REVERT] pueden trabajar en la [LINK=BUILDING_LEATHER_PADDER_HOUSE]casa del marroquinero[\LINK] o en una de sus mejoras para producir [LINK=YIELD_GOAT_HIDE_BOOTS]botas de piel de cabra[\LINK]. Para fabricar las botas, los marroquineros necesitan [LINK=YIELD_GOAT_HIDES]pieles de cabra[\LINK] y [LINK=YIELD_WILD_FEATHERS]plumas[\LINK]. Los [LINK=UNIT_LEATHER_TAYLOR]maestros marroquineros[\LINK] destacan en este oficio. Aumentan drásticamente tu producción de botas de cuero.</Spanish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]Сапожники[COLOR_REVERT] могут работать в [LINK=BUILDING_LEATHER_PADDER_HOUSE]доме кожевника[\LINK] или в одном из его улучшений для производства [LINK=YIELD_GOAT_HIDE_BOOTS]сапог из козьих шкур[\LINK]. Для их изготовления понадобятся [LINK=YIELD_GOAT_HIDES]козьи шкуры[\LINK] и [LINK=YIELD_WILD_FEATHERS]перья диких птиц[\LINK] или [LINK=YIELD_DOWNS]пух[\LINK]. [LINK=UNIT_LEATHER_TAYLOR]Мастера кожевники[\LINK] преуспели в этом ремесле. Они значительно увеличивают производство обуви.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_CHARCOAL_BURNER</Tag>

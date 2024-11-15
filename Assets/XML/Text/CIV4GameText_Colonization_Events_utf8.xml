@@ -6377,8 +6377,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_HELP</Tag>
-		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]30[COLOR_REVERT] turns, build a [COLOR_UNIT_TEXT]monastery[COLOR_REVERT] in the colony to support the church's missionary efforts in this region.</English>
-		<German>[ICON_BULLET] Errichtet innerhalb von [COLOR_UNIT_TEXT]30[COLOR_REVERT] Runden ein [COLOR_UNIT_TEXT]Kloster[COLOR_REVERT] in der Kolonie, um die Missionierungsversuche der Kirche in dieser Region zu unterstützen.</German>
+		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]30[COLOR_REVERT] turns, build a [COLOR_UNIT_TEXT]monastery[COLOR_REVERT] in the colony to support the church's missionary efforts in this region. The church will reward you.</English>
+		<German>[ICON_BULLET] Errichtet innerhalb von [COLOR_UNIT_TEXT]30[COLOR_REVERT] Runden ein [COLOR_UNIT_TEXT]Kloster[COLOR_REVERT] in der Kolonie, um die Missionierungsversuche der Kirche in dieser Region zu unterstützen. Die Kirche wird es Euch danken.</German>
 	</TEXT>
 </Civ4GameText>
 

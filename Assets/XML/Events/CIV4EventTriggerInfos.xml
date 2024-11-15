@@ -40945,10 +40945,12 @@
 				</RequiredUnitList>
 			</RequirementLists>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
+			<bOwnPlot>1</bOwnPlot>
 			<ePlotType>NONE</ePlotType>
 			<FeaturesRequired/>
-			<TerrainsRequired/>
+			<TerrainsRequired>
+				<TerrainType>TERRAIN_GRASS</TerrainType>
+			</TerrainsRequired>
 			<ImprovementsRequired/>
 			<RoutesRequired/>
 			<Events>
@@ -40968,10 +40970,10 @@
 			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
 			<bPickCity>0</bPickCity>
 			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bShowPlot>0</bShowPlot>
+			<bShowPlot>1</bShowPlot>
 			<bFrontPopup>0</bFrontPopup>
 			<iCityFoodWeight>0</iCityFoodWeight>
-			<PythonCanDo>canTriggerIsPlayableWithTriggerChance</PythonCanDo>
+			<PythonCanDo>isNoCity</PythonCanDo>
 			<PythonCanDoCity/>
 			<PythonCanDoUnit/>
 			<PythonCallback/>
@@ -41028,7 +41030,7 @@
 			<PrereqEvents>
 				<Event>EVENT_BUILD_MONASTERY_START</Event>
 			</PrereqEvents>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
+			<bPrereqEventPlot>1</bPrereqEventPlot>
 			<bRecurring>0</bRecurring>
 			<bTeam>0</bTeam>
 			<bGlobal>0</bGlobal>

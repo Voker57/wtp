@@ -8637,6 +8637,18 @@ getHelpWhalingTripDone2  = get_simple_help("TXT_KEY_EVENT_WHALING_TRIP_DONE_PYTH
 
 ######## Build Monastery Quest ###########
 
+def isNoCity(argsList):
+	pTriggeredData = argsList[0]
+	plot = gc.getMap().plot(pTriggeredData.iPlotX, pTriggeredData.iPlotY)
+	player = gc.getPlayer(pTriggeredData.ePlayer)
+	if not player.isPlayable():
+		return False
+	if plot.isCity():
+		return False
+	if gc.getPlayer(plot.getOwner()).isNative():
+		return False
+	return True
+
 def isExpiredBuildMonastery(argsList):
 	eEvent = argsList[0]
 	event = gc.getEventInfo(eEvent)

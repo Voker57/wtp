@@ -8634,7 +8634,6 @@ def isExpiredWhalingTrip(argsList):
 getHelpWhalingTripDone  = get_simple_help("TXT_KEY_EVENT_WHALING_TRIP_HELP")
 getHelpWhalingTripDone2  = get_simple_help("TXT_KEY_EVENT_WHALING_TRIP_DONE_PYTHON")
 
-
 ######## Build Monastery Quest ###########
 
 def isNoCity(argsList):

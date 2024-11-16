@@ -6327,14 +6327,6 @@
 		<German>Einige Eurer Schätze müssen sich schutzlos durch die Wildnis einen Weg bahnen.</German>
 		<Russian>Некоторым из ваших сокровищ придется пробираться через дикую местность без какой-либо защиты.</Russian>
 	</TEXT>
-
-
-
-
-
-
-
-
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BUILD_MONASTERY_START</Tag>
 		<English>Milord, some of our [COLOR_HIGHLIGHT_TEXT]missionaries[COLOR_REVERT] have apparently lost their way in the wilderness, at least no one has heard from them. We'd be better off setting up a [COLOR_HIGHLIGHT_TEXT]monastery[COLOR_REVERT] instead of losing the missionaries in the wilderness.</English>
@@ -6377,8 +6369,53 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_HELP</Tag>
-		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]30[COLOR_REVERT] turns, build a [COLOR_UNIT_TEXT]monastery[COLOR_REVERT] in the colony to support the church's missionary efforts in this region. The church will reward you.</English>
-		<German>[ICON_BULLET] Errichtet innerhalb von [COLOR_UNIT_TEXT]30[COLOR_REVERT] Runden ein [COLOR_UNIT_TEXT]Kloster[COLOR_REVERT] in der Kolonie, um die Missionierungsversuche der Kirche in dieser Region zu unterstützen. Die Kirche wird es Euch danken.</German>
+		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]40[COLOR_REVERT] turns, build a [COLOR_UNIT_TEXT]monastery[COLOR_REVERT] in the colony to support the church's missionary efforts in this region. The church will reward you.</English>
+		<German>[ICON_BULLET] Errichtet innerhalb von [COLOR_UNIT_TEXT]40[COLOR_REVERT] Runden ein [COLOR_UNIT_TEXT]Kloster[COLOR_REVERT] in der Kolonie, um die Missionierungsversuche der Kirche in dieser Region zu unterstützen. Die Kirche wird es Euch danken.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_DRAGOONS_TO_FRONTIER_START</Tag>
+		<English>Milord, the local population is in great concern. There are many [COLOR_HIGHLIGHT_TEXT]slaves[COLOR_REVERT] in the colony and no mounted troops stationed in the colony who could quickly recapture them. We should rather station a unit of [COLOR_HIGHLIGHT_TEXT]Dragoons[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Cavalry[COLOR_REVERT] there.</English>
+		<German>Milord, die örtliche Bevölkerung ist in großer Sorge. Es sind viele [COLOR_HIGHLIGHT_TEXT]Sklaven[COLOR_REVERT] in der Kolonie und keine Berittenen sind in der Kolonie stationiert, um sie notfalls einfangen zu können und mehr Sicherheit zu bieten. Wir sollten lieber eine Einheit [COLOR_HIGHLIGHT_TEXT]Dragoner[COLOR_REVERT] oder [COLOR_HIGHLIGHT_TEXT]Kavallerie[COLOR_REVERT] dort stationieren.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_DRAGOONS_TO_FRONTIER_DONE</Tag>
+		<English>A [COLOR_HIGHLIGHT_TEXT]mounted unit[COLOR_REVERT] was stationed in a colony to ensure more security.</English>
+		<German>In einer Kolonie wurde eine Einheit [COLOR_HIGHLIGHT_TEXT]Berittene[COLOR_REVERT] stationiert, um mehr Sicherheit zu gewährleisten.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_DRAGOONS_TO_FRONTIER_DONE</Tag>
+		<English>Milord, we have stationed a mounted unit in the colony. The population can now feel safe again.</English>
+		<German>Milord, wir haben eine Einheit Betittene in der Kolonie stationert. Die Bevölkerung kann sich nun wieder sicher fühlen.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_START</Tag>
+		<English>Yes, absolutely. We will provide the necessary money to equip the troops. We have to prove the people that the situation is under control.</English>
+		<German>Ja, unbedingt. Wir werden das nötige Kleingeld zur Verfügung stellen, um die Truppe auszurüsten. Wir müssen der Bevölkerung zeigen, dass wir die Lage im Griff haben.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_FAIL_DRAGOONS_TO_FRONTIER</Tag>
+		<English>Milord, we couldn't send the troops in time. The population won't be happy.</English>
+		<German>Milord, wir konnten die Truppen nicht rechtzeit entsenden. Die Bevölkerung wird nicht begeistert sein.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_DECLINE</Tag>
+		<English>No, we are royal servants should stay out of it. Let the landowners see for themselves how they keep their slaves from escaping or causing trouble.</English>
+		<German>Nein, wir als königliche Beamte sollten uns da raushalten. Sollen die Großgrundbesitzer selbst sehen, wie sie ihre Sklaven davon abhalten zu fliehen oder Ärger zu machen.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_DONE_1</Tag>
+		<English>Excellent that we were able to secure the colony. This will show the good citizens that we take their concerns seriously and that a strong colonial force will protect them.</English>
+		<German>Hervorragend, dass wir die Kolonie sichern konnten. Das wird den braven Bürgern zeigen, dass wir ihre Sorgen ernst nehmen und und eine starke Kolonialtruppe sie schützt.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_DONE_2</Tag>
+		<English>Outstanding. But we should do more and hire some new slave overseers. The colonial troops have other tasks to fulfil in the long run.</English>
+		<German>Hervorragend. Aber wir sollten noch mehr tun und einige neue Sklavenaufseher anheuern. Die kolonialen Truppen haben auf Dauer andere Aufgaben zu erfüllen.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_HELP</Tag>
+		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]10[COLOR_REVERT] turns, send a unit of [COLOR_UNIT_TEXT]Veteran Dragooners[COLOR_REVERT] or [COLOR_UNIT_TEXT]Veteran Cavalry[COLOR_REVERT] into the colony to protect the citizens and to guard the slaves. That will make the good citizens happy.</English>
+		<German>[ICON_BULLET] Entsendet innerhalb von [COLOR_UNIT_TEXT]10[COLOR_REVERT] Runden eine Einheit [COLOR_UNIT_TEXT]erfahrene Dragooner[COLOR_REVERT] oder [COLOR_UNIT_TEXT]erfahrene Kavallerie[COLOR_REVERT] in die Kolonie, um die Bürger zu schützen und die Sklaven zu bewachen. Das wird die braven Bürger glücklich machen.</German>
 	</TEXT>
 </Civ4GameText>
 

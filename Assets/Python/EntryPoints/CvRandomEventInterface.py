@@ -8660,3 +8660,43 @@ def isExpiredBuildMonastery(argsList):
 	return False
 
 getHelpBuildMonasteryDone  = get_simple_help("TXT_KEY_EVENT_BUILD_MONASTERY_HELP")
+
+######## Send Dragoons to Frontier Quest ###########
+
+def CheckAfricanSlaveInCity(argsList):
+	ePlayer = argsList[1]
+	player = gc.getPlayer(ePlayer)
+
+	if not player.isPlayable():
+		return False
+
+	# you could add checks for several Units like this
+	iUnitType = CvUtil.findInfoTypeNum('UNIT_AFRICAN_SLAVE')
+	iUnitsCurrent = countUnitsInCityForCityTrigger(argsList, iUnitType)
+	if not iUnitsCurrent > 3:
+		return False
+        
+	iUnitType = CvUtil.findInfoTypeNum('UNIT_VETERAN_DRAGOON')
+	iUnitsCurrent = countUnitsInCityForCityTrigger(argsList, iUnitType)
+	if not iUnitsCurrent == 0:
+		return False
+
+	iUnitType = CvUtil.findInfoTypeNum('UNIT_VETERAN_CAVALRY')
+	iUnitsCurrent = countUnitsInCityForCityTrigger(argsList, iUnitType)
+	if not iUnitsCurrent == 0:
+		return False
+
+	return True
+
+def isExpiredDragoonstoFrontier(argsList):
+	eEvent = argsList[0]
+	event = gc.getEventInfo(eEvent)
+	kTriggeredData = argsList[1]
+	player = gc.getPlayer(kTriggeredData.ePlayer)
+	if gc.getGame().getGameTurn() >= kTriggeredData.iTurn + event.getGenericParameter(1):
+		return True
+	if not player.isPlayable():
+		return True
+	return False
+
+getHelpDragoonstoFrontierDone  = get_simple_help("TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_HELP")

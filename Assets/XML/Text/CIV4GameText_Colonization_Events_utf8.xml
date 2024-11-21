@@ -6331,91 +6331,109 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_BUILD_MONASTERY_START</Tag>
 		<English>Milord, some of our [COLOR_HIGHLIGHT_TEXT]missionaries[COLOR_REVERT] have apparently lost their way in the wilderness, at least no one has heard from them. We'd be better off setting up a [COLOR_HIGHLIGHT_TEXT]monastery[COLOR_REVERT] instead of losing the missionaries in the wilderness.</English>
 		<German>Milord, einige unserer [COLOR_HIGHLIGHT_TEXT]Missionare[COLOR_REVERT] haben sich offenbar in der Wildnis verirrt, jedenfalls hat niemand mehr etwas von ihnen gehört. Wir sollten lieber eine [COLOR_HIGHLIGHT_TEXT]Missionsstation[COLOR_REVERT] errichten, statt die Missionare in der Wildnis zu verlieren.</German>
+		<Russian>Милорд, некоторые из наших [COLOR_HIGHLIGHT_TEXT]миссионеров[COLOR_REVERT], кажется, заблудились в глуши. Хорошо бы нам основать [COLOR_HIGHLIGHT_TEXT]монастырь[COLOR_REVERT], чтобы не терять миссионеров в этих диких местах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BUILD_MONASTERY_DONE</Tag>
 		<English>A colony has set up a new [COLOR_HIGHLIGHT_TEXT]monastery[COLOR_REVERT] to convert the natives to the Christian God.</English>
 		<German>Eine Kolonie hat eine neue [COLOR_HIGHLIGHT_TEXT]Missionstation[COLOR_REVERT] errichtet, um die Wilden zum christlichen Gott zu bekehren.</German>
+		<Russian>Европейцы основали [COLOR_HIGHLIGHT_TEXT]монастырь[COLOR_REVERT], чтобы обращать туземцев в христианскую веру.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BUILD_MONASTERY_DONE</Tag>
 		<English>Milord, we have finally completed the monastery. The [COLOR_HIGHLIGHT_TEXT]missionaries[COLOR_REVERT] can begin their work.</English>
 		<German>Milord, wir haben endlich die Missionsstation fertiggestellt. Die [COLOR_HIGHLIGHT_TEXT]Missionare[COLOR_REVERT] können mit ihrer Arbeit beginnen.</German>
+		<Russian>Милорд, мы наконец-то закончили строительство монастыря. [COLOR_HIGHLIGHT_TEXT]Миссионеры[COLOR_REVERT] могут приступить к работе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_START</Tag>
 		<English>Yes, absolutely. We will provide the necessary money. We have to start building immediately.</English>
 		<German>Ja, unbedingt. Wir werden das nötige Kleingeld zur Verfügung stellen. Wir müssen den Bau sofort beginnen.</German>
+		<Russian>Да, конечно. Мы выделим необходимые средства на строительство. И начинайте работы без промедлений.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_BUILD_MONASTERY</Tag>
 		<English>Milord, we couldn't finish the construction in time. The money and building materials for the monastery have been lost.</English>
 		<German>Milord, wir konnten den Bau nicht rechtzeitig fertigstellen. Das Geld und das Baumaterial für die Missionsstation sind verloren.</German>
+		<Russian>Милорд, мы не смогли закончить строительство вовремя. Деньги и строительные материалы для монастыря были потеряны...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_DECLINE</Tag>
 		<English>I don't think much of the church's efforts to impose our faith on the native people. We will not support the construction and will use the money elsewhere.</English>
 		<German>Ich halte nicht viel von den Bemühungen der Kirche, den Ureinwohnern unseren Glauben aufzuzwingen. Wir werden den Bau nicht unterstützen und das Geld anderweitig verwenden.</German>
+		<Russian>Не думаю, что индейцы будут в восторге еще от одной постройки на их земле. Мы не будем поддерживать строительство и направим деньги на что-нибудь более важное.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_DONE_1</Tag>
 		<English>It's excellent that we were able to finish the building on time, it will secure us the support of the church for some time to come. That can't hurt in any case, the church has influence over the king.</English>
 		<German>Hervorragend, dass wir den Bau rechtzeitig fertigstellen konnten, wird uns die Unterstützung der Kirche für einige Zeit sichern. Das kann auf keinen Fall schaden, die Kirche hat Einfluss auf den König.</German>
+		<Russian>Прекрасно, мы смогли закончить строительство вовремя и это обеспечит нам поддержку церкви. А это всегда полезно, ибо церковь имеет влияние на Короля.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_DONE_2</Tag>
 		<English>Outstanding. As we were able to complete the building on time, the church will hopefully be encouraged to send new and motivated missionaries to the colonies.</English>
 		<German>Hervorragend. Da wir den Bau rechtzeitig fertigstellen konnten, wird die Kirche hoffentlich ermuntern, neue und motivierte Missionare in die Kolonien zu entsenden.</German>
+		<Russian>Превосходно. Поскольку нам удалось завершить строительство вовремя, мы надеемся, что церковь продолжит отправлять в колонии своих миссионеров.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BUILD_MONASTERY_HELP</Tag>
 		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]40[COLOR_REVERT] turns, build a [COLOR_UNIT_TEXT]monastery[COLOR_REVERT] in the colony to support the church's missionary efforts in this region. The church will reward you.</English>
 		<German>[ICON_BULLET] Errichtet innerhalb von [COLOR_UNIT_TEXT]40[COLOR_REVERT] Runden ein [COLOR_UNIT_TEXT]Kloster[COLOR_REVERT] in der Kolonie, um die Missionierungsversuche der Kirche in dieser Region zu unterstützen. Die Kirche wird es Euch danken.</German>
+		<Russian>[ICON_BULLET] В течении [COLOR_UNIT_TEXT]40[COLOR_REVERT] ходов постройте [COLOR_UNIT_TEXT]монастырь[COLOR_REVERT] в указанном месте, чтобы поддержать миссионеров этого региона. Церковь вознаградит вас.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_DRAGOONS_TO_FRONTIER_START</Tag>
 		<English>Milord, the local population is in great concern. There are many [COLOR_HIGHLIGHT_TEXT]slaves[COLOR_REVERT] in the colony and no mounted troops stationed in the colony who could quickly recapture them. We should rather station a unit of [COLOR_HIGHLIGHT_TEXT]Dragoons[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Cavalry[COLOR_REVERT] there.</English>
 		<German>Milord, die örtliche Bevölkerung ist in großer Sorge. Es sind viele [COLOR_HIGHLIGHT_TEXT]Sklaven[COLOR_REVERT] in der Kolonie und keine Berittenen sind in der Kolonie stationiert, um sie notfalls einfangen zu können und mehr Sicherheit zu bieten. Wir sollten lieber eine Einheit [COLOR_HIGHLIGHT_TEXT]Dragoner[COLOR_REVERT] oder [COLOR_HIGHLIGHT_TEXT]Kavallerie[COLOR_REVERT] dort stationieren.</German>
+		<Russian>Милорд, местное население в большой тревоге. В колонии много [COLOR_HIGHLIGHT_TEXT]рабов[COLOR_REVERT] и нет конных войск, которые могли бы быстро поймать беглецов или усмирить мятежников. Хорошо было бы разместить там отряд [COLOR_HIGHLIGHT_TEXT]драгун[COLOR_REVERT] или [COLOR_HIGHLIGHT_TEXT]кавалерии[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DRAGOONS_TO_FRONTIER_DONE</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]mounted unit[COLOR_REVERT] was stationed in a colony to ensure more security.</English>
 		<German>In einer Kolonie wurde eine Einheit [COLOR_HIGHLIGHT_TEXT]Berittene[COLOR_REVERT] stationiert, um mehr Sicherheit zu gewährleisten.</German>
+		<Russian>Для обеспечения большей безопасности в колонии был размещен [COLOR_HIGHLIGHT_TEXT]конный отряд[COLOR_REVERT].</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_DRAGOONS_TO_FRONTIER_DONE</Tag>
 		<English>Milord, we have stationed a mounted unit in the colony. The population can now feel safe again.</English>
 		<German>Milord, wir haben eine Einheit Betittene in der Kolonie stationert. Die Bevölkerung kann sich nun wieder sicher fühlen.</German>
+		<Russian>Милорд, мы разместили в колонии конный отряд. Население теперь может снова чувствовать себя в безопасности.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_START</Tag>
 		<English>Yes, absolutely. We will provide the necessary money to equip the troops. We have to prove the people that the situation is under control.</English>
 		<German>Ja, unbedingt. Wir werden das nötige Kleingeld zur Verfügung stellen, um die Truppe auszurüsten. Wir müssen der Bevölkerung zeigen, dass wir die Lage im Griff haben.</German>
+		<Russian>Конечно. Мы предоставим необходимые средства для оснащения войск. Мы должны показать людям, что ситуация под контролем.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_DRAGOONS_TO_FRONTIER</Tag>
 		<English>Milord, we couldn't send the troops in time. The population won't be happy.</English>
 		<German>Milord, wir konnten die Truppen nicht rechtzeit entsenden. Die Bevölkerung wird nicht begeistert sein.</German>
+		<Russian>Милорд, мы не смогли вовремя отправить войска. Население будет недовольно...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_DECLINE</Tag>
 		<English>No, we are royal servants should stay out of it. Let the landowners see for themselves how they keep their slaves from escaping or causing trouble.</English>
 		<German>Nein, wir als königliche Beamte sollten uns da raushalten. Sollen die Großgrundbesitzer selbst sehen, wie sie ihre Sklaven davon abhalten zu fliehen oder Ärger zu machen.</German>
+		<Russian>Солдаты Короля воины, а не надсмотрщики. Пусть землевладельцы сами решают, как не дать своим рабам сбежать и уж тем более бунтовать.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_DONE_1</Tag>
 		<English>Excellent that we were able to secure the colony. This will show the good citizens that we take their concerns seriously and that a strong colonial force will protect them.</English>
 		<German>Hervorragend, dass wir die Kolonie sichern konnten. Das wird den braven Bürgern zeigen, dass wir ihre Sorgen ernst nehmen und und eine starke Kolonialtruppe sie schützt.</German>
+		<Russian>Отлично, нам удалось обезопасить колонию. Это покажет добропорядочным гражданам, что мы серьезно относимся к их проблемам и что колониальные войска готовы защищать их от любых напастей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_DONE_2</Tag>
 		<English>Outstanding. But we should do more and hire some new slave overseers. The colonial troops have other tasks to fulfil in the long run.</English>
 		<German>Hervorragend. Aber wir sollten noch mehr tun und einige neue Sklavenaufseher anheuern. Die kolonialen Truppen haben auf Dauer andere Aufgaben zu erfüllen.</German>
+		<Russian>Замечательно. Но нам следует сделать больше и нанять новых надсмотрщиков. У колониальных войск в долгосрочной перспективе будут и другие задачи.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRAGOONS_TO_FRONTIER_HELP</Tag>
 		<English>[ICON_BULLET] Within [COLOR_UNIT_TEXT]10[COLOR_REVERT] turns, send a unit of [COLOR_UNIT_TEXT]Veteran Dragooners[COLOR_REVERT] or [COLOR_UNIT_TEXT]Veteran Cavalry[COLOR_REVERT] into the colony to protect the citizens and to guard the slaves. That will make the good citizens happy.</English>
 		<German>[ICON_BULLET] Entsendet innerhalb von [COLOR_UNIT_TEXT]10[COLOR_REVERT] Runden eine Einheit [COLOR_UNIT_TEXT]erfahrene Dragooner[COLOR_REVERT] oder [COLOR_UNIT_TEXT]erfahrene Kavallerie[COLOR_REVERT] in die Kolonie, um die Bürger zu schützen und die Sklaven zu bewachen. Das wird die braven Bürger glücklich machen.</German>
+		<Russian>[ICON_BULLET] В течение [COLOR_UNIT_TEXT]10[COLOR_REVERT] ходов отправьте отряд [COLOR_UNIT_TEXT]Ветеран драгун[COLOR_REVERT] или [COLOR_UNIT_TEXT]Ветеран кавалерии[COLOR_REVERT] в колонию для охраны. Это сделает колонистов счастливыми.</Russian>
 	</TEXT>
 </Civ4GameText>
 

@@ -1103,6 +1103,10 @@ void CvInitCore::setOption(GameOptionTypes eIndex, bool bOption)
 	FASSERT_BOUNDS(0, NUM_GAMEOPTION_TYPES, eIndex, "CvInitCore::setOption");
 	if ( checkBounds(eIndex, 0, NUM_GAMEOPTION_TYPES) )
 	{
+		if (eIndex == GAMEOPTION_TWO_PLOT_CITY_RADIUS)
+		{
+			GC.setCityCatchmentRadius(bOption ? 2 : 1);
+		}
 		m_abOptions[eIndex] = bOption;
 	}
 }

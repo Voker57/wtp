@@ -16,6 +16,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGameCoreUtils.h"
 #include "iconv/converters.h"
+#include "CvInitCore.h"
 
 // static pointer used only by CvInfoBase
 // main purpose is to add read functions to CvInfoBase
@@ -14506,7 +14507,18 @@ bool CvGameOptionInfo::getDefault() const
 }
 bool CvGameOptionInfo::getVisible() const
 {
+	if (getScenarioOnly())
+	{
+		// a bit of a hack here. When exe asks for visibility, return if the game is a scenario when it's a setting, which is scenario only.
+		// There is no clean way of doing this since the menu itself is inside the exe.
+		const GameType eType = GC.getInitCore().getType();
+		return eType == GAME_SP_SCENARIO || eType == GAME_MP_SCENARIO || eType == GAME_HOTSEAT_SCENARIO || eType == GAME_PBEM_SCENARIO;
+	}
 	return m_bVisible;
+}
+bool CvGameOptionInfo::getScenarioOnly() const
+{
+	return m_bScenarioOnly;
 }
 bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -14516,6 +14528,7 @@ bool CvGameOptionInfo::read(CvXMLLoadUtility* pXML)
 	}
 	pXML->GetChildXmlValByName(&m_bDefault, "bDefault");
 	pXML->GetChildXmlValByName(&m_bVisible, "bVisible");
+	pXML->GetChildXmlValByName(&m_bScenarioOnly, "bScenarioOnly", false);
 	return true;
 }
 //////////////////////////////////////////////////////////////////////////

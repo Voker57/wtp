@@ -4333,11 +4333,13 @@ public:
 	virtual ~CvGameOptionInfo();
 	DllExport bool getDefault() const;
 	DllExport bool getVisible() const;
+	bool getScenarioOnly() const;
 	bool read(CvXMLLoadUtility* pXML);
 
 private:
 	bool m_bDefault;
 	bool m_bVisible;
+	bool m_bScenarioOnly;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

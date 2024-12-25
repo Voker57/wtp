@@ -546,8 +546,6 @@ void CvGlobals::init()
 	memcpy(m_aaiXYCityPlot_1_plot, aaiXYCityPlot_1_plot, sizeof(aaiXYCityPlot_1_plot));
 	m_aaiXYCityPlot_2_plot = (int*)malloc(sizeof(aaiXYCityPlot_2_plot));
 	memcpy(m_aaiXYCityPlot_2_plot, aaiXYCityPlot_2_plot, sizeof(aaiXYCityPlot_2_plot));
-
-	this->setCityCatchmentRadius(0);
 }
 
 //

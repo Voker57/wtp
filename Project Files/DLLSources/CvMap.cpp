@@ -271,9 +271,6 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 	// reset plot max visual range
 	resetVisibilityCache();
 
-	// reset city catchment radius. It should be 1 plot unless explicitly requested otherwise.
-	setCityCatchmentRadius(0);
-
 	//--------------------------------
 	// Uninit class
 	uninit();

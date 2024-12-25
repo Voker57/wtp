@@ -36,9 +36,9 @@ void CvGlobals::setCityCatchmentRadius(int iRadius)
 	// Ideally this assert should trigger if altered after players are added, but it doesn't look like there are any way to check that.
 	// What really should be checked here is that the total count of cities in the game should be 0.
 //	FAssert(!GC.getGameINLINE().isFinalInitialized());
-	local_CITY_PLOTS_RADIUS = static_cast<CityPlotTypes>(iRadius);
 	if (iRadius == 1)
 	{
+		local_CITY_PLOTS_RADIUS = static_cast<CityPlotTypes>(iRadius);
 		m_aaiXYCityPlot = m_aaiXYCityPlot_1_plot;
 		local_NUM_CITY_PLOTS = NUM_CITY_PLOTS_1_PLOT;
 		local_CITY_PLOTS_DIAMETER = static_cast<CityPlotTypes>(3);
@@ -47,6 +47,7 @@ void CvGlobals::setCityCatchmentRadius(int iRadius)
 	}
 	else if (iRadius == 2)
 	{
+		local_CITY_PLOTS_RADIUS = static_cast<CityPlotTypes>(iRadius);
 		m_aaiXYCityPlot = m_aaiXYCityPlot_2_plot;
 		local_NUM_CITY_PLOTS = NUM_CITY_PLOTS_2_PLOTS;
 		local_CITY_PLOTS_DIAMETER = static_cast<CityPlotTypes>(5);
@@ -57,8 +58,8 @@ void CvGlobals::setCityCatchmentRadius(int iRadius)
 	{
 		// invalid setting (likely 0). Use UserSetting value.
 		// Odds are that a scenario is read and the radius isn't specified.
-		UserSettings settings;
-		setCityCatchmentRadius(settings.getColonyRadius());
+		//UserSettings settings;
+		//setCityCatchmentRadius(settings.getColonyRadius());
 	}
 	local_LAST_CITY_PLOT = NUM_CITY_PLOTS - static_cast<CityPlotTypes>(1);
 }

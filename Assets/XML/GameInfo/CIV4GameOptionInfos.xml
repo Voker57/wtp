@@ -14,6 +14,14 @@
 			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_TWO_PLOT_CITY_RADIUS</Type>
+			<Description>TXT_KEY_GAMEOPTION_TWO_PLOT_CITY_RADIUS</Description>
+			<Help>TXT_KEY_GAMEOPTION_TWO_PLOT_CITY_RADIUS_HELP</Help>
+			<bDefault>1</bDefault>
+			<bVisible>0</bVisible>
+			<bScenarioOnly>1</bScenarioOnly>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_CITY_RAZING</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Description>
 			<Help>TXT_KEY_GAMEOPTION_NO_CITY_RAZING_HELP</Help>

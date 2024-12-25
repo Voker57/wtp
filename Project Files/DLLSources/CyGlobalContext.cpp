@@ -515,8 +515,7 @@ void CyGlobalContext::setGameFontDebug(int iChar)
 /// one/two city plot radius
 int CyGlobalContext::getDefaultCityCatchmentRadius() const
 {
-	UserSettings settings;
-	return settings.getColonyRadius();
+	return CITY_PLOTS_RADIUS;
 }
 // city radius end
 

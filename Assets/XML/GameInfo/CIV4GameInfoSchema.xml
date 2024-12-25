@@ -538,6 +538,7 @@
 		<element type="CultureLevelInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bVisible" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bScenarioOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="CivilizationType" content="textOnly"/>
 	<ElementType name="bCivilizationType" content="textOnly" dt:type="boolean"/>
 	<ElementType name="Civilization" content="eltOnly">
@@ -657,6 +658,7 @@
 		<element type="Help"/>
 		<element type="bDefault"/>
 		<element type="bVisible"/>
+		<element type="bScenarioOnly" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameOptionInfos" content="eltOnly">
 		<element type="GameOptionInfo" maxOccurs="*"/>

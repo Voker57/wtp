@@ -19,6 +19,14 @@
 		<Russian>Позволяет игрокам "покупать" стартовые поселения, юниты и улучшения по своему выбору в начале игры.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_TWO_PLOT_CITY_RADIUS</Tag>
+		<English>Two plot colony catchment radius</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_TWO_PLOT_CITY_RADIUS_HELP</Tag>
+		<English>Enables colonies to use plots within a range of 2 plots instead of the 1 plot used in vanilla.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI</Tag>
 		<English>Aggressive AI</English>
 		<French>IA agressive</French>

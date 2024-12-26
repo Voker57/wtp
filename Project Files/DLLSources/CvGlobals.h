@@ -990,6 +990,7 @@ public:
 	const InfoArray<YieldTypes>& getDomesticDemandYieldTypes() const { return m_iaDomesticDemandYieldTypes; }
 
 	void setCityCatchmentRadius(int iSetting);
+	void setUseNewMovementSystem(bool bNewSetting);
 
 	bool isMainThread() const;
 

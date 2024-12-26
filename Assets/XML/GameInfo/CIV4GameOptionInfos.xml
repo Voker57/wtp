@@ -6,6 +6,7 @@
 <!-- Game Option -->
 <Civ4GameOptionInfos xmlns="x-schema:CIV4GameInfoSchema.xml">
 	<GameOptionInfos>
+		<!-- The exe expects GAMEOPTION_ADVANCED_START to be first and will show advanced starting points in the GUI for the first entry -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_START</Type>
 			<Description>TXT_KEY_GAMEOPTION_ADVANCED_START</Description>
@@ -20,6 +21,13 @@
 			<bDefault>1</bDefault>
 			<bVisible>0</bVisible>
 			<bScenarioOnly>1</bScenarioOnly>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NEW_MOVEMENT_COST</Type>
+			<Description>TXT_KEY_GAMEOPTION_NEW_MOVEMENT_COST</Description>
+			<Help>TXT_KEY_GAMEOPTION_NEW_MOVEMENT_COST_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_CITY_RAZING</Type>

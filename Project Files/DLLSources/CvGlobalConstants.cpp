@@ -1,5 +1,5 @@
 #include "CvGameCoreDLL.h"
-#include "UserSettings.h"
+#include "CvGlobalConstants.h"
 
 // file to declare and control "variable enum values" and other global constants
 // the idea is to globally declare extern const variable, which will allow read access anywhere in the code
@@ -21,6 +21,10 @@ const CityPlotTypes& CITY_PLOTS_RADIUS = local_CITY_PLOTS_RADIUS;
 const CityPlotTypes& VARINFO<CityPlotTypes>::END = local_NUM_CITY_PLOTS;
 const CityPlotTypes& VARINFO<CityPlotTypes>::LAST = local_LAST_CITY_PLOT;
 const CityPlotTypes& VARINFO<CityPlotTypes>::NUM_ELEMENTS = local_NUM_CITY_PLOTS;
+
+bool local_USE_CLASSIC_MOVEMENT_SYSTEM = false;
+const bool& USE_CLASSIC_MOVEMENT_SYSTEM = local_USE_CLASSIC_MOVEMENT_SYSTEM;
+
 
 #ifndef CHECK_GLOBAL_CONSTANTS
 ArtStyleTypes    NUM_ARTSTYLE_TYPES    = static_cast<ArtStyleTypes   >(0);
@@ -62,4 +66,9 @@ void CvGlobals::setCityCatchmentRadius(int iRadius)
 		//setCityCatchmentRadius(settings.getColonyRadius());
 	}
 	local_LAST_CITY_PLOT = NUM_CITY_PLOTS - static_cast<CityPlotTypes>(1);
+}
+
+void CvGlobals::setUseNewMovementSystem(bool bNewSetting)
+{
+	local_USE_CLASSIC_MOVEMENT_SYSTEM = !bNewSetting;
 }

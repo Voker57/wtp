@@ -10,6 +10,8 @@
 
 extern const bool& SAVEGAME_IS_LOADING;
 
+extern const bool& USE_CLASSIC_MOVEMENT_SYSTEM;
+
 #ifndef CHECK_GLOBAL_CONSTANTS
 extern ArtStyleTypes NUM_ARTSTYLE_TYPES;
 

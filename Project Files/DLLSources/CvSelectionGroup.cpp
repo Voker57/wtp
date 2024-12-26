@@ -3012,7 +3012,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 		// for selection groups with mixed promotions (I have no idea how else to fix this)
 		FAssert(final_path.IsPathComplete());
 		std::pair<int, int> old_moves = std::make_pair(final_path.GetPathTurns(), -final_path.GetFinalMoves());
-		if ((GLOBAL_DEFINE_USE_CLASSIC_MOVEMENT_SYSTEM || canAllMove()) &&
+		if ((USE_CLASSIC_MOVEMENT_SYSTEM || canAllMove()) &&
 			(!final_path.GeneratePath(pDestPlot)
 			|| std::make_pair(final_path.GetPathTurns(), -final_path.GetFinalMoves()) > old_moves))
 		{

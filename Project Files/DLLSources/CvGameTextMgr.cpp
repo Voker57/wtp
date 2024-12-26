@@ -413,7 +413,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 		int iCurrMoves;
 
-		if (GLOBAL_DEFINE_USE_CLASSIC_MOVEMENT_SYSTEM)
+		if (USE_CLASSIC_MOVEMENT_SYSTEM)
 		{
 			iCurrMoves = ((pUnit->movesLeft() / GLOBAL_DEFINE_MOVE_DENOMINATOR) + (((pUnit->movesLeft() % GLOBAL_DEFINE_MOVE_DENOMINATOR) > 0) ? 1 : 0));
 		}

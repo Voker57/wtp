@@ -226,7 +226,7 @@ CvPlot* KmodPathFinder::GetPathEndTurnPlot() const
 
 	while (node && node->m_iData2 > 1)
 	{
-		if (!GLOBAL_DEFINE_USE_CLASSIC_MOVEMENT_SYSTEM) {
+		if (!USE_CLASSIC_MOVEMENT_SYSTEM) {
 			if (node->m_pParent == NULL || (node->m_pParent->m_iData2 == 1 && node->m_pParent->m_iData1 > 0))
 				// With the new movement system enabled, there is a new possibility:
 				// The movement during this turn reaches a plot, but the moving unit has negative movement points after arriving there

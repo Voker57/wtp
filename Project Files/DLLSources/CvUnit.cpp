@@ -855,7 +855,7 @@ void CvUnit::doTurn()
 
 	setMadeAttack(false);
 
-	if (GLOBAL_DEFINE_USE_CLASSIC_MOVEMENT_SYSTEM)
+	if (USE_CLASSIC_MOVEMENT_SYSTEM)
 	{
 		setMoves(0);
 	}
@@ -8928,7 +8928,7 @@ int CvUnit::maxMoves() const
 
 int CvUnit::movesLeft() const
 {
-	if (GLOBAL_DEFINE_USE_CLASSIC_MOVEMENT_SYSTEM)
+	if (USE_CLASSIC_MOVEMENT_SYSTEM)
 	{
 		return std::max(0, (maxMoves() - getMoves()));
 	}

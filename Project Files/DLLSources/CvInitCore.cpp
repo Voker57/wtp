@@ -1103,9 +1103,14 @@ void CvInitCore::setOption(GameOptionTypes eIndex, bool bOption)
 	FASSERT_BOUNDS(0, NUM_GAMEOPTION_TYPES, eIndex, "CvInitCore::setOption");
 	if ( checkBounds(eIndex, 0, NUM_GAMEOPTION_TYPES) )
 	{
-		if (eIndex == GAMEOPTION_TWO_PLOT_CITY_RADIUS)
+		switch (eIndex)
 		{
+		case GAMEOPTION_TWO_PLOT_CITY_RADIUS:
 			GC.setCityCatchmentRadius(bOption ? 2 : 1);
+			break;
+		case GAMEOPTION_NEW_MOVEMENT_COST:
+			GC.setUseNewMovementSystem(bOption);
+			break;
 		}
 		m_abOptions[eIndex] = bOption;
 	}
@@ -1902,8 +1907,9 @@ void CvInitCore::read(FDataStreamBase* pStream)
 		}
 	}
 
-	m_iNumVictories = this->read(reader, m_abVictories, true, NUM_VICTORY_TYPES);
-	this->read(reader, m_abOptions, false, NUM_GAMEOPTION_TYPES);
+	m_iNumVictories = read(reader, m_abVictories, true, NUM_VICTORY_TYPES);
+	read(reader, m_abOptions, false, NUM_GAMEOPTION_TYPES);
+	GC.setUseNewMovementSystem(getOption(GAMEOPTION_NEW_MOVEMENT_COST));
 
 	for (int i = 0; i < NUM_MPOPTION_TYPES; ++i)
 	{

@@ -27,6 +27,14 @@
 		<English>Enables colonies to use plots within a range of 2 plots instead of the 1 plot used in vanilla.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_NEW_MOVEMENT_COST</Tag>
+		<English>New movement cost system</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_NEW_MOVEMENT_COST_HELP</Tag>
+		<English>Units using more moves than they have will carry over the loss to the next turn. Like a unit with 2 moves using 3 will only have one move the following turn. 1 move units can spend multiple turns getting through rough terrain.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI</Tag>
 		<English>Aggressive AI</English>
 		<French>IA agressive</French>

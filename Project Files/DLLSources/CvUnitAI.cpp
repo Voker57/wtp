@@ -14908,10 +14908,31 @@ int CvUnitAI::AI_foundValue(CvPlot* pPlot)
 {
 	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
 
-	// Do not settle the first city on an island
-	if (kOwner.getNumCities() == 0 && pPlot->area()->isIsland())
+	if (kOwner.getNumCities() == 0 && kOwner.getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
 	{
-		return 0;
+		// Do not settle the first city on an island
+		if (pPlot->area()->isIsland())
+		{
+			return 0;
+		}
+
+		// first AI colony should be a deep water colony
+		bool bFoundDeepWater = false;
+		for (int iDX = -1; iDX <= 1 && !bFoundDeepWater; iDX++)
+		{
+			for (int iDY = -1; iDY <= 1 && !bFoundDeepWater; iDY++)
+			{
+				const CvPlot* pLoopPlot = GC.getMap().plotSoren(pPlot->getX_INLINE() + iDX, pPlot->getY_INLINE() + iDY);
+				if (pLoopPlot != NULL && pLoopPlot->getTerrainType() == TERRAIN_COAST)
+				{
+					bFoundDeepWater = true;
+				}
+			}
+		}
+		if (!bFoundDeepWater)
+		{
+			return 0;
+		}
 	}
 
 	int iValue = 0;

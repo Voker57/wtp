@@ -7411,16 +7411,19 @@ void CvCity::doYields()
 					int iLoss = std::max(GC.getCITY_YIELD_DECAY_PERCENT() * iExcess / 100, GC.getMIN_CITY_YIELD_DECAY());
 					iLoss = std::min(iLoss, iExcess);
 					changeYieldStored(eYield, -iLoss);
+					
+					// compare possible profits from selling Europe and Africa, and use the best possible
+					const int iEuropeProfit = GET_PLAYER(getOwnerINLINE()).getSellToEuropeProfit(eYield, iLoss);
+					const int iAfricaProfit = GET_PLAYER(getOwnerINLINE()).getSellToAfricaProfit(eYield, iLoss);
+					int iComparableProfitInEast = std::max(iEuropeProfit, iAfricaProfit);
 
 					// R&R, ray , Changes to Custom House - START
-					int iComparableProfitInEurope = GET_PLAYER(getOwnerINLINE()).getSellToEuropeProfit(eYield, iLoss);
-
 					// Yield is boycotted but you have Custom House
-					if (iComparableProfitInEurope == 0 && bIgnoresBoycott)
+					if (iComparableProfitInEast == 0 && bIgnoresBoycott)
 					{
 						if (GET_PLAYER(getOwnerINLINE()).getParent() == NO_PLAYER)
 						{
-							iComparableProfitInEurope = 0;
+							iComparableProfitInEast = 0;
 						}
 
 						else
@@ -7428,12 +7431,12 @@ void CvCity::doYields()
 							int briberate = GET_PLAYER(getOwnerINLINE()).getTaxRate();
 							int minPrice = GC.getYieldInfo(eYield).getMinimumBuyPrice();
 							int iAmount = iLoss;
-							iComparableProfitInEurope = iAmount * minPrice;
-							iComparableProfitInEurope -= (iComparableProfitInEurope * briberate) / 100;
+							iComparableProfitInEast = iAmount * minPrice;
+							iComparableProfitInEast -= (iComparableProfitInEast * briberate) / 100;
 						}
 					}
 
-					int iProfit = iOverflowYieldSellPercent * iComparableProfitInEurope / 100;
+					int iProfit = iOverflowYieldSellPercent * iComparableProfitInEast / 100;
 					// R&R, ray , Changes to Custom House - END
 					if (iProfit > 0)
 					{
@@ -7442,10 +7445,20 @@ void CvCity::doYields()
 						GET_PLAYER(getOwnerINLINE()).changeGold(iProfit * GET_PLAYER(getOwnerINLINE()).getExtraTradeMultiplier(kPlayerEurope.getID()) / 100);
 
 						int iDiscountedLoss = iOverflowYieldSellPercent * iLoss / 100;
-						GET_PLAYER(getOwnerINLINE()).changeYieldTradedTotal(eYield, iDiscountedLoss);
-						kPlayerEurope.changeYieldTradedTotal(eYield, iDiscountedLoss);
-						GC.getGameINLINE().changeYieldBoughtTotal(kPlayerEurope.getID(), eYield, -iDiscountedLoss);
-
+						if (iEuropeProfit > iAfricaProfit)
+						{
+							// we sold to Europe
+							GET_PLAYER(getOwnerINLINE()).changeYieldTradedTotal(eYield, iDiscountedLoss);
+							kPlayerEurope.changeYieldTradedTotal(eYield, iDiscountedLoss);
+							GC.getGameINLINE().changeYieldBoughtTotal(kPlayerEurope.getID(), eYield, -iDiscountedLoss);
+						}
+						else
+						{
+							// we sold to Africa
+							GET_PLAYER(getOwnerINLINE()).changeYieldTradedTotalAfrica(eYield, iDiscountedLoss);
+							kPlayerEurope.changeYieldTradedTotalAfrica(eYield, iDiscountedLoss);
+							GC.getGameINLINE().changeYieldBoughtTotalAfrica(kPlayerEurope.getID(), eYield, -iDiscountedLoss);
+						}
 						// R&R, ray , Changes to Custom House - START
 						// Selling with Custom House will get Trade Founding Father Points
 						// check if Custom House

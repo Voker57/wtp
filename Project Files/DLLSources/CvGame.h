@@ -408,6 +408,9 @@ public:
 
 	int getRemainingForcedPeaceTurns() const;
 
+	unsigned int getWorldBuilderOpeningCounter() const;
+	void increaseWorldBuilderOpeningCounter();
+
 	static const int PLOT_OCEAN_DISTANCE_IMPASSABLE_THRESHOLD = 1000;
 
 protected:
@@ -431,6 +434,7 @@ protected:
 	int m_iBestLandUnitCombat;
 
 	unsigned int m_uiInitialTime;
+	unsigned int m_uiWorldBuilderUseCount;
 
 	bool m_bScoreDirty;
 	bool m_bDebugMode;

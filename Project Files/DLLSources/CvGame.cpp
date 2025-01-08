@@ -7479,3 +7479,17 @@ CvPlot* CvGame::getAnyEuropePlot() const
 	
 	return NULL;
 }
+
+unsigned int CvGame::getWorldBuilderOpeningCounter() const
+{
+	return m_uiWorldBuilderUseCount;
+}
+
+void CvGame::increaseWorldBuilderOpeningCounter()
+{
+	// overflow seems unrealistic, but protect against it just in case. You never know what some people might do
+	if (m_uiWorldBuilderUseCount != MAX_UNSIGNED_INT)
+	{
+		++m_uiWorldBuilderUseCount;
+	}
+}

@@ -41,6 +41,8 @@ const int defaultNumSessions = 1;
 const int defaultNumCultureVictoryCities = 0;
 const int defaultCultureVictoryCultureLevel = NO_CULTURELEVEL;
 
+const unsigned int defaultWorldBuilderUseCount = 0;
+
 // 
 enum SavegameVariableTypes
 {
@@ -106,6 +108,7 @@ enum SavegameVariableTypes
 	GameSave_InactiveTriggers,
 	GameSave_NumCultureVictoryCities,
 	GameSave_CultureVictoryCultureLevel,
+	GameSave_WorldBuilderUseCount,
 
 	NUM_SAVE_ENUM_VALUES,
 };
@@ -175,6 +178,7 @@ const char* getSavedEnumNameGame(SavegameVariableTypes eType)
 	case GameSave_InactiveTriggers: return "GameSave_InactiveTriggers";
 	case GameSave_NumCultureVictoryCities: return "GameSave_NumCultureVictoryCities";
 	case GameSave_CultureVictoryCultureLevel: return "GameSave_CultureVictoryCultureLevel";
+	case GameSave_WorldBuilderUseCount: return "GameSave_WorldBuilderUseCount";
 
 	}
 	FAssertMsg(0, "Missing case");
@@ -249,6 +253,8 @@ void CvGame::resetSavedData(HandicapTypes eHandicap, bool bConstructorCall)
 	m_aeInactiveTriggers.clear();
 	m_iNumCultureVictoryCities = defaultNumCultureVictoryCities;
 	m_eCultureVictoryCultureLevel = defaultCultureVictoryCultureLevel;
+
+	m_uiWorldBuilderUseCount = defaultWorldBuilderUseCount;
 }
 
 void CvGame::read(CvSavegameReader reader)
@@ -331,6 +337,7 @@ void CvGame::read(CvSavegameReader reader)
 		case GameSave_InactiveTriggers: reader.Read(m_aeInactiveTriggers); break;
 		case GameSave_NumCultureVictoryCities: reader.Read(m_iNumCultureVictoryCities); break;
 		case GameSave_CultureVictoryCultureLevel: reader.Read(m_eCultureVictoryCultureLevel); break;
+		case GameSave_WorldBuilderUseCount: reader.Read(m_uiWorldBuilderUseCount); break;
 		}
 		
 	}
@@ -360,6 +367,8 @@ void CvGame::read(CvSavegameReader reader)
 			m_sorenRand.reseed(timeGetTime());
 		}
 	}
+
+		FAssertMsg(getWorldBuilderOpeningCounter() == 0, CvString::format("World Builder was opened %d times", getWorldBuilderOpeningCounter()).c_str());
 }
 
 void CvGame::write(CvSavegameWriter writer)
@@ -434,6 +443,7 @@ void CvGame::write(CvSavegameWriter writer)
 	writer.Write(GameSave_InactiveTriggers, m_aeInactiveTriggers);
 	writer.Write(GameSave_NumCultureVictoryCities, m_iNumCultureVictoryCities, defaultNumCultureVictoryCities);
 	writer.Write(GameSave_CultureVictoryCultureLevel, m_eCultureVictoryCultureLevel, defaultCultureVictoryCultureLevel);
+	writer.Write(GameSave_WorldBuilderUseCount, m_uiWorldBuilderUseCount, defaultWorldBuilderUseCount);
 
 	writer.Write(GameSave_END);
 }

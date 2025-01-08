@@ -528,6 +528,8 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				GC.getGameINLINE().regenerateMap();
 				break;
 			case 4:
+				// no need to sync WB counter as WB is disabled in multiplayer anyway
+				GC.getGameINLINE().increaseWorldBuilderOpeningCounter();
 				GC.getGameINLINE().doControl(CONTROL_WORLD_BUILDER);
 				break;
 			}

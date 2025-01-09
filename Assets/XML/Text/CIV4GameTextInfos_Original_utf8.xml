@@ -11238,6 +11238,7 @@
 		<German>(Siedlungsangriff : %D1%%)</German>
 		<Italian>(Attacco insediamento : %D1%%)</Italian>
 		<Spanish>(Ataque del asentamiento : %D1%%)</Spanish>
+		<Russian>(Атака поселения : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_CITY_DEFENSE</Tag>
@@ -11246,6 +11247,7 @@
 		<German>(Siedlungsverteidigung : %D1%%)</German>
 		<Italian>(Difesa insediamento : %D1%%)</Italian>
 		<Spanish>(Defensa del asentamiento : %D1%%)</Spanish>
+		<Russian>(Защита поселения : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_HILLS_ATTACK</Tag>
@@ -11254,6 +11256,7 @@
 		<German>(Hügel-Angriff : %D1%%)</German>
 		<Italian>(Attacco in collina : %D1%%)</Italian>
 		<Spanish>(Ataque a colinas : %D1%%)</Spanish>
+		<Russian>(Атака в холмах : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_HILLS</Tag>
@@ -11262,6 +11265,7 @@
 		<German>(Hügel-Verteidigung : %D1%%)</German>
 		<Italian>(Difesa in collina : %D1%%)</Italian>
 		<Spanish>(Defender colinas : %D1%%)</Spanish>
+		<Russian>(Защита в холмах : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_FEATURE_ATTACK</Tag>
@@ -11286,6 +11290,7 @@
 		<German>(Geländeangriff: %D1%%)</German>
 		<Italian>(Attacco da terreno: %D1%%)</Italian>
 		<Spanish>(Ataque a terreno: %D1%%)</Spanish>
+		<Russian>(Атака на местности : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_TERRAIN</Tag>
@@ -11294,6 +11299,7 @@
 		<German>(Gelände-Verteidigung : %d1%%)</German>
 		<Italian>(Difesa da terreno : %d1%%)</Italian>
 		<Spanish>(Defender terreno : %d1%%)</Spanish>
+		<Russian>(Защита на местности : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_RIVER_ATTACK</Tag>
@@ -11302,6 +11308,7 @@
 		<German>(Angriff über Fluß : %D1%%)</German>
 		<Italian>(Attacco fiume : %D1%%)</Italian>
 		<Spanish>(Ataque por río : %D1%%)</Spanish>
+		<Russian>(Речная атака : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_CLASS_AMPHIB_ATTACK</Tag>
@@ -11310,6 +11317,7 @@
 		<German>(Landung von See : %D1%%)</German>
 		<Italian>(Attacco anfibio : %D1%%)</Italian>
 		<Spanish>(Ataque anfibio : %D1%%)</Spanish>
+		<Russian>(Атака десанта : %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_NATIVE_COMBAT</Tag>

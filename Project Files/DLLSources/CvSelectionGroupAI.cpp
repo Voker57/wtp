@@ -1296,12 +1296,12 @@ bool CvSelectionGroupAI::AI_tradeRoutes()
 			{
 				// Erik: This is redundant. Instead of looping through all routes, just find the subset of routes to the best destination city
 
-				CvCity* pSourceCity = ::getCity(routes[i]->getSourceCity());
+				const CvCity* pSourceCity = ::getCity(routes[i]->getSourceCity());
 				if ((pSourceCity != NULL && pSourceCity == pPlotCity) // R&R mod, vetiarvind, max yield import limit (move plot==srcCity check outside as optmztn)
 					&& (routes[i]->getDestinationCity() == kBestDestination))
 				{
-					CvCity* pDestinationCity = ::getCity(routes[i]->getDestinationCity());
-					YieldTypes eYield = routes[i]->getYield();
+					const CvCity* pDestinationCity = ::getCity(routes[i]->getDestinationCity());
+					const YieldTypes eYield = routes[i]->getYield();
 
 					// transport feeder - start - Nightinggale
 					//int iAmount = pSourceCity->getYieldStored(eYield) - pSourceCity->getMaintainLevel(eYield);
@@ -1311,8 +1311,8 @@ bool CvSelectionGroupAI::AI_tradeRoutes()
 
 					// R&R mod, vetiarvind, max yield import limit - start
 					int iOriginalAmount = iAmount;
-					int bDestinationHasImportLimit = pDestinationCity != NULL && pDestinationCity->getMaxImportAmount(eYield) > 0;
-					if(bDestinationHasImportLimit)
+					const bool bDestinationHasImportLimit = pDestinationCity != NULL && pDestinationCity->getImportsLimit(eYield) > 0;
+					if (bDestinationHasImportLimit)
 					{
 						int turnsToReach = 0;
 						iOriginalAmount = iAmount = std::min(GC.getGameINLINE().getCargoYieldCapacity(), iAmount);
@@ -1530,7 +1530,7 @@ bool CvSelectionGroupAI::getIgnoreDangerStatus() const
 // R&R mod, vetiarvind, max yield import limit - end
 // Private Functions...
 // R&R mod, vetiarvind, max yield import limit - start
-int CvSelectionGroupAI::estimateYieldsToLoad(CvCity* pDestinationCity, int maxYieldsToLoad, YieldTypes eYield, int turnsToReach, int alreadyLoaded) const
+int CvSelectionGroupAI::estimateYieldsToLoad(const CvCity* pDestinationCity, int maxYieldsToLoad, YieldTypes eYield, int turnsToReach, int alreadyLoaded) const
 {
 	if(maxYieldsToLoad <= 0) return 0; // R&R mod, vetiarvind, max yield import limit fix
 	int yieldsToLoad = maxYieldsToLoad;

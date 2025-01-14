@@ -6209,7 +6209,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_WHALING_TRIP_DONE_PYTHON</Tag>
-		<English>[ICON_BULLET] Send a unit [COLOR_UNIT_TEXT]%s1:1_unit[COLOR_REVERT] to .</English>
+		<English>[ICON_BULLET] [COLOR_UNIT_TEXT]Humpback whales[COLOR_REVERT] can be very dangerous. Stay alert in case they attack.</English>
 		<German>[ICON_BULLET] Die [COLOR_UNIT_TEXT]Buckelwale[COLOR_REVERT] in der Nähe sind gefährlich. Seid gewarnt, sie werden Euch vermutlich angreifen!</German>
 		<Russian>[ICON_BULLET] [COLOR_UNIT_TEXT]Горбатые киты[COLOR_REVERT] могут быть очень опасны. Будьте осторожны, они могут напасть на судно!</Russian>
 	</TEXT>
@@ -6281,43 +6281,43 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_NEW_MILITIA_HELP</Tag>
-		<English>[ICON_BULLET]Some charioteers and attendants in the treasure transport arm themselves and form a militia.</English>
+		<English>[ICON_BULLET]Mounted troops and wagon masters in the treasure transport arm themselves to form a militia.</English>
 		<German>[ICON_BULLET]Einige Wagenlenker und Begleiter eines Schatztransports bewaffnen sich und bilden eine Miliz.</German>
 		<Russian>[ICON_BULLET]Некоторые возничие и сопровождающие транспорт с сокровищами вооружаются и формируют ополчение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_TREASURE_PROTECTION</Tag>
-		<English>Milord, many of our [COLOR_HIGHLIGHT_TEXT]treasures[COLOR_REVERT] are out in the wilderness unprotected. Some adventurers would set out for some hand money and escort them safely to the nearest colony.</English>
+		<English>Milord, many of our [COLOR_HIGHLIGHT_TEXT]treasures[COLOR_REVERT] are out in the wilderness unprotected. For pocket money we could recruit adventurers willing to escort them safely to the nearest colony.</English>
 		<German>Milord, viele unserer [COLOR_HIGHLIGHT_TEXT]Schätze[COLOR_REVERT] sind in der Wildnis ungeschützt unterwegs. Einige Abenteurer würden sich gegen ein Handgeld auf den Weg machen und sie sicher in die nächste Kolonie geleiten.</German>
 		<Russian>Милорд, многие из наших [COLOR_HIGHLIGHT_TEXT]сокровищ[COLOR_REVERT] находятся в глуши без защиты. Некоторые искатели приключений готовы отправиться туда и сопроводить их до ближайшей колонии.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_1</Tag>
-		<English>Very well, we should definitely hire a few [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] and they should be on their way right away.</English>
+		<English>Right, we're going to hire some [COLOR_HIGHLIGHT_TEXT]mounted conquistadors[COLOR_REVERT]. They'll saddle up and be on their way.</English>
 		<German>Sehr schön, wir sollten unbedingt ein paar [COLOR_HIGHLIGHT_TEXT]Berittene Konquistadoren[COLOR_REVERT] anheuern und sie sollten sich gleich auf den Weg machen.</German>
 		<Russian>Что же, нам определенно следует нанять несколько [COLOR_HIGHLIGHT_TEXT]конных конкистадоров[COLOR_REVERT]. И прикажите им отправляться как можно скорее!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_2</Tag>
-		<English>I see the problem, but arming a few workers and temporarily forming a [COLOR_HIGHLIGHT_TEXT]militia[COLOR_REVERT] will do just fine.</English>
+		<English>I do see the problem, but I beieve arming a few workers to form a [COLOR_HIGHLIGHT_TEXT]militia[COLOR_REVERT] should be enough.</English>
 		<German>Ich sehe das Problem, aber es reicht vollkommen aus, wenn wir ein paar Arbeiter bewaffnen und vorübergehend eine [COLOR_HIGHLIGHT_TEXT]Miliz[COLOR_REVERT] bilden lassen.</German>
 		<Russian>Да, это проблема, но вооружить нескольких рабочих, сформировав временное [COLOR_HIGHLIGHT_TEXT]ополчение[COLOR_REVERT], будет вполне достаточно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_3</Tag>
-		<English>Oh well, the wagons have to get by like this. I can't spare a man or a piece of gold for that.</English>
+		<EnglishThe wagons will have to get there  on their own. I can't spare men or money for that.</English>
 		<German>Ach was, die Wagen müssen sich so durchschlagen. Dafür kann ich keinen Mann und kein Goldstück entbehren.</German>
 		<Russian>Как не прискорбно, но сейчас у нас нет ни людей, ни золота. Перевозчиками придётся полагаться только на свои силы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_1_News</Tag>
-		<English>Some [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] now accompany your treasures safely to the colonies.</English>
+		<English>Some [COLOR_HIGHLIGHT_TEXT]Mounted Conquistadors[COLOR_REVERT] now escort your treasures safely to the colonies.</English>
 		<German>Einige [COLOR_HIGHLIGHT_TEXT]Berittene Konquistadoren[COLOR_REVERT] begleiten Eure Schätze nun sicher in die Kolonien.</German>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Конные конкистадоры[COLOR_REVERT] займутся охраной ваших сокровищ в пути.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TREASURE_PROTECTION_2_News</Tag>
-		<English>Some [COLOR_HIGHLIGHT_TEXT]militias[COLOR_REVERT] now accompany your treasures safely to the colonies.</English>
+		<English>[COLOR_HIGHLIGHT_TEXT]Militias[COLOR_REVERT] now escort your treasures safely to the colonies.</English>
 		<German>Einige [COLOR_HIGHLIGHT_TEXT]Milizionäre[COLOR_REVERT] begleiten Eure Schätze nun sicher in die Kolonien.</German>
 		<Russian>Сокровища направляются в колонии под охраной [COLOR_HIGHLIGHT_TEXT]ополченцев[COLOR_REVERT].</Russian>
 	</TEXT>
@@ -6329,7 +6329,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_BUILD_MONASTERY_START</Tag>
-		<English>Milord, some of our [COLOR_HIGHLIGHT_TEXT]missionaries[COLOR_REVERT] have apparently lost their way in the wilderness, at least no one has heard from them. We'd be better off setting up a [COLOR_HIGHLIGHT_TEXT]monastery[COLOR_REVERT] instead of losing the missionaries in the wilderness.</English>
+		<English>Milord, some of our [COLOR_HIGHLIGHT_TEXT]missionaries[COLOR_REVERT] must have lost their way in the wilderness. It's a long time since anyone has heard from them. We'd be wiser to set up a [COLOR_HIGHLIGHT_TEXT]monastery[COLOR_REVERT] here instead of having missionaries vanish into the wilderness.</English>
 		<German>Milord, einige unserer [COLOR_HIGHLIGHT_TEXT]Missionare[COLOR_REVERT] haben sich offenbar in der Wildnis verirrt, jedenfalls hat niemand mehr etwas von ihnen gehört. Wir sollten lieber eine [COLOR_HIGHLIGHT_TEXT]Missionsstation[COLOR_REVERT] errichten, statt die Missionare in der Wildnis zu verlieren.</German>
 		<Russian>Милорд, некоторые из наших [COLOR_HIGHLIGHT_TEXT]миссионеров[COLOR_REVERT], кажется, заблудились в глуши. Хорошо бы нам основать [COLOR_HIGHLIGHT_TEXT]монастырь[COLOR_REVERT], чтобы не терять миссионеров в этих диких местах.</Russian>
 	</TEXT>

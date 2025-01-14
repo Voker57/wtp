@@ -1548,19 +1548,28 @@ int CvSelectionGroupAI::estimateYieldsToLoad(const CvCity* pDestinationCity, int
 
 void CvSelectionGroupAI::unloadToCity(CvCity* pCity, CvUnit* unit, UnloadMode um)
 {
-		if (um == UnloadMode::NoForce && pCity->getMaxImportAmount(unit->getYield()) > 0)
+	if (um == UnloadMode::NoForce && pCity->getImportsLimit(unit->getYield()) > 0)
+	{
+		const int totalStored = unit->getYieldStored();
+		const int toUnload = estimateYieldsToLoad(pCity, totalStored, unit->getYield(), 0, 0);
+
+		if (toUnload <= 0)
 		{
-			int totalStored = unit->getYieldStored();
-			int toUnload = estimateYieldsToLoad(pCity, totalStored, unit->getYield(), 0, 0);
-			if(toUnload <= 0)
-				return;
-			if(toUnload < totalStored)
-				unit->unloadStoredAmount(toUnload);
-			else
-				unit->unload();
+			return;
+		}
+		if (toUnload < totalStored)
+		{
+			unit->unloadStoredAmount(toUnload);
 		}
 		else
+		{
 			unit->unload();
+		}
+	}
+	else
+	{
+		unit->unload();
+	}
 }
 
 // R&R mod, vetiarvind, max yield import limit - end

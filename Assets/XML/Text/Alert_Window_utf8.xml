@@ -113,4 +113,14 @@ Consultez le fichier Readme pour plus de détails.</French>
 		<French>Cette sauvegarde a été écrite par une version de We The People plus récente que celle que vous utilisez maintenant. Sans savoir quelles données ont été rajoutées, il n'y a aucun moyen de lire cette sauvegarde. Le jeu va s'arrêter pour éviter un plantage.</French>
 		<Russian>Сохранение сделано с версией We The People, которая новее, чем версия, которую вы используете сейчас. Не зная, какие данные были добавлены, невозможно прочитать сохранение. Игра будет закрыта, чтобы предотвратить сбой кода сохранения.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALERT_FAILED_TO_READ_TEXT_XML_FILE_HEADER</Tag>
+		<English>XML file read error</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ALERT_FAILED_TO_READ_TEXT_XML_FILE</Tag>
+		<English>%s
+Reason: %s
+Text from this file will be missing in the game.</English>
+	</TEXT>
 </Civ4GameText>

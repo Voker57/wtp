@@ -45,6 +45,21 @@ void TxtReader::readFile(const char* pFile)
 {
 	tinyxml2::XMLDocument doc;
 	doc.LoadFile(pFile);
+	if (doc.Error())
+	{
+		AlertWindow window;
+
+		window.header = "TXT_KEY_ALERT_FAILED_TO_READ_TEXT_XML_FILE_HEADER";
+		window.message = "TXT_KEY_ALERT_FAILED_TO_READ_TEXT_XML_FILE";
+		window.addArgument(pFile);
+		window.addArgument(doc.ErrorIDToName(doc.ErrorID()));
+		window.setIcon(AlertWindow::iconTypes::IconError);
+		window.setButtonLayout(AlertWindow::Buttons::BtnOK);
+		window.openWindow();
+
+		return;
+	}
+
 	tinyxml2::XMLElement* root = doc.RootElement();
 	if (strcmp(root->Name(), "Civ4GameText") != 0)
 		root = root->NextSiblingElement("Civ4GameText");

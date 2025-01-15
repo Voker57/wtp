@@ -187,14 +187,11 @@ public:
 	int getPlayerTextColorA();
 	int getSeaPlotYield(YieldTypes eIndex);
 	// R&R, Robert Surcouf, No More Variables Hidden game option START
-	int getYieldTradedTotal(YieldTypes eIndex);
-	int getYieldTradedTotalINT(int /*YieldTypes*/ eIndex);
+	int getYieldTradedTotalEurope(int /*YieldTypes*/ eIndex);
     // R&R, Robert Surcouf, No More Variables Hidden game option END
 	// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	int getYieldTradedTotalAfrica(YieldTypes eIndex);
-	int getYieldTradedTotalINTAfrica(int /*YieldTypes*/ eIndex);
-	int getYieldTradedTotalPortRoyal(YieldTypes eIndex);
-	int getYieldTradedTotalINTPortRoyal(int /*YieldTypes*/ eIndex);
+	int getYieldTradedTotalAfrica(int /*YieldTypes*/ eIndex);
+	int getYieldTradedTotalPortRoyal(int /*YieldTypes*/ eIndex);
 	// WTP, ray, Yields Traded Total for Africa and Port Royal - END
 	int getYieldScoreTotalINT(int /*YieldTypes*/ eIndex); // R&R, vetiarvind, Price dependent tax rate change
 	int getYieldRate(YieldTypes eIndex);

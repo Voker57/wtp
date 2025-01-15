@@ -3364,7 +3364,6 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 			YieldTypes eYield = (YieldTypes) iData1;
 			kPlayer.setYieldEuropeTradable(eYield, false);
 			// R&R, ray, Improvements to Tax Mechanism - START
-			setYieldTradedTotal(eYield, 0);
 			setYieldScoreTotal(eYield, 0);// R&R, vetiarvind, price dependent tax rate change
 
 			wipeRoyalYieldScore();
@@ -18128,20 +18127,14 @@ void CvPlayer::buyUnitsFromKing()
 }
 
 
-int CvPlayer::getYieldTradedTotal(YieldTypes eYield) const
+int CvPlayer::getYieldTradedTotalEurope(YieldTypes eYield) const
 {
-	FAssert(eYield >= 0);
-	FAssert(eYield < NUM_YIELD_TYPES);
-
 	return m_em_iYieldTradedTotal.get(eYield);
 }
 
-void CvPlayer::setYieldTradedTotal(YieldTypes eYield, int iValue)
+void CvPlayer::setYieldTradedTotalEurope(YieldTypes eYield, int iValue)
 {
-	FAssert(eYield >= 0);
-	FAssert(eYield < NUM_YIELD_TYPES);
-
-	if(iValue != getYieldTradedTotal(eYield))
+	if (iValue > getYieldTradedTotalEurope(eYield)) // overflow protection
 	{
 		m_em_iYieldTradedTotal.set(eYield, iValue);
 	}
@@ -18150,18 +18143,12 @@ void CvPlayer::setYieldTradedTotal(YieldTypes eYield, int iValue)
 // WTP, ray, Yields Traded Total for Africa and Port Royal - START
 int CvPlayer::getYieldTradedTotalAfrica(YieldTypes eYield) const
 {
-	FAssert(eYield >= 0);
-	FAssert(eYield < NUM_YIELD_TYPES);
-
 	return m_em_iYieldTradedTotalAfrica.get(eYield);
 }
 
 void CvPlayer::setYieldTradedTotalAfrica(YieldTypes eYield, int iValue)
 {
-	FAssert(eYield >= 0);
-	FAssert(eYield < NUM_YIELD_TYPES);
-
-	if(iValue != getYieldTradedTotalAfrica(eYield))
+	if (iValue > getYieldTradedTotalAfrica(eYield)) // overflow protection
 	{
 		m_em_iYieldTradedTotalAfrica.set(eYield, iValue);
 	}
@@ -18169,18 +18156,12 @@ void CvPlayer::setYieldTradedTotalAfrica(YieldTypes eYield, int iValue)
 
 int CvPlayer::getYieldTradedTotalPortRoyal(YieldTypes eYield) const
 {
-	FAssert(eYield >= 0);
-	FAssert(eYield < NUM_YIELD_TYPES);
-
 	return m_em_iYieldTradedTotalPortRoyal.get(eYield);
 }
 
 void CvPlayer::setYieldTradedTotalPortRoyal(YieldTypes eYield, int iValue)
 {
-	FAssert(eYield >= 0);
-	FAssert(eYield < NUM_YIELD_TYPES);
-
-	if(iValue != getYieldTradedTotalPortRoyal(eYield))
+	if (iValue > getYieldTradedTotalPortRoyal(eYield)) // overflow protection
 	{
 		m_em_iYieldTradedTotalPortRoyal.set(eYield, iValue);
 	}
@@ -18222,7 +18203,7 @@ void CvPlayer::changeYieldTradedTotal(YieldTypes eYield, int iChange, int iUnitP
 
 
 	setYieldScoreTotal(eYield, getYieldScoreTotal(eYield) + iChange*iUnitPrice);
-	setYieldTradedTotal(eYield, getYieldTradedTotal(eYield) + iChange);
+	setYieldTradedTotalEurope(eYield, getYieldTradedTotalEurope(eYield) + iChange);
 }
 
 // WTP, ray, Yields Traded Total for Africa and Port Royal - START
@@ -18269,7 +18250,6 @@ void CvPlayer::wipeRoyalYieldScore()
 	{
 		if (!getColonyPlayer()->isYieldEuropeTradable(eYieldCargo)) continue; //skip whatever is on embargo
 
-		setYieldTradedTotal(eYieldCargo, 0);
 		setYieldScoreTotal(eYieldCargo, 0);
 
 	}
@@ -18350,14 +18330,14 @@ void CvPlayer::changeYieldTradedTotal(YieldTypes eYield, int iChange)
 YieldTypes CvPlayer::getHighestTradedYield() const
 {
 	YieldTypes eBestYield = NO_YIELD;
-	for (int i = 0; i < NUM_YIELD_TYPES; i++)
+	for (YieldTypes eYield = FIRST_YIELD; eYield < NUM_CARGO_YIELD_TYPES; ++eYield)
 	{
-		YieldTypes eYield = (YieldTypes) i;
-		if (isYieldEuropeTradable(eYield))
+		// reverse order of ifs compared to vanilla. We now go from fastest to slowest tests - Nightinggale
+		if ((eBestYield == NO_YIELD) || (getYieldScoreTotal(eYield) > getYieldScoreTotal(eBestYield)))
 		{
-			if (getCity(getHighestStoredYieldCityId(eYield)) != NULL)
+			if (isYieldEuropeTradable(eYield))
 			{
-				if ((eBestYield == NO_YIELD) || (getYieldTradedTotal(eYield) > getYieldTradedTotal(eBestYield)))
+				if (getCity(getHighestStoredYieldCityId(eYield)) != NULL)
 				{
 					eBestYield = eYield;
 				}
@@ -20557,6 +20537,9 @@ void CvPlayer::doAchievements(bool afterMove)
 	bool bGained = false;
 	int iI, iJ, iK;
 	int count;
+
+	int iNumGoodsTraded = -1;
+
 //	CvWString szBuffer = gDLL->getText("TXT_KEY_DALETEST", GC.getGameINLINE().getGameTurn());
 //	gDLL->UI().addPlayerMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVIC_ADOPT", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), NULL, NULL, true, true);
 	for (iI = 0; iI < GC.getNumAchieveInfos(); iI++)
@@ -20685,12 +20668,18 @@ void CvPlayer::doAchievements(bool afterMove)
 					}
 					if (GC.getAchieveInfo((AchieveTypes)iI).getNumGoodsTraded() > 0)
 					{
-						count = 0;
-						for (int iK = 0; iK < NUM_YIELD_TYPES; iK++)
+						if (iNumGoodsTraded == -1)
 						{
-							count += getYieldTradedTotal((YieldTypes) iK);
+							// value not known. Calculate it and store it in iNumGoodsTraded for the rest of the achievements needing this value
+							iNumGoodsTraded = 0;
+							for (YieldTypes eYield = FIRST_YIELD; eYield < NUM_CARGO_YIELD_TYPES; ++eYield)
+							{
+								iNumGoodsTraded += getYieldTradedTotalEurope(eYield);
+								iNumGoodsTraded += getYieldTradedTotalAfrica(eYield);
+								iNumGoodsTraded += getYieldTradedTotalPortRoyal(eYield);
+							}
 						}
-						if (count > GC.getAchieveInfo((AchieveTypes)iI).getNumGoodsTraded())
+						if (iNumGoodsTraded > GC.getAchieveInfo((AchieveTypes)iI).getNumGoodsTraded())
 						{
 							pPlot = NULL;
 							bGained = true;

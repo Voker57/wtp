@@ -631,31 +631,18 @@ int CyPlayer::getSeaPlotYield(YieldTypes eIndex)
 	return m_pPlayer ? (int) m_pPlayer->getSeaPlotYield(eIndex) : 0;
 }
 // R&R, Robert Surcouf, No More Variables Hidden game option START
-int CyPlayer::getYieldTradedTotal(YieldTypes eIndex)
+int CyPlayer::getYieldTradedTotalEurope(int /*YieldTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotal(eIndex) : -1;
-}
-int CyPlayer::getYieldTradedTotalINT(int /*YieldTypes*/ eIndex)
-{
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotal((YieldTypes)eIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getYieldTradedTotalEurope((YieldTypes)eIndex) : -1;
 }
 // R&R, Robert Surcouf, No More Variables Hidden game option END
 
 // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-int CyPlayer::getYieldTradedTotalAfrica(YieldTypes eIndex)
-{
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotalAfrica(eIndex) : -1;
-}
-int CyPlayer::getYieldTradedTotalINTAfrica(int /*YieldTypes*/ eIndex)
+int CyPlayer::getYieldTradedTotalAfrica(int /*YieldTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getYieldTradedTotalAfrica((YieldTypes)eIndex) : -1;
 }
-
-int CyPlayer::getYieldTradedTotalPortRoyal(YieldTypes eIndex)
-{
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotalPortRoyal(eIndex) : -1;
-}
-int CyPlayer::getYieldTradedTotalINTPortRoyal(int /*YieldTypes*/ eIndex)
+int CyPlayer::getYieldTradedTotalPortRoyal(int /*YieldTypes*/ eIndex)
 {
 	return m_pPlayer ? m_pPlayer->getYieldTradedTotalPortRoyal((YieldTypes)eIndex) : -1;
 }

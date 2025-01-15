@@ -783,8 +783,8 @@ public:
 	// TAC - AI purchases military units - koma13 - END
 	CvUnit* buyEuropeUnit(UnitTypes eUnit, int iPriceModifier);
 	void buyUnitsFromKing();
-	int getYieldTradedTotal(YieldTypes eYield) const;
-	void setYieldTradedTotal(YieldTypes eYield, int iValue);
+	int getYieldTradedTotalEurope(YieldTypes eYield) const;
+	void setYieldTradedTotalEurope(YieldTypes eYield, int iValue);
 	// WTP, ray, Yields Traded Total for Africa and Port Royal - START
 	int getYieldTradedTotalAfrica(YieldTypes eYield) const;
 	void setYieldTradedTotalAfrica(YieldTypes eYield, int iValue);

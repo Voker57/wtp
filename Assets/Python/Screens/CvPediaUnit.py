@@ -142,6 +142,11 @@ class CvPediaUnit:
 				screen.appendListBoxStringNoUpdate(panelName, u"<font=2>" + szCost + u"%c" % gc.getYieldInfo(iYield).getChar() + u"</font>", WidgetTypes.WIDGET_PEDIA_JUMP_TO_YIELDS, iYield, 1, CvUtil.FONT_LEFT_JUSTIFY)
 				## R&R, Robert Surcouf,  Pedia - Start
 				
+		iCombat = gc.getUnitInfo(self.iUnit).getUnitCombatType()
+		if (iCombat != -1):
+			screen.appendListBoxStringNoUpdate(panelName, u" ", WidgetTypes.WIDGET_GENERAL, 0, 0, CvUtil.FONT_LEFT_JUSTIFY)
+			screen.appendListBoxStringNoUpdate(panelName, u"<font=4>" + gc.getUnitCombatInfo(iCombat).getDescription() + u"</font>", WidgetTypes.WIDGET_GENERAL, 0, 0, CvUtil.FONT_LEFT_JUSTIFY)
+		
 		screen.updateListBox(panelName)
 
 	# Place Special abilities

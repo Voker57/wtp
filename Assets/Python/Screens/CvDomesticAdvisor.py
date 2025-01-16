@@ -14,6 +14,7 @@ import NativeAdvisor
 import WarehouseAdvisor
 import TeacherAdvisor
 import DebugTerrainAdvisor
+import TradeCountAdvisor
 
 
 
@@ -137,6 +138,7 @@ class CvDomesticAdvisor:
 		self.WAREHOUSE_STATE          = self.addButton("WareHouseState",         "INTERFACE_STORES_BUTTON"           , WarehouseAdvisor.WarehouseAdvisor(self))
 		self.BUILDING_STATE           = self.addButton("BuildingState",          "INTERFACE_CITY_BUILD_BUTTON"       , BuildingAdvisor.BuildingAdvisor(self))
 		self.IMPORTEXPORT_STATE       = self.addButton("ImportExportState",      "INTERFACE_CITY_GOVENOR_BUTTON"     , ImportExportAdvisor.ImportExportAdvisor(self))
+		self.TRADE_COUNT_STATE        = self.addButton("TradeCountState",        "INTERFACE_DOMESTIC_TRADE_COUNT"    , TradeCountAdvisor.TradeCountAdvisor(self))
 		self.CITIZEN_STATE            = self.addButton("CitizenState",           "INTERFACE_CITY_CITIZEN_BUTTON")
 		self.TOTAL_PRODUCTION_STATE   = self.addButton("TotalProductionState",   "INTERFACE_TOTAL_PRODUCTION_BUTTON")  # total production page - Nightinggale
 		self.TRADEROUTE_STATE         = self.addButton("TradeRouteState",        "INTERFACE_IMPORT_EXPORT_BUTTON")
@@ -983,6 +985,8 @@ class CvDomesticAdvisor:
 				return localText.getText("TXT_KEY_DOMESTIC_ADVISOR_STATE_CITIZEN", ())
 			elif iData1 == self.IMPORTEXPORT_STATE:
 				return localText.getText("TXT_KEY_CONCEPT_TRADE_ROUTE", ())
+			elif iData1 == self.TRADE_COUNT_STATE:
+				return localText.getText("TXT_KEY_DOMESTIC_ADVISOR_STATE_TRADE_COUNT", ())
 			# total production page - start - Nightinggale
 			elif iData1 == self.TOTAL_PRODUCTION_STATE:
 				return localText.getText("TXT_KEY_CONCEPT_TOTAL_PRODUCTION", ())

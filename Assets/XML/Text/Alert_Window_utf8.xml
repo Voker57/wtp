@@ -116,11 +116,15 @@ Consultez le fichier Readme pour plus de détails.</French>
 	<TEXT>
 		<Tag>TXT_KEY_ALERT_FAILED_TO_READ_TEXT_XML_FILE_HEADER</Tag>
 		<English>XML file read error</English>
+		<Russian>Ошибка чтения XML файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALERT_FAILED_TO_READ_TEXT_XML_FILE</Tag>
 		<English>%s
 Reason: %s
 Text from this file will be missing in the game.</English>
+		<Russian>%s
+Причина: %s
+Текст из этого файла будет отсутствовать в игре.</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -3185,10 +3185,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_ADVISOR_STATE_TRADE_COUNT</Tag>
 		<English>Exported goods</English>
+		<Russian>Экспортированные товары</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_ADVISOR_STATE_CITIZEN</Tag>
 		<English>Citizens</English>
+		<Russian>Граждане</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GO_TO_CITY</Tag>

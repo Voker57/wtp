@@ -224,9 +224,9 @@ static inline JITarrayTypes getJITarrayType(TeamTypes var)
 	return JIT_ARRAY_TEAM;
 }
 
-static inline JITarrayTypes getJITarrayType(TradeScreenTypes var)
+static inline JITarrayTypes getJITarrayType(TradeLocationTypes var)
 {
-	return JIT_ARRAY_TRADE_SCREEN;
+	return JIT_ARRAY_TRADE_LOCATION;
 }
 
 static inline JITarrayTypes getJITarrayType(TraitTypes var)

@@ -17108,14 +17108,14 @@ int CvHandicapInfo::getOppressometerGrowthHandicap() const
 }
 
 // trade screen type - start - Nightinggale
-CvTradeScreenInfo::CvTradeScreenInfo()
+CvTradeLocationInfo::CvTradeLocationInfo()
 {
 }
-CvTradeScreenInfo::~CvTradeScreenInfo()
+CvTradeLocationInfo::~CvTradeLocationInfo()
 {
 }
 
-bool CvTradeScreenInfo::read(CvXMLLoadUtility* pXML)
+bool CvTradeLocationInfo::read(CvXMLLoadUtility* pXML)
 {
 	if (!CvInfoBase::read(pXML))
 	{

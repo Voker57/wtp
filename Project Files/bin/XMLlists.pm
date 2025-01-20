@@ -43,7 +43,7 @@ sub isAlwaysHardcodedEnum
 	return 1 if $type eq "InvisibleTypes";
 	return 1 if $type eq "GameOptionTypes";
 	return 1 if $type eq "PlayerOptionTypes";
-	return 1 if $type eq "TradeScreenTypes";
+	return 1 if $type eq "TradeLocationTypes";
 	return 1 if $type eq "TerrainTypes";
 	return 1 if $type eq "YieldTypes";
 	return 1 if $type eq "AutomateTypes";
@@ -288,7 +288,7 @@ sub getEnumFiles
 	push(@list, "GameInfo/CIV4PlayerOptionInfos.xml");
 	push(@list, "GameInfo/CIV4SeaLevelInfo.xml");
 	push(@list, "GameInfo/CIV4TurnTimerInfo.xml");
-	push(@list, "GameInfo/CIV4TradeScreenInfo.xml");
+	push(@list, "GameInfo/CIV4TradeLocationInfo.xml");
 	push(@list, "GameInfo/CIV4VictoryInfo.xml");
 	push(@list, "GameInfo/CIV4WorldInfo.xml");
 	

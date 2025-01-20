@@ -412,11 +412,11 @@ struct xmlLocation<SeaLevelTypes>
 };
 
 template <>
-struct xmlLocation<TradeScreenTypes>
+struct xmlLocation<TradeLocationTypes>
 {
-	static const char* file() { return "CIV4TradeScreenInfo"; }
+	static const char* file() { return "CIV4TradeLocationInfo"; }
 	static const char* folder() { return "GameInfo"; }
-	static const char* path() { return "Civ4TradeScreenInfo/TradeScreenInfos/TradeScreenInfo"; }
+	static const char* path() { return "Civ4TradeLocationInfo/TradeLocationInfos/TradeLocationInfo"; }
 };
 
 template <>

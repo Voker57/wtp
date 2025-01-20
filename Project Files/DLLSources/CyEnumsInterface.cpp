@@ -175,6 +175,7 @@ void CyEnumsPythonInterface()
 	addEnumValues(NO_PROFESSION        , "ProfessionTypes"    , "NO_PROFESSION"    , "NUM_PROFESSION_TYPES"     );
 	addEnumValues(NO_SPECIALBUILDING   , "SpecialBuildingTypes","NO_SPECIALBUILDING", "NUM_SPECIALBUILDING_TYPES");
 	addEnumValues(NO_TERRAIN           , "TerrainTypes"       , "NO_TERRAIN"       , "NUM_TERRAIN_TYPES"        );
+	addEnumValues(NO_TRADELOCATION     , "TradeLocationTypes" , "NO_TRADELOCATION" , "NUM_TRADELOCATION_TYPES"  );
 	addEnumValues(NO_UNIT              , "UnitTypes"          , "NO_UNIT"          , "NUM_UNIT_TYPES"           );
 	addEnumValues(NO_UNITCLASS         , "UnitClassTypes"     , "NO_UNITCLASS"     , "NUM_UNITCLASS_TYPES"      );
 	addEnumValues(NO_WORLDSIZE         , "WorldSizeTypes"     , "NO_WORLDSIZE"     , "NUM_WORLDSIZE_TYPES"      );

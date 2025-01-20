@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Civ4TradeLocationInfo xmlns="x-schema:CIV4GameInfoSchema.xml">
+	<TradeLocationInfos>
+		<TradeLocationInfo>
+			<Type>TRADE_LOCATION_EUROPE</Type>
+		</TradeLocationInfo>
+		<TradeLocationInfo>
+			<Type>TRADE_LOCATION_AFRICA</Type>
+		</TradeLocationInfo>
+		<TradeLocationInfo>
+			<Type>TRADE_LOCATION_PORT_ROYAL</Type>
+		</TradeLocationInfo>
+	</TradeLocationInfos>
+</Civ4TradeLocationInfo>

@@ -4986,12 +4986,12 @@ protected:
 // PatchMod: Achievements END
 
 // trade screen type - start - Nightinggale
-class CvTradeScreenInfo :
+class CvTradeLocationInfo :
 	public CvInfoBase
 {
 public:
-	CvTradeScreenInfo();
-	~CvTradeScreenInfo();
+	CvTradeLocationInfo();
+	~CvTradeLocationInfo();
 
 	bool read(CvXMLLoadUtility* pXML);
 

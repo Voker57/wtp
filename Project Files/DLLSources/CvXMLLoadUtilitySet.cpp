@@ -344,7 +344,7 @@ void CvXMLLoadUtility::readXMLfiles(XMLReadStage eStage)
 		}
 	}
 	// trade screen type - start - Nightinggale
-	PreLoadGlobalClassInfo(eStage, GC.getTradeScreenInfo(), "CIV4TradeScreenInfo", "GameInfo", "Civ4TradeScreenInfo/TradeScreenInfos/TradeScreenInfo", NULL);
+	PreLoadGlobalClassInfo(eStage, GC.getTradeLocationInfo(), "CIV4TradeLocationInfo", "GameInfo", "Civ4TradeLocationInfo/TradeLocationInfos/TradeLocationInfo", NULL);
 	// trade screen type - end - Nightinggale
 	// Load CivEffects
 	PreLoadGlobalClassInfo(eStage, GC.getCivEffectInfo(), "CIV4CivEffectsInfos", "CivEffects", "Civ4CivEffectInfos/CivEffectInfo", NULL);

@@ -2310,20 +2310,20 @@ CvEventInfo& CvGlobals::getEventInfo(EventTypes eEvent)
 }
 
 // trade screen type - start - Nightinggale
-int CvGlobals::getNumTradeScreenInfos() const
+int CvGlobals::getNumTradeLocationInfos() const
 {
 	return (int)m_paTradeScreenInfo.size();
 }
 
-std::vector<CvTradeScreenInfo*>& CvGlobals::getTradeScreenInfo()
+std::vector<CvTradeLocationInfo*>& CvGlobals::getTradeLocationInfo()
 {
 	return m_paTradeScreenInfo;
 }
 
-const CvTradeScreenInfo& CvGlobals::getTradeScreenInfo(TradeScreenTypes eTradeScreen) const
+const CvTradeLocationInfo& CvGlobals::getTradeLocationInfo(TradeLocationTypes eTradeLocation) const
 {
-	FAssert(validEnumRange(eTradeScreen));
-	return *(m_paTradeScreenInfo[eTradeScreen]);
+	FAssert(validEnumRange(eTradeLocation));
+	return *(m_paTradeScreenInfo[eTradeLocation]);
 }
 // trade screen type - end - Nightinggale
 

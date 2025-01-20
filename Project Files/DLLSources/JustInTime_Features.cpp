@@ -173,7 +173,7 @@ static const char* getArrayType(CivCategoryTypes eType)
 {
 	switch (eType)
 	{
-	case CIV_CATEGORY_EUROPEAN:  return "CIV_CATEGORY_EUROPEAN";
+	case CIV_CATEGORY_COLONIAL:  return "CIV_CATEGORY_COLONIAL";
 	case CIV_CATEGORY_NATIVE:    return "CIV_CATEGORY_NATIVE";
 	case CIV_CATEGORY_KING:      return "CIV_CATEGORY_KING";
 	case CIV_CATEGORY_BARBARIAN: return "CIV_CATEGORY_BARBARIAN";

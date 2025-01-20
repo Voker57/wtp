@@ -138,7 +138,7 @@ static void setupGameFontCharsOffset(const CivilizationTypes eOffset)
 	for (CivilizationTypes eLoop = FIRST_CIVILIZATION; eLoop < NUM_CIVILIZATION_TYPES; ++eLoop)
 	{
 		CvCivilizationInfo& kInfo = GC.getCivilizationInfo(eLoop);
-		if (kInfo.getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+		if (kInfo.getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 		{
 			iIndex += 2;
 			kInfo.setChar(iIndex);

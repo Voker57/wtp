@@ -1994,7 +1994,7 @@ bool CvPlayer::isNative() const
 
 bool CvPlayer::isColonialNation() const
 {
-	return (getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN);
+	return (getCivCategoryTypes() == CIV_CATEGORY_COLONIAL);
 }
 
 CivCategoryTypes CvPlayer::getCivCategoryTypes() const
@@ -8084,7 +8084,7 @@ void CvPlayer::setAlive(bool bNewValue)
 			killCities();
 			killAllDeals();
 			// destroy missions and trade posts for colonial players
-			if (getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+			if (getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 			{
 				killMissionsAndTradeposts();
 			}
@@ -8210,7 +8210,7 @@ void CvPlayer::verifyAlive()
 
 		// if we should be killed and have no more respawn chances (only colonial players or natives)
 		// WTP, jooe: test if units are in combat
-		if (bKill && (getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN || isNative()))
+		if (bKill && (getCivCategoryTypes() == CIV_CATEGORY_COLONIAL || isNative()))
 		{
 			if (isUnitInActiveCombat())
 				{
@@ -8290,7 +8290,7 @@ bool CvPlayer::canRespawn()
 void CvPlayer::buyEuropeSettlerIfLandlockedAI()
 {
 	// Only AI Colonial Players, but not Kings, not Natives, not Animals, ...
-	if (getParent() == NO_PLAYER || getCivCategoryTypes() != CIV_CATEGORY_EUROPEAN || isHuman())
+	if (getParent() == NO_PLAYER || getCivCategoryTypes() != CIV_CATEGORY_COLONIAL || isHuman())
 	{
 		return;
 	}
@@ -8367,7 +8367,7 @@ void CvPlayer::kill()
 	// WTP, jooe: This was commented out, but I think it is the right place for that call
 	setAlive(false);
 
-	if (getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+	if (getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 	{
 		// Send a message that the player was destroyed
 		CvWString szBuffer = gDLL->getText("TXT_KEY_NO_MORE_RESPAWN", getCivilizationShortDescriptionKey());
@@ -22949,7 +22949,7 @@ void CvPlayer::checkForPrivateersAccusation()
 			{
 				// we check if we are in the territory of a player and that player is a colonial player
 				PlayerTypes ePossiblePlayer = pPlot->getOwnerINLINE();
-				if(ePossiblePlayer != NO_PLAYER && GET_PLAYER(ePossiblePlayer).getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+				if(ePossiblePlayer != NO_PLAYER && GET_PLAYER(ePossiblePlayer).getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 				{
 					// also we need to check that we are not at war with that player
 					// or that plot and unit are owned by the same team

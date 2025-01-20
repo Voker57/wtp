@@ -14908,7 +14908,7 @@ int CvUnitAI::AI_foundValue(CvPlot* pPlot)
 {
 	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
 
-	if (kOwner.getNumCities() == 0 && kOwner.getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+	if (kOwner.getNumCities() == 0 && kOwner.getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 	{
 		// Do not settle the first city on an island
 		if (pPlot->area()->isIsland())

@@ -15217,8 +15217,8 @@ bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 		}
 		else
 		{
-			// no civ categories set in xml. Assume European only
-			m_emAllowedCivCategories.set(CIV_CATEGORY_EUROPEAN, true);
+			// no civ categories set in xml. Assume Colonial only
+			m_emAllowedCivCategories.set(CIV_CATEGORY_COLONIAL, true);
 		}
 	}
 

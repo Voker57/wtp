@@ -264,7 +264,7 @@ void CvPlayerCivEffect::updateHasCivEffectCache() const
 	m_ja_iHasCivEffectCache.safeAdd(1, kCivInfo.getCivEffect());
 	switch (kCivInfo.getCivCategoryTypes())
 	{
-	case CIV_CATEGORY_EUROPEAN:
+	case CIV_CATEGORY_COLONIAL:
 		m_ja_iHasCivEffectCache.safeAdd(1, CIV_EFFECT_DEFAULT_EUROPEAN);
 		break;
 	case CIV_CATEGORY_NATIVE:

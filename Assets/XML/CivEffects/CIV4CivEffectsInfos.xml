@@ -17,7 +17,7 @@
 		<TagGroupAllow>
 			<AllowConqueringCities>
 				<AllowConqueringCity>
-					<eCivCategory>CIV_CATEGORY_EUROPEAN</eCivCategory>
+					<eCivCategory>CIV_CATEGORY_COLONIAL</eCivCategory>
 					<iAllow>1</iAllow>
 				</AllowConqueringCity>
 				<AllowConqueringCity>
@@ -51,7 +51,7 @@
 		<TagGroupAllow>
 			<AllowConqueringCities>
 				<AllowConqueringCity>
-					<eCivCategory>CIV_CATEGORY_EUROPEAN</eCivCategory>
+					<eCivCategory>CIV_CATEGORY_COLONIAL</eCivCategory>
 					<iAllow>1</iAllow>
 				</AllowConqueringCity>
 				<AllowConqueringCity>

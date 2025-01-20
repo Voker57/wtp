@@ -3583,7 +3583,7 @@ int CvGame::countCivPlayerEuropeanAI()
 		const CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 		if (kPlayer.isEverAlive())
 		{
-			if (!kPlayer.isHuman() && kPlayer.getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+			if (!kPlayer.isHuman() && kPlayer.getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 			{
 				iCount++;
 			}
@@ -7467,7 +7467,7 @@ CvPlot* CvGame::getAnyEuropePlot() const
 	{
 		CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 		
-		if (kPlayer.isEverAlive() && kPlayer.getCivCategoryTypes() == CIV_CATEGORY_EUROPEAN)
+		if (kPlayer.isEverAlive() && kPlayer.getCivCategoryTypes() == CIV_CATEGORY_COLONIAL)
 		{
 			 CvPlot* const pStartingPlot = kPlayer.getStartingPlot();
 			 if (pStartingPlot != NULL)

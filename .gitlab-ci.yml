@@ -11,13 +11,13 @@ build:
     - .windows_job
   stage: build
   script:
-    - echo "running scripts in the build job"
+    - 'cd "Project Files"'
+    - '& "Get Compiler.bat"'
+    - '& compile.pl'
 
 test:
   extends:
     - .windows_job
   stage: test
   script:
-    - 'cd "Project Files"'
-    - '"Get Compiler.bat"'
-    - './compile.pl'
+    - 

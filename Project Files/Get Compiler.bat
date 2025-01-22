@@ -20,12 +20,12 @@ if not exist ..\..\tbbmalloc.dll (
 )
 
 rem test is perl.exe is in PATH
-where /q perl.exe
-if ERRORLEVEL 1 (
-	echo No perl found
-	echo Perl is required for the compiler to work properly.
-	echo Please install the 64 bit version of Strawberry perl. Hit any key to open the download URL.
-	echo The compiler should be fully installed and working once perl is installed.
-) else (
-	echo "ok"
-)
+rem  where /q perl.exe
+rem  if ERRORLEVEL 1 (
+rem  	echo No perl found
+rem  	echo Perl is required for the compiler to work properly.
+rem  	echo Please install the 64 bit version of Strawberry perl. Hit any key to open the download URL.
+rem  	echo The compiler should be fully installed and working once perl is installed.
+rem  ) else (
+rem  	echo "ok"
+rem  )

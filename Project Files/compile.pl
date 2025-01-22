@@ -30,7 +30,6 @@ sub printListOfDLLs
 
 sub menu
 {
-	$OUTPUT_SCREEN->Cls;
 
 	print "Pick type of DLL to compile.\n";
 	printListOfDLLs();
@@ -48,7 +47,7 @@ sub menu
 	print "\n";
 	print "Pick an option and press enter\n";
 	
-	my $input = <STDIN>;
+	my $input = "6";
 	chomp $input;
 	
 	if ($input eq "1")
@@ -87,8 +86,6 @@ sub menu
 	else
 	{
 		print "Not valid input\n\n";
-		print "\n\nPress enter to try again\n";
-		my $input = <STDIN>;
 		menu();
 	}
 	exit();
@@ -98,7 +95,7 @@ sub createBatMenu
 {
 	print "Select type of DLL file, which should be used when starting with the bat file.\n";
 	printListOfDLLs();
-	my $input = <STDIN>;
+	my $input = "6";
 	chomp $input;
 	
 	if ($input eq "1")
@@ -128,7 +125,6 @@ sub createBatMenu
 	else
 	{
 		print "Invalid input\n";
-		<STDIN>;
 	}
 }
 
@@ -187,13 +183,11 @@ sub createBat
 	print "Do not except it to work on other computers. They will have to make their own bat files.\n";
 	print "\nPress enter to continue.\n";
 	
-	<STDIN>
 	
 }
 
 sub help
 {
-	$OUTPUT_SCREEN->Cls;
 	
 	print "There are 3 types of DLL files.\n";
 	print "1 Assert\n";
@@ -213,8 +207,6 @@ sub help
 	print "   The nature of those two makes them useless for anybody who isn't writing C++ code.\n";
 	
 	print "\n\nPress enter to continue\n";
-	<STDIN>;
-	$OUTPUT_SCREEN->Cls;
 	
 	print "All DLL files comes in two versions, dynamic and hardcoded\n\n";
 	print "Dynamic\n";
@@ -234,8 +226,6 @@ sub help
 	print "Not compiling might still go wrong even if you use a dynamic DLL file.\n";
 	
 	print "\n\nPress enter to continue\n";
-	<STDIN>;
-	$OUTPUT_SCREEN->Cls;
 	
 	print "Bat file creation\n";
 	print "\n";
@@ -253,6 +243,4 @@ sub help
 	
 	
 	print "\n\nPress enter to continue\n";
-	<STDIN>;
-	$OUTPUT_SCREEN->Cls;
 }

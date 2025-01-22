@@ -26,8 +26,7 @@ if ERRORLEVEL 1 (
 	echo Perl is required for the compiler to work properly.
 	echo Please install the 64 bit version of Strawberry perl. Hit any key to open the download URL.
 	echo The compiler should be fully installed and working once perl is installed.
-	pause
 	start "" https://strawberryperl.com/
 ) else (
-	pause
+	echo "ok"
 )

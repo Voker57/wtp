@@ -18,3 +18,4 @@ build:
     - 'cd "Project Files"'
     - '& "./Get Compiler.bat"'
     - 'perl compile.pl'
+    - 'copy temp_files\FinalRelease_HARDCODED\depends CON'

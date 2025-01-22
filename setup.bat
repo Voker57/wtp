@@ -26,4 +26,3 @@ echo Installation complete
 )
 
 echo.
-pause

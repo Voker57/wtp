@@ -12,4 +12,3 @@ bin\jom source_list /NOLOGO && ^
 nmake precompile  /NOLOGO && ^
 bin\jom build
 
-pause

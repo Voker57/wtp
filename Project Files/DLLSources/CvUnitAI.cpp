@@ -14922,7 +14922,7 @@ int CvUnitAI::AI_foundValue(CvPlot* pPlot)
 		{
 			for (int iDY = -1; iDY <= 1 && !bFoundDeepWater; iDY++)
 			{
-				const CvPlot* pLoopPlot = GC.getMap().plotSoren(pPlot->getX_INLINE() + iDX, pPlot->getY_INLINE() + iDY);
+				const CvPlot* pLoopPlot = GC.getMap().plotINLINE(pPlot->getX_INLINE() + iDX, pPlot->getY_INLINE() + iDY);
 				if (pLoopPlot != NULL && pLoopPlot->getTerrainType() == TERRAIN_COAST)
 				{
 					bFoundDeepWater = true;

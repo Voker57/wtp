@@ -102,6 +102,10 @@ PRECOMPILE_MEMORY = /Zm150
 !ENDIF
 !include Makefile.settings
 
+!IFNDEF VERBOSE
+HIDE_CHAR=@
+!ENDIF
+
 PRECOMPILE_DEPENDENCIES =
 PROJECT_CFLAGS =
 PROJECT_LDFLAGS =
@@ -282,8 +286,8 @@ clean:
 
 build: $(Target_BIN)
 !IFDEF YOURMOD
-	@$(PERL) bin\copy.pl "$(Target_BIN)" "$(YOURMOD)\Assets\." verbose
-	@$(PERL) bin\copy.pl "$(Target_PDB)" "$(YOURMOD)\Assets\."
+	$(HIDE_CHAR)$(PERL) bin\copy.pl "$(Target_BIN)" "$(YOURMOD)\Assets\." verbose
+	$(HIDE_CHAR)$(PERL) bin\copy.pl "$(Target_PDB)" "$(YOURMOD)\Assets\."
 !IF "$(YOURMOD)" != ".."
 	-xcopy "..\Assets\*" "$(YOURMOD)\Assets\*" /e /y /f /d
 	-xcopy "..\PublicMaps\*" "$(YOURMOD)\PublicMaps\*" /e /y /f /d
@@ -307,25 +311,25 @@ source_list_building: header_building
 	
 header_building:
 !IFDEF NO_FASTDEP
-	@IF EXIST $(TEMP_TARGET_FILES) DEL /f /q $(TEMP_TARGET_FILES)
+	$(HIDE_CHAR)IF EXIST $(TEMP_TARGET_FILES) DEL /f /q $(TEMP_TARGET_FILES)
 !ENDIF
 	@ECHO Building headers
-	@$(PERL) bin\xml_enum_gen.pl
-	@$(PERL) bin\variable_setup.pl
-	@$(PERL) bin\Makefile_setup.pl "$(PROGRAMFILES)"
+	$(HIDE_CHAR)$(PERL) bin\xml_enum_gen.pl
+	$(HIDE_CHAR)$(PERL) bin\variable_setup.pl
+	$(HIDE_CHAR)$(PERL) bin\Makefile_setup.pl "$(PROGRAMFILES)"
 
 fastdep: source_list_building
 	@ECHO Running fastdep
 !IFDEF RELEASE_VERSION
-	@echo $(RELEASE_VERSION)| $(PERL) bin\git_version.pl
+	$(HIDE_CHAR)echo $(RELEASE_VERSION)| $(PERL) bin\git_version.pl
 !ELSEIFDEF WITH_GIT
-	@$(GIT) rev-parse HEAD | $(PERL) bin\git_version.pl
+	$(HIDE_CHAR)$(GIT) rev-parse HEAD | $(PERL) bin\git_version.pl
 !ELSE
-	@echo Unknown Version| $(PERL) bin\git_version.pl
+	$(HIDE_CHAR)echo Unknown Version| $(PERL) bin\git_version.pl
 !ENDIF
 !IFNDEF NO_FASTDEP
-	@$(FD) --objectextension=pch -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCE_DIR)\CvGameCoreDLL.cpp >> $(FILE_DEPENDS)
-    @$(FD) --objectextension=obj -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCES) >> $(FILE_DEPENDS)
+	$(HIDE_CHAR)$(FD) --objectextension=pch -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCE_DIR)\CvGameCoreDLL.cpp >> $(FILE_DEPENDS)
+    $(HIDE_CHAR)$(FD) --objectextension=obj -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCES) >> $(FILE_DEPENDS)
 !ENDIF
 
 Make_Dir:
@@ -341,46 +345,46 @@ Target_unfinished:
 
 $(Target_BIN): $(OBJS) $(Target_RESOURCE)
 	@ECHO.Linking DLL
-	@$(LD) /out:$(Target_BIN) $(LDFLAGS) $(LIBS) $(OBJS) $(Target_RESOURCE)
+	$(HIDE_CHAR)$(LD) /out:$(Target_BIN) $(LDFLAGS) $(LIBS) $(OBJS) $(Target_RESOURCE)
 
 {$(SOURCE_DIR)\.}.cpp{$(TEMP_TARGET_FILES)\.}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\.}.c{$(TEMP_TARGET_FILES)\.}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR1)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR1)}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR2)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR2)}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH2)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH2)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR3)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR3)}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH3)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH3)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR4)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR4)}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH4)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH4)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR5)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR5)}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH5)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH5)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR6)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR6)}.obj:
 	@ECHO.>"$*.obj.@"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH6)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH6)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR7)}.cpp{$(TEMP_TARGET_FILES)\$(SUBDIR7)}.obj:
@@ -433,7 +437,7 @@ $(Target_PCH) $(TEMP_TARGET_FILES)\_precompile.obj: $(PRECOMPILE_DEPENDENCIES)
 	@ECHO.>"$(Target_PCH).@"
 	@ECHO.>"$(TEMP_TARGET_FILES)\_precompile.obj.@"
 	@FOR %i IN ($(TEMP_TARGET_FILES)\*.obj) DO @IF EXIST "%i" DEL "%i"
-    @$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(PRECOMPILE_MEMORY) $(INCS) /YcCvGameCoreDLL.h /Fo"$(TEMP_TARGET_FILES)\_precompile.obj" /c $(SOURCE_DIR)\_precompile.cpp
+    $(HIDE_CHAR)$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(PRECOMPILE_MEMORY) $(INCS) /YcCvGameCoreDLL.h /Fo"$(TEMP_TARGET_FILES)\_precompile.obj" /c $(SOURCE_DIR)\_precompile.cpp
 	@DEL "$(Target_PCH).@"
 	@DEL "$(TEMP_TARGET_FILES)\_precompile.obj.@"
 
@@ -457,12 +461,12 @@ $(TEMP_TARGET_FILES)\$(BLACKLIST).obj: $(BLACKLIST).cpp
 # NOTE: requires git 2.29 or newer. Git bundled with smartGIT at the time of writing this is 2.28
 BuildRelease:
 	@ECHO Building zip file
-	@cd ..
-	@$(GIT) archive --format=zip --prefix=Assets/ --add-file=Assets/CvGameCoreDLL.dll --prefix= -9 --output "Project Files"/WeThePeople-temp.zip head
-	@cd "Project Files"
-	@echo $(RELEASE_VERSION)| $(PERL) bin\git_version.pl
+	$(HIDE_CHAR)cd ..
+	$(HIDE_CHAR)$(GIT) archive --format=zip --prefix=Assets/ --add-file=Assets/CvGameCoreDLL.dll --prefix= -9 --output "Project Files"/WeThePeople-temp.zip head
+	$(HIDE_CHAR)cd "Project Files"
+	$(HIDE_CHAR)echo $(RELEASE_VERSION)| $(PERL) bin\git_version.pl
 	@ECHO Generating checksums
-	@$(PERL) bin/checksums-zip.pl > checksums.txt
+	$(HIDE_CHAR)$(PERL) bin/checksums-zip.pl > checksums.txt
 
 ###
 ### test targets
@@ -472,14 +476,14 @@ BuildRelease:
 # this test is really fast (below 0.01 seconds) and is always executed in target source_list
 test_DllExport:
 	@ECHO Testing DllExport
-	@$(PERL) bin\DllExport.pl "$(SOURCE_DIR)"
-	@$(PERL) bin\xml_validation.pl
-	@$(PERL) bin\CPP_line_checker.pl
-	@$(PERL) bin\InfoArray.pl
+	$(HIDE_CHAR)$(PERL) bin\DllExport.pl "$(SOURCE_DIR)"
+	$(HIDE_CHAR)$(PERL) bin\xml_validation.pl
+	$(HIDE_CHAR)$(PERL) bin\CPP_line_checker.pl
+	$(HIDE_CHAR)$(PERL) bin\InfoArray.pl
 
 test_Python: header_building
-	@$(PERL) bin\xml_enum_global_types.pl
-	@$(PERL) bin\python_enum_check.pl
+	$(HIDE_CHAR)$(PERL) bin\xml_enum_global_types.pl
+	$(HIDE_CHAR)$(PERL) bin\python_enum_check.pl
 
 # first step in the testing process
 # each target mentioned here will run in a dedicated process

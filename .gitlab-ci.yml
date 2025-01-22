@@ -4,8 +4,7 @@
   before_script:
     - Set-Variable -Name "time" -Value (date -Format "%H:%m")
     - echo ${time}
-    - echo "started by ${GITLAB_USER_NAME} / @${GITLAB_USER_LOGIN}"
-
+    
 build:
   extends:
     - .windows_job
@@ -16,5 +15,12 @@ build:
     - "ls"
     - '$Env:PATH += ";$(Resolve-Path -Path perl\c\bin);$(Resolve-Path -Path perl\perl\bin);$(Resolve-Path -Path perl\perl\site\bin)"'
     - 'cd "Project Files"'
+    - "'NO_FASTDEP=1' | Out-File -FilePath Makefile.settings -Append"
     - '& "./Get Compiler.bat"'
     - 'perl compile.pl'
+  artifacts:
+    paths:
+      - .
+    exclude:
+      - "Project Files"
+      - ".git*'

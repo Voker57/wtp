@@ -4,15 +4,15 @@
   before_script:
     - Set-Variable -Name "time" -Value (date -Format "%H:%m")
     - echo ${time}
+  cache:
+    - perl
     
 build:
   extends:
     - .windows_job
   stage: build
   script:
-    - 'Invoke-WebRequest "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54001_64bit_UCRT/strawberry-perl-5.40.0.1-64bit-portable.zip" -OutFile perl.zip'
-    - "Expand-Archive perl.zip perl"
-    - "ls"
+    - '(Test-Path perl) ? (perl is cached) : (Invoke-WebRequest "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54001_64bit_UCRT/strawberry-perl-5.40.0.1-64bit-portable.zip" -OutFile perl.zip ; Expand-Archive perl.zip perl)'
     - '$Env:PATH += ";$(Resolve-Path -Path perl\c\bin);$(Resolve-Path -Path perl\perl\bin);$(Resolve-Path -Path perl\perl\site\bin)"'
     - 'cd "Project Files"'
     - "'NO_FASTDEP=1' | Out-File -FilePath Makefile.settings -Append"
@@ -24,3 +24,4 @@ build:
     exclude:
       - "Project Files"
       - ".git*"
+      - "perl"

@@ -328,8 +328,8 @@ fastdep: source_list_building
 	$(HIDE_CHAR)echo Unknown Version| $(PERL) bin\git_version.pl
 !ENDIF
 !IFNDEF NO_FASTDEP
-	$(HIDE_CHAR)$(FD) --objectextension=pch -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCE_DIR)\CvGameCoreDLL.cpp >> $(FILE_DEPENDS)
-    $(HIDE_CHAR)$(FD) --objectextension=obj -q --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCES) >> $(FILE_DEPENDS)
+	$(HIDE_CHAR)$(FD) --objectextension=pch --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCE_DIR)\CvGameCoreDLL.cpp >> $(FILE_DEPENDS)
+    $(HIDE_CHAR)$(FD) --objectextension=obj --removepath=$(SOURCE_DIR)\ -O $(TEMP_TARGET_FILES) $(SOURCES) >> $(FILE_DEPENDS)
 !ENDIF
 
 Make_Dir:

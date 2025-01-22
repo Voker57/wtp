@@ -17,4 +17,4 @@ build:
     - 'Invoke-WebRequest "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54001_64bit_UCRT/strawberry-perl-5.40.0.1-64bit.msi" -OutFile perl.msi'
     - 'msiexec /package perl.msi /quiet /passive'
     - '& "./Get Compiler.bat"'
-    - '& compile.pl'
+    - 'perl compile.pl'

@@ -297,7 +297,7 @@ build: $(Target_BIN)
 
 precompile: Make_Dir Target_unfinished $(Target_PCH)
 
-source_list: source_list_building Make_Dir fastdep
+source_list: source_list_building Make_Dir test_DllExport test_Python fastdep
 
 source_list_building: header_building
 	@ECHO Building source list

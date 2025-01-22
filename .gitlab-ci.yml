@@ -11,6 +11,8 @@ build:
     - .windows_job
   stage: build
   script:
+    - 'ls'
     - 'cd "Project Files"'
-    - '& "Get Compiler.bat"'
+    - 'ls'
+    - '& "./Get Compiler.bat"'
     - '& compile.pl'

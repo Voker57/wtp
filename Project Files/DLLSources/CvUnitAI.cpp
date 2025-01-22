@@ -6495,7 +6495,11 @@ bool CvUnitAI::AI_africa()
 
 	AI_sellYieldUnits(AFRICA);
 
-	if (kOwner.m_estimatedUnemploymentCount < kOwner.getNumCities() * 2)
+	// Disabling this for now until we find a better method to determine the utitility
+#if 0
+	const int iEstimatedUnemploymentCount = kOwner.AI_estimateUnemploymentCount();
+
+	if (iEstimatedUnemploymentCount < kOwner.getNumCities() * 2)
 	{
 		for (int iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
 		{
@@ -6505,13 +6509,15 @@ bool CvUnitAI::AI_africa()
 			if (kUnitInfo.getDefaultUnitAIType() == UNITAI_COLONIST && kUnitInfo.getAfricaCost() > 0)
 			{
 				// Attempt to buy slaves as long as we have have enough gold and free cargo slots
-				const int iPotentialSlavesToBuy = cargoSpace() - getCargo();
+				const int iCount = cargoSpace() - getCargo() - kPLayer.getNumAfricaUnits();
 
-				for (int i=0; i < iPotentialSlavesToBuy; i++)
+				for (int i=0; i < iCount; i++)
 				{
 					if (kOwner.buyAfricaUnit(eLoopUnit, 100) == NULL)
 						// Early exit since we could not buy anymore
 						break;
+					logBBAI("CvUnitAI::AI_africa player %S hurries %d units since iEstimatedUnemploymentCount is %d",
+						kOwner.getCivilizationDescription(), i, iEstimatedUnemploymentCount);
 				}
 
 				// No need to consider other units
@@ -6519,6 +6525,7 @@ bool CvUnitAI::AI_africa()
 			}
 		}
 	}
+#endif
 
 	//Pick up units from Africa (FIFO)
 	std::deque<CvUnit*> aUnits;
@@ -6647,13 +6654,18 @@ bool CvUnitAI::AI_europe()
 	}
 	// TAC - AI purchases military units - koma13 - END
 
-	if (kOwner.AI_shouldHurryUnit() && kOwner.m_estimatedUnemploymentCount < kOwner.getNumCities() * 2)
+	const int iEstimatedUnemploymentCount = kOwner.AI_estimateUnemploymentCount();
+
+	if (kOwner.AI_shouldHurryUnit() && iEstimatedUnemploymentCount < kOwner.getNumCities() * 2)
 	{
 		const int iPotentialColonistsToHurry = std::max(0, cargoSpace() - getCargo() - kOwner.getNumEuropeUnits());
 
 		if (iPotentialColonistsToHurry > 0)
 		{
 			kOwner.AI_hurryBestDockUnits(std::min(kOwner.CivEffect().getNumUnitsOnDock(), (unsigned int)iPotentialColonistsToHurry));
+			logBBAI("CvUnitAI::AI_europe player %S hurries %d units since iEstimatedUnemploymentCount is %d", 
+				kOwner.getCivilizationDescription(),
+				iPotentialColonistsToHurry, iEstimatedUnemploymentCount);
 		}
 	}
 	// Erik: Pick up the most valuable units first (e.g. statesmen)

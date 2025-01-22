@@ -464,9 +464,7 @@ public:
 	void AI_hurryBestDockUnits(int iHurryCount);
 	int AI_getColonialMilitaryModifier() const;
 	bool AI_shouldHurryUnit() const;
-
-	// TODO: Make protective and replace with a getter
-	int m_estimatedUnemploymentCount;
+	int AI_estimateUnemploymentCount() const;
 
 protected:
 
@@ -581,7 +579,6 @@ protected:
 
 	int AI_getBestDockUnit() const;
 	bool AI_canHurryDockUnit() const;
-	int AI_estimateUnemploymentCount() const;
 
 	friend class CvGameTextMgr;
 };

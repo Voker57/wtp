@@ -121,8 +121,6 @@ void CvPlayerAI::AI_doTurnPre()
 	FAssertMsg(getLeaderType() != NO_LEADER, "getLeaderType() is not expected to be equal with NO_LEADER");
 	FAssertMsg(getCivilizationType() != NO_CIVILIZATION, "getCivilizationType() is not expected to be equal with NO_CIVILIZATION");
 
-	int m_estimatedUnemploymentCount = AI_estimateUnemploymentCount();
-
 	AI_invalidateCloseBordersAttitudeCache();
 
 	AI_doCounter();
@@ -16575,6 +16573,9 @@ int CvPlayerAI::AI_estimateUnemploymentCount() const
 			cnt++;
 		}
 	}
+
+	logBBAI("CvPlayerAI::AI_estimateUnemploymentCount for Player %S: %d", getCivilizationDescription(),
+		cnt);
 
 	return cnt;
 }

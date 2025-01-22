@@ -5,7 +5,8 @@
     - Set-Variable -Name "time" -Value (date -Format "%H:%m")
     - echo ${time}
   cache:
-    - perl
+    paths:
+      - perl
     
 build:
   extends:

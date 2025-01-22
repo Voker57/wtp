@@ -1,0 +1,23 @@
+.windows_job:
+  tags:
+    - saas-windows-medium-amd64
+  before_script:
+    - Set-Variable -Name "time" -Value (date -Format "%H:%m")
+    - echo ${time}
+    - echo "started by ${GITLAB_USER_NAME} / @${GITLAB_USER_LOGIN}"
+
+build:
+  extends:
+    - .windows_job
+  stage: build
+  script:
+    - echo "running scripts in the build job"
+
+test:
+  extends:
+    - .windows_job
+  stage: test
+  script:
+    - 'cd "Project Files"'
+    - '"Get Compiler.bat"'
+    - './compile.pl'

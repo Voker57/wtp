@@ -20,6 +20,7 @@ build:
     - "'NO_FASTDEP=1' | Out-File -FilePath Makefile.settings -Append"
     - '& "./Get Compiler.bat"'
     - 'perl compile.pl'
+    - 'dir'
   artifacts:
     paths:
       - .

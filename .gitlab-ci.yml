@@ -23,7 +23,7 @@ build:
     - 'perl compile.pl'
     - 'dir ../..'
     - "Invoke-WebRequest https://7-zip.org/a/7zr.exe -OutFile 7zr.exe"
-    - '.\7zr.exe -ms=on -mx9 WeThePeople.7z wtp -X ProjectFiles -X .git*'
+    - '.\7zr.exe a -ms=on -mx9 -x ProjectFiles -x .git* WeThePeople.7z wtp'
   artifacts:
     paths:
       - "../WeThePeople.7z"

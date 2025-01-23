@@ -19,7 +19,7 @@ if not exist ..\..\tbbmalloc.dll (
 	copy DLL_for_exe\tbbmalloc.dll ..\..\
 )
 
-test is perl.exe is in PATH
+rem test is perl.exe is in PATH
 where /q perl.exe
 if ERRORLEVEL 1 (
 	echo No perl found

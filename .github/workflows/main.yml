@@ -7,8 +7,9 @@ jobs:
     runs-on: windows-2025
     name: wtp
     steps:
-      - name: build
+      - name: co
         uses: actions/checkout@v4
+      - name: build
         run: |
           dir
           $ProgressPreference = 'SilentlyContinue'

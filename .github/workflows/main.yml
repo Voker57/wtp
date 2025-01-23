@@ -29,12 +29,8 @@ jobs:
           perl compile.pl
           cd ..
           git archive --format=zip --prefix=Assets/ --add-file=Assets/CvGameCoreDLL.dll --prefix= -9 head --output ../WeThePeople.zip
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        name: release
+      - name: release
+        uses: ncipollo/release-action@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          artifacts: "WeThePeople.zip"
           prerelease: true
-          automatic_release_tag: whatever
-          title: "Development Build"
-          files: |
-            WeThePeople.zip

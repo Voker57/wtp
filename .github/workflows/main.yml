@@ -9,9 +9,15 @@ jobs:
     steps:
       - name: co
         uses: actions/checkout@v4
+      - name: cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            perl
+            Compiler
+            7zr.exe
       - name: build
         run: |
-          dir
           $ProgressPreference = 'SilentlyContinue'
           if (Test-Path perl) {Write-Host "perl is cached"} else { Invoke-WebRequest "https://github.com/StrawberryPerl/Perl-Dist-Strawberry/releases/download/SP_54001_64bit_UCRT/strawberry-perl-5.40.0.1-64bit-portable.zip" -OutFile ..\perl.zip ; Expand-Archive ..\perl.zip perl }
           $Env:PATH += ";$(Resolve-Path -Path perl\c\bin);$(Resolve-Path -Path perl\perl\bin);$(Resolve-Path -Path perl\perl\site\bin)"
@@ -21,11 +27,12 @@ jobs:
           & "./Get Compiler.bat"
           perl compile.pl
           cd ../..
-          Invoke-WebRequest https://7-zip.org/a/7zr.exe -OutFile 7zr.exe
-          .\7zr.exe a -ms=on -mx9 -xr!ProjectFiles -xr!git* -xr!perl -xr!Compiler  WeThePeople.7z wtp
+          if (Test-Path 7zr.exe) { Write-Host "7zr is cached" } else { Invoke-WebRequest https://7-zip.org/a/7zr.exe -OutFile 7zr.exe }
+          .\7zr.exe a -ms=on -mx9 -xr!ProjectFiles -xr!git* -xr!perl -xr!Compiler -xr!7zr.exe  WeThePeople.7z wtp
+          mv WeThePeople.7z wtp
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: wtp.7z
-          path: ../WeThePeople.7z
+          name: WeThePeople.7z
+          path: WeThePeople.7z
         

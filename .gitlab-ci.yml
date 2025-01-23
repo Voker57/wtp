@@ -21,12 +21,9 @@ build:
     - "'VERBOSE=1' | Out-File -FilePath Makefile.settings -Append"
     - '& "./Get Compiler.bat"'
     - 'perl compile.pl'
-    - 'dir ..'
+    - 'dir ../..'
+    - "Invoke-WebRequest https://7-zip.org/a/7zr.exe -OutFile 7zr.exe"
+    - ".\7zr.exe -ms=on -mx9 WeThePeople.7z wtp -X ProjectFiles -X .git*"
   artifacts:
     paths:
-      - "."
-    exclude:
-      - "Project Files"
-      - "Project Files/**/*"
-      - ".git/**/*"
-      - ".git"
+      - "../WeThePeople.7z"

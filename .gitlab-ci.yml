@@ -23,7 +23,7 @@ build:
     - 'dir'
   artifacts:
     paths:
-      - %CI_PROJECT_DIR%
+      - "%CI_PROJECT_DIR%"
     exclude:
       - "Project Files"
       - "Project Files/**/*"

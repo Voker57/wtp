@@ -27,8 +27,8 @@ jobs:
           & "./Get Compiler.bat"
           perl compile.pl
           cd ../..
-          if (Test-Path 7zr.exe) { Write-Host "7zr is cached" } else { Invoke-WebRequest https://7-zip.org/a/7zr.exe -OutFile 7zr.exe }
-          .\7zr.exe a -ms=on -mx9 -xr!ProjectFiles -xr!git* -xr!perl -xr!Compiler -xr!7zr.exe  WeThePeople.7z wtp
+          if (Test-Path wtp\7zr.exe) { Write-Host "7zr is cached" } else { Invoke-WebRequest https://7-zip.org/a/7zr.exe -OutFile wtp\7zr.exe }
+          .\wtp\7zr.exe a -ms=on -mx9 -xr!ProjectFiles "-xr!.git*" -xr!perl -xr!Compiler -xr!7zr.exe  WeThePeople.7z wtp
           mv WeThePeople.7z wtp
       - name: upload
         uses: actions/upload-artifact@v4

@@ -28,7 +28,8 @@ jobs:
           & "./Get Compiler.bat"
           perl compile.pl
           cd ..
-          git archive --format=tar --prefix=Assets/ --add-file=Assets/CvGameCoreDLL.dll --prefix= head | { cd ..; mkdir WeThePeople; cd WeThePeople; tar x }
+          mkdir ..\WeThePeople
+          git archive --format=tar --prefix=Assets/ --add-file=Assets/CvGameCoreDLL.dll --prefix= head | tar x -C ../WeThePeople
       - name: upload
         uses: actions/upload-artifact@v4
         with:

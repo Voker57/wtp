@@ -120805,7 +120805,7 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=20
-		CityName=Oilantaytambo
+		CityName=Ollantaytambo
 		CityPopulation=3
 		BuildingType=BUILDING_AZTEC_SACRIFICIAL_ALTAR
 		BuildingType=BUILDING_NATIVE_WALL

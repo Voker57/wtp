@@ -428,27 +428,32 @@ void CvPlot::doTurn()
 			if(getNumDefenders(BarbarianPlayerType) == 0)
 			{
 				CvPlayer& barbarianPlayer = GET_PLAYER(BarbarianPlayerType);
-				UnitTypes GeneratedUnitType = NO_UNIT;
+				UnitTypes generatedUnitType = NO_UNIT;
 
 				// to have a little variation
-				int randomUnitGerationValue = GC.getGameINLINE().getSorenRandNum(3, "Barbarian Camp Defender");
-				if (randomUnitGerationValue <= 1)
+				const int iUnitChoice = GC.getGameINLINE().getSorenRandNum(3, "Barbarian Camp Defender");
+				if (iUnitChoice == 0)
 				{
-					GeneratedUnitType = (UnitTypes)GC.getCivilizationInfo(barbarianPlayer.getCivilizationType()).getCivilizationUnits(GC.getDefineINT("UNITCLASS_REVOLTING_SLAVE"));
+					generatedUnitType = (UnitTypes)GC.getCivilizationInfo(barbarianPlayer.getCivilizationType()).getCivilizationUnits(GC.getDefineINT("UNITCLASS_REVOLTING_SLAVE"));
 				}
-				if (randomUnitGerationValue == 2)
+				else if (iUnitChoice == 1)
 				{
-					GeneratedUnitType = (UnitTypes)GC.getCivilizationInfo(barbarianPlayer.getCivilizationType()).getCivilizationUnits(GC.getDefineINT("UNITCLASS_REVOLTING_NATIVE_SLAVE"));
+					generatedUnitType = (UnitTypes)GC.getCivilizationInfo(barbarianPlayer.getCivilizationType()).getCivilizationUnits(GC.getDefineINT("UNITCLASS_REVOLTING_NATIVE_SLAVE"));
+				}
+				else if (iUnitChoice == 2)
+				{
+					generatedUnitType = (UnitTypes)GC.getCivilizationInfo(barbarianPlayer.getCivilizationType()).getCivilizationUnits(GC.getDefineINT("UNITCLASS_REVOLTING_CRIMINAL"));
 				}
 				else
 				{
-					GeneratedUnitType = (UnitTypes)GC.getCivilizationInfo(barbarianPlayer.getCivilizationType()).getCivilizationUnits(GC.getDefineINT("UNITCLASS_REVOLTING_CRIMINAL"));
+					FAssertMsg(false, "Invalid choice");
 				}
 
-				if(GeneratedUnitType != NO_UNIT)
+				if(generatedUnitType != NO_UNIT)
 				{
 					// we generate with Default Unit AI
-					CvUnit* protectingUnit = barbarianPlayer.initUnit(GeneratedUnitType, (ProfessionTypes) GC.getUnitInfo(GeneratedUnitType).getDefaultProfession(), getX_INLINE(), getY_INLINE(), NO_UNITAI);
+					CvUnit* const protectingUnit = barbarianPlayer.initUnit(generatedUnitType, (ProfessionTypes) GC.getUnitInfo(generatedUnitType).getDefaultProfession(), getX_INLINE(), getY_INLINE(), NO_UNITAI);
+					(void)protectingUnit; // Silence warnings
 				}
 			}
 		}

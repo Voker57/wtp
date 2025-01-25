@@ -5218,7 +5218,8 @@ EuropeTypes CvPlot::getNearestEurope() const
 
 bool CvPlot::isEuropeAccessable() const
 {
-	return getDistanceToOcean() != MAX_SHORT;
+	// Ice-locked water plots are not accessible from Europe
+	return getDistanceToOcean() < CvGame::PLOT_OCEAN_DISTANCE_IMPASSABLE_THRESHOLD;
 }
 
 // This function finds an *inland* corner of this plot at which to place a river.

@@ -783,38 +783,29 @@ public:
 	// TAC - AI purchases military units - koma13 - END
 	CvUnit* buyEuropeUnit(UnitTypes eUnit, int iPriceModifier);
 	void buyUnitsFromKing();
-	int getYieldTradedTotalEurope(YieldTypes eYield) const;
-	void setYieldTradedTotalEurope(YieldTypes eYield, int iValue);
-	// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	int getYieldTradedTotalAfrica(YieldTypes eYield) const;
-	void setYieldTradedTotalAfrica(YieldTypes eYield, int iValue);
-	int getYieldTradedTotalPortRoyal(YieldTypes eYield) const;
-	void setYieldTradedTotalPortRoyal(YieldTypes eYield, int iValue);
-	// WTP, ray, Yields Traded Total for Africa and Port Royal - END
+	int getYieldSoldTotal(TradeLocationTypes eLocation, YieldTypes eYield) const;
 	// R&R, vetiarvind, Price dependent tax rate change - Start
-	int CvPlayer::getYieldScoreTotal(YieldTypes eYield) const;
-	void CvPlayer::setYieldScoreTotal(YieldTypes eYield, int iValue);
+	int getYieldScoreTotal(YieldTypes eYield) const;
+	void setYieldScoreTotal(YieldTypes eYield, int iValue);
+	void changeYieldCountScoreTotal(YieldTypes eYield, int iChange);
 	const int getFullYieldScore();
 	const int getTaxRaiseChance();
 	const int getTaxThresold();
 
-	void CvPlayer::changeYieldTradedTotal(YieldTypes eYield, int iChange, int iUnitPrice = -1);
-	void CvPlayer::changeYieldTradedTotalAfrica(YieldTypes eYield, int iChange, int iUnitPrice = -1); // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	void CvPlayer::changeYieldTradedTotalPortRoyal(YieldTypes eYield, int iChange, int iUnitPrice = -1); // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	//void changeYieldTradedTotal(YieldTypes eYield, int iChange);
+	// setting iAmountSold to something negative means something was bought
+	void changeYieldTradedCounters(TradeLocationTypes eScreen, YieldTypes eYield, int iAmountSold, int iUnitPrice = MIN_INT);
 	// R&R, vetiarvind, Price dependent tax rate change - End
 
-	int getYieldBoughtTotal(YieldTypes eYield) const;
-	void setYieldBoughtTotal(YieldTypes eYield, int iValue);
-	void changeYieldBoughtTotal(YieldTypes eYield, int iChange);
+	int getYieldBoughtTotal(TradeLocationTypes eLocation, YieldTypes eYield) const;
+	void changeYieldTradedTaxCounter(TradeLocationTypes eLocation, YieldTypes eYield, int iAmountSold);
 
 	// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	int getYieldBoughtTotalAfrica(YieldTypes eYield) const;
-	void setYieldBoughtTotalAfrica(YieldTypes eYield, int iValue);
-	void changeYieldBoughtTotalAfrica(YieldTypes eYield, int iChange);
-	int getYieldBoughtTotalPortRoyal(YieldTypes eYield) const;
-	void setYieldBoughtTotalPortRoyal(YieldTypes eYield, int iValue);
-	void changeYieldBoughtTotalPortRoyal(YieldTypes eYield, int iChange);
+	//int getYieldBoughtTotalAfrica(YieldTypes eYield) const;
+	//void setYieldBoughtTotalAfrica(YieldTypes eYield, int iValue);
+	//void changeYieldBoughtTotalAfrica(YieldTypes eYield, int iChange);
+	//int getYieldBoughtTotalPortRoyal(YieldTypes eYield) const;
+	//void setYieldBoughtTotalPortRoyal(YieldTypes eYield, int iValue);
+	//void changeYieldBoughtTotalPortRoyal(YieldTypes eYield, int iChange);
 	// WTP, ray, Yields Traded Total for Africa and Port Royal - END
 
 	YieldTypes getHighestTradedYield() const;
@@ -978,7 +969,9 @@ public:
 
 	DirectionTypes getPreferredStartingDirection() const;
 	std::vector<CvUnit*> getPortUnitsByProfession(ProfessionTypes eProfession) const;
-	CvUnit* buyYieldUnit(YieldTypes eYield, int iAmount, CvUnit* pTransport, Port port);
+	CvUnit* buyYieldUnit(YieldTypes eYield, int iAmount, CvUnit* pTransport, TradeLocationTypes eLocation);
+
+	bool is(CivCategoryTypes eCivCategory) const;
 
 protected:
 
@@ -1130,12 +1123,8 @@ protected:
 	EnumMap<YieldTypes, int> m_em_iYieldBuyPrice;
 	EnumMap<YieldTypes, int> m_em_iYieldAfricaBuyPrice; // R&R, ray, Africa
 	EnumMap<YieldTypes, int> m_em_iYieldPortRoyalBuyPrice; // R&R, ray, Port Royal
-	EnumMap<YieldTypes, int> m_em_iYieldTradedTotal;
-	EnumMap<YieldTypes, int> m_em_iYieldTradedTotalAfrica; // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	EnumMap<YieldTypes, int> m_em_iYieldTradedTotalPortRoyal; // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	EnumMap<YieldTypes, int> m_em_iYieldBoughtTotal;
-	EnumMap<YieldTypes, int> m_em_iYieldBoughtTotalAfrica; // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	EnumMap<YieldTypes, int> m_em_iYieldBoughtTotalPortRoyal; // WTP, ray, Yields Traded Total for Africa and Port Royal - START
+	EnumMap<YieldTypes, int> m_em_iYieldSoldTotal[NUM_TRADELOCATION_TYPES];
+	EnumMap<YieldTypes, int> m_em_iYieldBoughtTotal[NUM_TRADELOCATION_TYPES];
 	EnumMap<YieldTypes, int> m_em_iTaxYieldModifierCount;
 	EnumMap<YieldTypes, int> m_em_iYieldScoreTotal; // R&R, vetiarvind, Price dependent tax rate change
 
@@ -1336,4 +1325,10 @@ inline bool CvPlayer::hasContentsYieldEquipmentAmountSecure(ProfessionTypes ePro
 	return eProfession > NO_PROFESSION ? hasContentsYieldEquipmentAmount(eProfession) : false;
 }
 // cache CvPlayer::getYieldEquipmentAmount - end - Nightinggale
+
+inline bool CvPlayer::is(CivCategoryTypes eCivCategory) const
+{
+	return getCivCategoryTypes() == eCivCategory;
+}
+
 #endif

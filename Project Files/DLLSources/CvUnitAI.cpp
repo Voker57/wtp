@@ -429,7 +429,7 @@ bool CvUnitAI::AI_europeUpdate()
 			{
 				// If we're carrying any units we may as well unload them
 				// so that other ships can transport them while we heal
-				AI_unloadUnits(EUROPE);
+				AI_unloadUnits(TRADE_LOCATION_EUROPE);
 			}
 
 			return false;
@@ -514,7 +514,7 @@ bool CvUnitAI::AI_europeUpdate()
 			{
 				if (hasCargo())
 				{
-					AI_sellYieldUnits(EUROPE);
+					AI_sellYieldUnits(TRADE_LOCATION_EUROPE);
 				}
 				crossOcean(UNIT_TRAVEL_STATE_FROM_EUROPE);
 			}
@@ -522,7 +522,7 @@ bool CvUnitAI::AI_europeUpdate()
 			{
 				if (hasCargo())
 				{
-					AI_sellYieldUnits(AFRICA);
+					AI_sellYieldUnits(TRADE_LOCATION_AFRICA);
 				}
 				crossOcean(UNIT_TRAVEL_STATE_FROM_AFRICA);
 			}
@@ -4612,7 +4612,7 @@ bool CvUnitAI::AI_sailToPreferredPort(bool bMove)
 		//const bool bAfricaRatio = (kOwner.getNumEuropeUnits() / static_cast<double>(cargoSpace()) <= 0.5);
 
 		// 2) Our goods must have a higher value in Africa than in Europe
-		const int iAfricaBetterValue = getCargoValue(AFRICA) - getCargoValue(EUROPE);
+		const int iAfricaBetterValue = getCargoValue(TRADE_LOCATION_AFRICA) - getCargoValue(TRADE_LOCATION_EUROPE);
 
 		// 3) The price of a slave must be less than a free colonist
 		const int iPriceDifference = AI_getCostDifferenceFreeVsSlave();
@@ -6493,7 +6493,7 @@ bool CvUnitAI::AI_africa()
 	if (kOwner.getParent() == NO_PLAYER)
 		return false;
 
-	AI_sellYieldUnits(AFRICA);
+	AI_sellYieldUnits(TRADE_LOCATION_AFRICA);
 
 	// Disabling this for now until we find a better method to determine the utitility
 #if 0
@@ -6601,8 +6601,8 @@ bool CvUnitAI::AI_europe()
 {
 	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
 
-	AI_sellYieldUnits(EUROPE);
-	AI_unloadUnits(EUROPE);
+	AI_sellYieldUnits(TRADE_LOCATION_EUROPE);
+	AI_unloadUnits(TRADE_LOCATION_EUROPE);
 
 	// TAC - AI King no Europe trading bugfix - koma13 - START
 	//kOwner.AI_doEurope();
@@ -6795,7 +6795,7 @@ bool CvUnitAI::AI_europeAssaultSea()
 {
 	CvPlayer& kOwner = GET_PLAYER(getOwnerINLINE());
 
-	AI_sellYieldUnits(EUROPE);
+	AI_sellYieldUnits(TRADE_LOCATION_EUROPE);
 
 	//Pick up units from Europe (FIFO)
 	while (kOwner.getNumEuropeUnits() > 0)
@@ -19384,7 +19384,7 @@ bool CvUnitAI::AI_moveToCity(bool bUnload, CvCity* pLoopCity)
 }
 //End TAC Whaling, ray
 
-void CvUnitAI::AI_sellYieldUnits(Port port)
+void CvUnitAI::AI_sellYieldUnits(TradeLocationTypes eLocation)
 {
 	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
 	CvPlot* pPlot = plot();
@@ -19411,18 +19411,18 @@ void CvUnitAI::AI_sellYieldUnits(Port port)
 
 	for (uint i = 0; i < apUnits.size(); ++i)
 	{
-		if (port == EUROPE)
+		if (eLocation == TRADE_LOCATION_EUROPE)
 		{
 			kOwner.sellYieldUnitToEurope(apUnits[i], apUnits[i]->getYieldStored(), 0);
 		}
-		else if (port == AFRICA)
+		else if (eLocation == TRADE_LOCATION_AFRICA)
 		{
 			kOwner.sellYieldUnitToAfrica(apUnits[i], apUnits[i]->getYieldStored(), 0);
 		}
 	}
 }
 
-void CvUnitAI::AI_unloadUnits(Port port)
+void CvUnitAI::AI_unloadUnits(TradeLocationTypes eLocation)
 {
 	CvPlayerAI& kOwner = GET_PLAYER(getOwnerINLINE());
 	CvPlot* pPlot = plot();
@@ -19444,11 +19444,11 @@ void CvUnitAI::AI_unloadUnits(Port port)
 
 	for (uint i = 0; i < apUnits.size(); ++i)
 	{
-		if (port == EUROPE)
+		if (eLocation == TRADE_LOCATION_EUROPE)
 		{
 			kOwner.unloadUnitToEurope(apUnits[i]);
 		}
-		else if (port == AFRICA)
+		else if (eLocation == TRADE_LOCATION_AFRICA)
 		{
 			kOwner.unloadUnitToAfrica(apUnits[i]);
 		}

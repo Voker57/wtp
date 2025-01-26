@@ -16367,7 +16367,7 @@ int CvUnit::getAmountForNativeTrade() const
 // R&R, ray, Natives Trading - END
 
 // Returns 0 if there are no yield units on the transport to evaluate
-int CvUnit::getCargoValue(Port port) const
+int CvUnit::getCargoValue(TradeLocationTypes eLocation) const
 {
 	CvPlot const* const pPlot = plot();
 
@@ -16390,11 +16390,11 @@ int CvUnit::getCargoValue(Port port) const
 
 			if (eYield != NO_YIELD)
 			{
-				if (port == EUROPE && kOwner.isYieldEuropeTradable(eYield))
+				if (eLocation == TRADE_LOCATION_EUROPE && kOwner.isYieldEuropeTradable(eYield))
 				{
 					sellValue += pLoopUnit->getYieldStored() * kEuropePlayer.getYieldBuyPrice(eYield);
 				}
-				if (port == AFRICA && kOwner.isYieldAfricaTradable(eYield))
+				if (eLocation == TRADE_LOCATION_AFRICA && kOwner.isYieldAfricaTradable(eYield))
 				{
 					sellValue += pLoopUnit->getYieldStored() * kEuropePlayer.getYieldAfricaBuyPrice(eYield);
 				}

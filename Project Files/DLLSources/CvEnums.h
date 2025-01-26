@@ -2068,6 +2068,12 @@ enum UnitTravelStates
 
 enum UnitAIStates
 {
+	// WARNING: values are hardcoded in savegames
+	// For this reason, once a value has been added, it has to stay at that value even if it's no longer used
+	// Adding new values can only be done at the end because adding in the middle will change values of other entires
+	// The savegame enum autoadjust is not implemented for this enum
+	//    Nightinggale
+
 	NO_UNITAI_STATE = -1,
 
 	UNITAI_STATE_DEFAULT,
@@ -2088,6 +2094,7 @@ enum UnitAIStates
 	UNITAI_STATE_PURCHASED,
 	UNITAI_STATE_SELL_TO_NATIVES,
 	UNITAI_STATE_SAIL,
+	UNITAI_STATE_YIELD_BOUGHT_OFFMAP,
 
 	NUM_UNITAI_STATES,
 };

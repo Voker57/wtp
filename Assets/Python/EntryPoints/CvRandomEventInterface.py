@@ -3391,7 +3391,7 @@ def CanDoEuropeTrade(argsList, iYieldID, iQuantity):
 		quantity = quantity * Handicap.getAITrainPercent()/100
 	
 	# now we check if enough of the Yield has been traded with Europe using function argument iYieldID
-	if player.getYieldTradedTotalEurope(iYieldID) < quantity:
+	if player.getYieldSoldTotal(TradeLocationTypes.TRADE_LOCATION_EUROPE, iYieldID) < quantity:
 		return False
 	return True
 
@@ -6151,7 +6151,7 @@ def CanDoAfricaTrade(argsList, iYieldID, iQuantity):
 		quantity = quantity * Handicap.getAITrainPercent()/100
 	
 	# now we check if enough of the Yield has been traded with Africa using function argument iYieldID
-	if player.getYieldTradedTotalAfrica(iYieldID) < quantity:
+	if player.getYieldSoldTotal(TradeLocationTypes.TRADE_LOCATION_AFRICA, iYieldID) < quantity:
 		return False
 	return True
 
@@ -6302,7 +6302,7 @@ def CanDoPortRoyalTrade(argsList, iYieldID, iQuantity):
 		quantity = quantity * Handicap.getAITrainPercent()/100
 	
 	# now we check if enough of the Yield has been traded with Port Royal using function argument iYieldID
-	if player.getYieldTradedTotalPortRoyal(iYieldID) < quantity:
+	if player.getYieldSoldTotal(TradeLocationTypes.TRADE_LOCATION_PORT_ROYAL, iYieldID) < quantity:
 		return False
 	return True
 

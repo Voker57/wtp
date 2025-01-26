@@ -631,22 +631,11 @@ int CyPlayer::getSeaPlotYield(YieldTypes eIndex)
 	return m_pPlayer ? (int) m_pPlayer->getSeaPlotYield(eIndex) : 0;
 }
 // R&R, Robert Surcouf, No More Variables Hidden game option START
-int CyPlayer::getYieldTradedTotalEurope(int /*YieldTypes*/ eIndex)
+int CyPlayer::getYieldSoldTotal(TradeLocationTypes eLocation, int /*YieldTypes*/ eIndex)
 {
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotalEurope((YieldTypes)eIndex) : -1;
+	return m_pPlayer ? m_pPlayer->getYieldSoldTotal(eLocation, (YieldTypes)eIndex) : -1;
 }
 // R&R, Robert Surcouf, No More Variables Hidden game option END
-
-// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-int CyPlayer::getYieldTradedTotalAfrica(int /*YieldTypes*/ eIndex)
-{
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotalAfrica((YieldTypes)eIndex) : -1;
-}
-int CyPlayer::getYieldTradedTotalPortRoyal(int /*YieldTypes*/ eIndex)
-{
-	return m_pPlayer ? m_pPlayer->getYieldTradedTotalPortRoyal((YieldTypes)eIndex) : -1;
-}
-// WTP, ray, Yields Traded Total for Africa and Port Royal - END
 
 // R&R, vetiarvind, Price dependent tax rate change - START
 int CyPlayer::getYieldScoreTotalINT(int /*YieldTypes*/ eIndex)
@@ -1398,21 +1387,10 @@ CyUnit* CyPlayer::buyEuropeUnit(int /*UnitTypes*/ eUnit)
 {
 	return m_pPlayer ? (new CyUnit(m_pPlayer->buyEuropeUnit((UnitTypes) eUnit, 100))) : NULL;
 }
-int CyPlayer::getYieldBoughtTotal(int /*YieldTypes*/ eYield) const
+int CyPlayer::getYieldBoughtTotal(TradeLocationTypes eLocation, int /*YieldTypes*/ eYield) const
 {
-	return m_pPlayer ? m_pPlayer->getYieldBoughtTotal((YieldTypes) eYield) : 0;
+	return m_pPlayer ? m_pPlayer->getYieldBoughtTotal(eLocation, (YieldTypes) eYield) : 0;
 }
-
-// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-int CyPlayer::getYieldBoughtTotalAfrica(int /*YieldTypes*/ eYield) const
-{
-	return m_pPlayer ? m_pPlayer->getYieldBoughtTotalAfrica((YieldTypes) eYield) : 0;
-}
-int CyPlayer::getYieldBoughtTotalPortRoyal(int /*YieldTypes*/ eYield) const
-{
-	return m_pPlayer ? m_pPlayer->getYieldBoughtTotalPortRoyal((YieldTypes) eYield) : 0;
-}
-// WTP, ray, Yields Traded Total for Africa and Port Royal - END
 
 int CyPlayer::getNumRevolutionEuropeUnits() const
 {

@@ -7228,85 +7228,30 @@ int CvGame::getFatherCategoryPosition(FatherTypes eFather) const
 	return iPosition;
 }
 
-void CvGame::changeYieldBoughtTotal(PlayerTypes eMainEurope, YieldTypes eYield, int iChange) const
+void CvGame::changeYieldBoughtTotal(TradeLocationTypes eLocation, PlayerTypes eMainEurope, YieldTypes eYield, int iChange) const
 {
 	//change non-mercantile Europes by partial amount
-	for(int iEurope=0;iEurope<MAX_PLAYERS;iEurope++)
+	for (PlayerTypes eEurope = FIRST_PLAYER; eEurope < NUM_PLAYER_TYPES; ++eEurope)
 	{
-		CvPlayer& kEuropePlayer = GET_PLAYER((PlayerTypes) iEurope);
-		if(kEuropePlayer.isAlive() && kEuropePlayer.isEurope())
+		CvPlayer& kEuropePlayer = GET_PLAYER(eEurope);
+		if (kEuropePlayer.isAlive() && kEuropePlayer.isEurope())
 		{
 			//check if any children are mercantile
-			int iMercantilePercent = (iEurope == eMainEurope) ? 100 : GC.getDefineINT("EUROPE_MARKET_CORRELATION_PERCENT");
-			for(int iPlayer=0;iPlayer<MAX_PLAYERS;iPlayer++)
+			int iMercantilePercent = (eEurope == eMainEurope) ? 100 : GLOBAL_DEFINE_EUROPE_MARKET_CORRELATION_PERCENT;
+			CvPlayer* pColonyPlayer = kEuropePlayer.getColonyPlayer();
+			FAssert(pColonyPlayer != NULL);
+
+			if (pColonyPlayer->isAlive())
 			{
-				CvPlayer& kChildPlayer = GET_PLAYER((PlayerTypes) iPlayer);
-				if(kChildPlayer.isAlive() && (kChildPlayer.getParent() == iEurope))
-				{
-					iMercantilePercent *= 100 + kChildPlayer.getMercantileFactor();
-					iMercantilePercent /= 100;
-				}
+				iMercantilePercent *= 100 + pColonyPlayer->getMercantileFactor();
+				iMercantilePercent /= 100;
 			}
 
 			//affect non-mercantile amounts
-			kEuropePlayer.changeYieldBoughtTotal(eYield, iChange * iMercantilePercent / 100);
+			kEuropePlayer.changeYieldTradedTaxCounter(eLocation, eYield, iChange * iMercantilePercent / 100);
 		}
 	}
 }
-
-// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-void CvGame::changeYieldBoughtTotalAfrica(PlayerTypes eMainEurope, YieldTypes eYield, int iChange) const
-{
-	//change non-mercantile Europes by partial amount
-	for(int iEurope=0;iEurope<MAX_PLAYERS;iEurope++)
-	{
-		CvPlayer& kEuropePlayer = GET_PLAYER((PlayerTypes) iEurope);
-		if(kEuropePlayer.isAlive() && kEuropePlayer.isEurope())
-		{
-			//check if any children are mercantile
-			int iMercantilePercent = (iEurope == eMainEurope) ? 100 : GC.getDefineINT("EUROPE_MARKET_CORRELATION_PERCENT");
-			for(int iPlayer=0;iPlayer<MAX_PLAYERS;iPlayer++)
-			{
-				CvPlayer& kChildPlayer = GET_PLAYER((PlayerTypes) iPlayer);
-				if(kChildPlayer.isAlive() && (kChildPlayer.getParent() == iEurope))
-				{
-					iMercantilePercent *= 100 + kChildPlayer.getMercantileFactor();
-					iMercantilePercent /= 100;
-				}
-			}
-
-			//affect non-mercantile amounts
-			kEuropePlayer.changeYieldBoughtTotalAfrica(eYield, iChange * iMercantilePercent / 100);
-		}
-	}
-}
-
-void CvGame::changeYieldBoughtTotalPortRoyal(PlayerTypes eMainEurope, YieldTypes eYield, int iChange) const
-{
-	//change non-mercantile Europes by partial amount
-	for(int iEurope=0;iEurope<MAX_PLAYERS;iEurope++)
-	{
-		CvPlayer& kEuropePlayer = GET_PLAYER((PlayerTypes) iEurope);
-		if(kEuropePlayer.isAlive() && kEuropePlayer.isEurope())
-		{
-			//check if any children are mercantile
-			int iMercantilePercent = (iEurope == eMainEurope) ? 100 : GC.getDefineINT("EUROPE_MARKET_CORRELATION_PERCENT");
-			for(int iPlayer=0;iPlayer<MAX_PLAYERS;iPlayer++)
-			{
-				CvPlayer& kChildPlayer = GET_PLAYER((PlayerTypes) iPlayer);
-				if(kChildPlayer.isAlive() && (kChildPlayer.getParent() == iEurope))
-				{
-					iMercantilePercent *= 100 + kChildPlayer.getMercantileFactor();
-					iMercantilePercent /= 100;
-				}
-			}
-
-			//affect non-mercantile amounts
-			kEuropePlayer.changeYieldBoughtTotalPortRoyal(eYield, iChange * iMercantilePercent / 100);
-		}
-	}
-}
-// WTP, ray, Yields Traded Total for Africa and Port Royal - END
 
 void CvGame::updateOceanDistances()
 {

@@ -187,12 +187,8 @@ public:
 	int getPlayerTextColorA();
 	int getSeaPlotYield(YieldTypes eIndex);
 	// R&R, Robert Surcouf, No More Variables Hidden game option START
-	int getYieldTradedTotalEurope(int /*YieldTypes*/ eIndex);
+	int getYieldSoldTotal(TradeLocationTypes eLocation, int /*YieldTypes*/ eIndex);
     // R&R, Robert Surcouf, No More Variables Hidden game option END
-	// WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	int getYieldTradedTotalAfrica(int /*YieldTypes*/ eIndex);
-	int getYieldTradedTotalPortRoyal(int /*YieldTypes*/ eIndex);
-	// WTP, ray, Yields Traded Total for Africa and Port Royal - END
 	int getYieldScoreTotalINT(int /*YieldTypes*/ eIndex); // R&R, vetiarvind, Price dependent tax rate change
 	int getYieldRate(YieldTypes eIndex);
 	int getHappinessRate(); // WTP, ray, Happiness - START
@@ -299,9 +295,7 @@ public:
 	CyUnit* buyYieldUnitFromEurope(int /*YieldTypes*/ eYield, int iAmount, CyUnit* pTransport);
 	int getEuropeUnitBuyPrice(int /*UnitTypes*/ eUnit);
 	CyUnit* buyEuropeUnit(int /*UnitTypes*/ eUnit);
-	int getYieldBoughtTotal(int /*YieldTypes*/ eYield) const;
-	int getYieldBoughtTotalAfrica(int /*YieldTypes*/ eYield) const; // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-	int getYieldBoughtTotalPortRoyal(int /*YieldTypes*/ eYield) const; // WTP, ray, Yields Traded Total for Africa and Port Royal - START
+	int getYieldBoughtTotal(TradeLocationTypes eLocation, int /*YieldTypes*/ eYield) const;
 	int getNumRevolutionEuropeUnits() const;
 	int getRevolutionEuropeUnit(int iIndex) const;
 	int getRevolutionEuropeProfession(int iIndex) const;

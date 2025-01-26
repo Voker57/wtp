@@ -3193,6 +3193,10 @@
 		<Russian>Граждане</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DOMESTIC_ADVISOR_TRADE_STATE_HELP</Tag>
+		<English>Sold: %d1[NEWLINE]Bought: %d2</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GO_TO_CITY</Tag>
 		<English>Click to Go to [COLOR_SELECTED_TEXT]%s1_city[COLOR_REVERT]</English>
 		<French>Cliquez pour aller à : [COLOR_SELECTED_TEXT]%s1_city[COLOR_REVERT]</French>

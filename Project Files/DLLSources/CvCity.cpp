@@ -7445,20 +7445,9 @@ void CvCity::doYields()
 						GET_PLAYER(getOwnerINLINE()).changeGold(iProfit * GET_PLAYER(getOwnerINLINE()).getExtraTradeMultiplier(kPlayerEurope.getID()) / 100);
 
 						int iDiscountedLoss = iOverflowYieldSellPercent * iLoss / 100;
-						if (iEuropeProfit > iAfricaProfit)
-						{
-							// we sold to Europe
-							GET_PLAYER(getOwnerINLINE()).changeYieldTradedTotal(eYield, iDiscountedLoss);
-							kPlayerEurope.changeYieldTradedTotal(eYield, iDiscountedLoss);
-							GC.getGameINLINE().changeYieldBoughtTotal(kPlayerEurope.getID(), eYield, -iDiscountedLoss);
-						}
-						else
-						{
-							// we sold to Africa
-							GET_PLAYER(getOwnerINLINE()).changeYieldTradedTotalAfrica(eYield, iDiscountedLoss);
-							kPlayerEurope.changeYieldTradedTotalAfrica(eYield, iDiscountedLoss);
-							GC.getGameINLINE().changeYieldBoughtTotalAfrica(kPlayerEurope.getID(), eYield, -iDiscountedLoss);
-						}
+						const TradeLocationTypes BestPort = iEuropeProfit > iAfricaProfit ? TRADE_LOCATION_EUROPE : TRADE_LOCATION_AFRICA;
+						kPlayerEurope.changeYieldTradedCounters(BestPort, eYield, iDiscountedLoss);
+
 						// R&R, ray , Changes to Custom House - START
 						// Selling with Custom House will get Trade Founding Father Points
 						// check if Custom House

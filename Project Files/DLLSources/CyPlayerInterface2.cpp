@@ -83,9 +83,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("buyYieldUnitFromPortRoyal", &CyPlayer::buyYieldUnitFromPortRoyal, python::return_value_policy<python::manage_new_object>(), "CyUnit (int /*YieldTypes*/ eYield, int iAmount, CyUnit* pTransport)") // R&R, ray, Port Royal
 		.def("getEuropeUnitBuyPrice", &CyPlayer::getEuropeUnitBuyPrice, "int (int (UnitTypes))")
 		.def("buyEuropeUnit", &CyPlayer::buyEuropeUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit (int /*UnitTypes*/ eUnit)")
-		.def("getYieldBoughtTotal", &CyPlayer::getYieldBoughtTotal, "int (int /*YieldTypes*/ eYield)")
-		.def("getYieldBoughtTotalAfrica", &CyPlayer::getYieldBoughtTotalAfrica, "int (int /*YieldTypes*/ eYield)") // WTP, ray, Yields Traded Total for Africa and Port Royal - START
-		.def("getYieldBoughtTotalPortRoyal", &CyPlayer::getYieldBoughtTotalPortRoyal, "int (int /*YieldTypes*/ eYield)") // WTP, ray, Yields Traded Total for Africa and Port Royal - START	 
+		.def("getYieldBoughtTotal", &CyPlayer::getYieldBoughtTotal, "int (TradeLocationTypes eLocation, int /*YieldTypes*/ eYield)")
 		.def("getNumRevolutionEuropeUnits", &CyPlayer::getNumRevolutionEuropeUnits, "int ()")
 		.def("getRevolutionEuropeUnit", &CyPlayer::getRevolutionEuropeUnit, "int (int iIndex)")
 		.def("getRevolutionEuropeProfession", &CyPlayer::getRevolutionEuropeProfession, "int (int iIndex)")

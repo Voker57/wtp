@@ -94,6 +94,9 @@ public:
 	//End TAC Whaling, ray
 	bool AI_africa();
 
+	bool is(UnitAIStates) const;
+	bool is(UnitAITypes) const;
+
 protected:
 
 	void AI_resetSavedData();
@@ -403,13 +406,23 @@ protected:
 
 	bool AI_sailTo(const SailToHelper& sth, bool bMove, bool bIgnoreDanger = true);
 
-	void AI_sellYieldUnits(Port port);
-	void AI_unloadUnits(Port port);
+	void AI_sellYieldUnits(TradeLocationTypes eLocation);
+	void AI_unloadUnits(TradeLocationTypes eLocation);
 	void AI_automateSailTo(const SailToHelper& sth);
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
 
 };
+
+inline bool CvUnitAI::is(UnitAIStates eUnitAIState) const
+{
+	return m_eUnitAIState == eUnitAIState;
+}
+
+inline bool CvUnitAI::is(UnitAITypes eUnitAI) const
+{
+	return m_eUnitAIType == eUnitAI;
+}
 
 #endif

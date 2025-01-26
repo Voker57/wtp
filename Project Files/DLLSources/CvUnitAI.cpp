@@ -2155,7 +2155,7 @@ void CvUnitAI::AI_scoutMove()
 	if (isHuman()) 
 	{
 		const CvWString szBuffer(gDLL->getText("TXT_KEY_SCOUT_FINISHED_EXPLORING"));
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, coord(), NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, coord(), NULL, MESSAGE_TYPE_MINOR_EVENT, NULL, COLOR_WHITE, true, true);
 		getGroup()->setAutomateType(NO_AUTOMATE);
 	}
 	else

@@ -602,7 +602,7 @@ void CvUnit::kill(bool bDelay, CvUnit* pAttacker)
 					pkCapturedUnit->addDamageRandom(10, 75, 5);
 					CvWString szBuffer;
 					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CAPTURED_UNIT", GC.getUnitInfo(eCaptureUnitType).getTextKeyWide());
-					gDLL->UI().addPlayerMessage(eCapturingPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+					gDLL->UI().addPlayerMessage(eCapturingPlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), COLOR_GREEN, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 					if (!pkCapturedUnit->isCargo())
 					{
@@ -1283,7 +1283,7 @@ void CvUnit::updateCombat(bool bQuick)
 					szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN");
 				}
 
-				gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true);
+				gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), COLOR_RED, pPlot->getX_INLINE(), pPlot->getY_INLINE(), true);
 			}
 		}
 
@@ -1335,10 +1335,10 @@ void CvUnit::updateCombat(bool bQuick)
 					{
 						// Send Messages
 						szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_SHIP_ESCAPED_CITY", pDefender->getName().GetCString(), pCityForMessage->getNameKey());
-						gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pEjectPlot->getX_INLINE(), pEjectPlot->getY_INLINE());
+						gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_WHITE, pEjectPlot->getX_INLINE(), pEjectPlot->getY_INLINE());
 
 						szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_SHIP_ESCAPED_CITY", pDefender->getName().GetCString(), pCityForMessage->getNameKey());
-						gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pEjectPlot->getX_INLINE(), pEjectPlot->getY_INLINE());
+						gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pEjectPlot->getX_INLINE(), pEjectPlot->getY_INLINE());
 					}
 
 					// set to true to avoid killing the Defender Unit in next if below
@@ -1489,14 +1489,14 @@ void CvUnit::updateCombat(bool bQuick)
 			if (bIsNativeRaid && pPlot->isFort())
 			{
 				szBuffer = gDLL->getText("TXT_KEY_NATIVE_RAID_ATTACKED_FORT");
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, COLOR_RED, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			}
 			// R&R, ray, Monasteries and Forts - END
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING", getNameOrProfessionKey(), pDefender->getNameOrProfessionKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, COLOR_RED, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT", pDefender->getNameOrProfessionKey(), getNameOrProfessionKey(), getVisualCivAdjective(pDefender->getTeam()));
-			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 			// WTP, ray, fix for Human Unit not stopping automation after attacked - START
 			// in this case the defender is alive and has won the battle
@@ -1694,11 +1694,11 @@ void CvUnit::updateCombat(bool bQuick)
 			if (bIsNativeRaid && pPlot->isFort())
 			{
 				szBuffer = gDLL->getText("TXT_KEY_NATIVE_RAID_ATTACKED_FORT_BUT_DEFEATED");
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			}
 			// R&R, ray, Monasteries and Forts - END
 
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitVictoryScript(), MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			if (getVisualOwner(pDefender->getTeam()) != getOwnerINLINE())
 			{
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_UNKNOWN", pDefender->getNameOrProfessionKey(), getNameOrProfessionKey());
@@ -1708,7 +1708,7 @@ void CvUnit::updateCombat(bool bQuick)
 				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED", pDefender->getNameOrProfessionKey(), getNameOrProfessionKey(), getVisualCivAdjective(pDefender->getTeam()));
 			}
 
-			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, COLOR_RED, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 			// report event to Python, along with some other key state
 			gDLL->getEventReporterIFace()->combatResult(this, pDefender);
@@ -1967,12 +1967,12 @@ void CvUnit::updateCombat(bool bQuick)
 			// PatchMod: Achievements END
 
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ESCAPED", getNameOrProfessionKey(), pDefender->getNameOrProfessionKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_WHITE, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			CvCity* pCity = pDefender->plot()->getPlotCity();
 			if (pCity != NULL)
 			{
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ESCAPED", pDefender->getNameOrProfessionKey(), getNameOrProfessionKey(), pCity->getNameKey());
-				gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
+				gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE());
 			}
 
 			// WTP, ray, fix for Human Unit not stopping automation after attacked - START
@@ -2055,10 +2055,10 @@ void CvUnit::updateCombat(bool bQuick)
 				// R&R, ray, Natives raiding party - END
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_ESCAPED", getNameOrProfessionKey(), pDefender->getNameOrProfessionKey(), pCity->getNameKey());
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE());
 			}
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_ESCAPED", pDefender->getNameOrProfessionKey(), getNameOrProfessionKey());
-			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_WHITE, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 			// WTP, ray, fix for Human Unit not stopping automation after attacked - START
 			// in this case the defender is alive and had won the battle
@@ -2086,9 +2086,9 @@ void CvUnit::updateCombat(bool bQuick)
 		else
 		{
 			szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WITHDRAW", getNameOrProfessionKey(), pDefender->getNameOrProfessionKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 			szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_UNIT_WITHDRAW", getNameOrProfessionKey(), pDefender->getNameOrProfessionKey());
-			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+			gDLL->UI().addPlayerMessage(pDefender->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, COLOR_RED, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 			// WTP, ray, fix for Human Unit not stopping automation after attacked - START
 			// in this case we are sure that defender is alive since both are alive
@@ -4349,7 +4349,7 @@ void CvUnit::gift(bool bTestTransport)
 	GET_PLAYER(pGiftUnit->getOwnerINLINE()).AI_changePeacetimeGrantValue(eOwner, iUnitValue / 5);
 
 	szBuffer = gDLL->getText("TXT_KEY_MISC_GIFTED_UNIT_TO_YOU", GET_PLAYER(eOwner).getNameKey(), pGiftUnit->getNameKey());
-	gDLL->UI().addPlayerMessage(pGiftUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pGiftUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pGiftUnit->getX_INLINE(), pGiftUnit->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(pGiftUnit->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, pGiftUnit->getButton(), COLOR_WHITE, pGiftUnit->getX_INLINE(), pGiftUnit->getY_INLINE(), true, true);
 
 	// Python Event
 	gDLL->getEventReporterIFace()->unitGifted(pGiftUnit, getOwnerINLINE(), plot());
@@ -5695,7 +5695,7 @@ void CvUnit::learn()
 	if (isHuman() && currentPlayerAttitude == 0)
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_NATIVES_NOT_WILLING_TO_TALK", plot()->getPlotCity()->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_LEARN).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_LEARN).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 		return;
 	}
 	// R&R, ray, Natives do not talk when furious - ELSE
@@ -5713,7 +5713,7 @@ void CvUnit::learn()
 			if (pLoopUnit != NULL && pLoopUnit->getUnitTravelState() == UNIT_TRAVEL_STATE_LIVE_AMONG_NATIVES)
 			{
 				CvWString szBuffer = gDLL->getText("TXT_KEY_NATIVES_NOT_WILLING_ALREADY_COLONIST_LEARNING", plot()->getPlotCity()->getNameKey());
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_LEARN).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_LEARN).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 				return;
 			}
 		}
@@ -6103,7 +6103,7 @@ void CvUnit::establishMission()
 	if (isHuman() &&  currentPlayerAttitude == 0)
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_NATIVES_NOT_WILLING_TO_TALK", pCity->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 		return;
 	}
 	// R&R, ray, Natives do not talk when furious - ELSE
@@ -6111,7 +6111,7 @@ void CvUnit::establishMission()
 	if (GC.getGameINLINE().getSorenRandNum(100, "Mission failure roll") > getMissionarySuccessPercent())
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_MISSION_FAILED", plot()->getPlotCity()->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 		kCityOwner.AI_changeMemoryCount((getOwnerINLINE()), MEMORY_MISSIONARY_FAIL, 1);
 
 		//Ramstormp, Disillusioned missionary - START
@@ -6124,7 +6124,7 @@ void CvUnit::establishMission()
 				CvUnit* FailedMissionaryUnit = GET_PLAYER(getOwnerINLINE()).initUnit(FailedMissionaryType, GC.getUnitInfo(FailedMissionaryType).getDefaultProfession(), pCity->getX_INLINE(), pCity->getY_INLINE());
 				//  WTP, ray, we still need to display a message - your missionary failed and became a Failed Missionary
 				CvWString szBuffer = gDLL->getText("TXT_KEY_FAILED_MISSIONARY_SPAWNED_FROM_FAIL", plot()->getPlotCity()->getNameKey());
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 			}
 		}
 		//Ramstormp, Disillusioned missionary - END
@@ -6158,7 +6158,7 @@ void CvUnit::establishMission()
 					CvUnit* FailedMissionaryUnit = oldMissionaryPlayer.initUnit(FailedMissionaryType, GC.getUnitInfo(FailedMissionaryType).getDefaultProfession(), pCity->getX_INLINE(), pCity->getY_INLINE());
 					//  WTP, ray, we still need to display a message - your missionary was thrown out because new Mission and became a Failed Missionary
 					CvWString szBuffer = gDLL->getText("TXT_KEY_FAILED_MISSIONARY_SPAWNED_FROM_MISSION_REPLACED", plot()->getPlotCity()->getNameKey());
-					gDLL->UI().addPlayerMessage(pCity->getMissionaryPlayer(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+					gDLL->UI().addPlayerMessage(pCity->getMissionaryPlayer(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_MISSION).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 				}
 			}
 			//Ramstormp, Disillusioned missionary - END
@@ -6196,7 +6196,7 @@ void CvUnit::establishTradePost()
 	if (isHuman() &&  currentPlayerAttitude == 0)
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_NATIVES_NOT_WILLING_TO_TALK", pCity->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 		return;
 	}
 	// R&R, ray, Natives do not talk when furious - ELSE
@@ -6204,7 +6204,7 @@ void CvUnit::establishTradePost()
 	if (GC.getGameINLINE().getSorenRandNum(100, "Trade Post failure roll") > getNativeTradePostSuccessPercent())
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_TRADE_POST_FAILED", plot()->getPlotCity()->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 		// removed the Memory Count because it display strange unfitting since it is not a Mission and there is no special Memory Count for Trade Posts
 		//GET_PLAYER(pCity->getOwnerINLINE()).AI_changeMemoryCount((getOwnerINLINE()), MEMORY_MISSIONARY_FAIL, 1);
 
@@ -6219,7 +6219,7 @@ void CvUnit::establishTradePost()
 				CvUnit* FailedTraderUnit = GET_PLAYER(getOwnerINLINE()).initUnit(FailedTraderType, GC.getUnitInfo(FailedTraderType).getDefaultProfession(), pCity->getX_INLINE(), pCity->getY_INLINE());
 				//  WTP, ray, we still need to display a message - your trader failed and became a Failed Trader
 				CvWString szBuffer = gDLL->getText("TXT_KEY_FAILED_TRADER_SPAWNED_FROM_FAIL", plot()->getPlotCity()->getNameKey());
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 			}
 		}
 		// WTP, ray, Failed Trader - END
@@ -6255,7 +6255,7 @@ void CvUnit::establishTradePost()
 					//  WTP, ray, we still need to display a message - your trader was thrown out because new Trader and became a Failed Trader
 					CvUnit* FailedTraderUnit = oldTradePostPlayer.initUnit(FailedTraderType, GC.getUnitInfo(FailedTraderType).getDefaultProfession(), pCity->getX_INLINE(), pCity->getY_INLINE());
 					CvWString szBuffer = gDLL->getText("TXT_KEY_FAILED_TRADER_SPAWNED_FROM_TRADE_POST_REPLACED", plot()->getPlotCity()->getNameKey());
-					gDLL->UI().addPlayerMessage(pCity->getTradePostPlayer(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+					gDLL->UI().addPlayerMessage(pCity->getTradePostPlayer(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_ESTABLISH_TRADE_POST).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 				}
 			}
 			// WTP, ray, Failed Trader - END
@@ -6572,21 +6572,21 @@ void CvUnit::stirUpNatives()
 	if (isHuman() && currentPlayerAttitude == 0)
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_NATIVES_NOT_WILLING_TO_TALK", plot()->getPlotCity()->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_STIR_UP_NATIVES).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_STIR_UP_NATIVES).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 	}
 	// R&R, ray, Natives do not talk when furious - ELSE
 
 	else if (GC.getGameINLINE().getSorenRandNum(100, "Stir Up failure roll") > getStirUpSuccessPercent())
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_STIR_UP_FAILED", plot()->getPlotCity()->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_STIR_UP_NATIVES).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_STIR_UP_NATIVES).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 
 		kCityOwner.AI_changeAttitudeExtra(getOwnerINLINE(), -1);
 	}
 	else
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_STIR_UP_SUCCESSFULL", plot()->getPlotCity()->getNameKey());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_STIR_UP_NATIVES).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_STIR_UP_NATIVES).getButton(), COLOR_HIGHLIGHT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 
 		const UnitTypes DefaultUnitType = kCityOwner.getUnitType(GLOBAL_DEFINE_DEFAULT_POPULATION_UNIT);
 		if (NO_UNIT != DefaultUnitType)
@@ -6748,7 +6748,7 @@ void CvUnit::speakWithChief()
 		if (currentPlayerAttitude == 0)
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_NATIVES_NOT_WILLING_TO_TALK", pCity->getNameKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_SPEAK_WITH_CHIEF).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE(), true, true);
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getCommandInfo(COMMAND_SPEAK_WITH_CHIEF).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE(), true, true);
 			return;
 		}
 		// R&R, ray, Natives do not talk when furious - END
@@ -7181,21 +7181,21 @@ bool CvUnit::bombard()
 
 		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", GC.getImprovementInfo(pTargetPlot->getImprovementType()).getText(),
 			(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()), GET_PLAYER(getOwnerINLINE()).getNameKey());
-		gDLL->UI().addPlayerMessage(pTargetPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(pTargetPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), COLOR_RED, pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameKey(), GC.getImprovementInfo(pTargetPlot->getImprovementType()).getText(),
 			(GC.getImprovementInfo(pTargetPlot->getImprovementType()).getDefenseModifier()-pTargetPlot->getDefenseDamage()));
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE());
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), COLOR_GREEN, pTargetPlot->getX_INLINE(), pTargetPlot->getY_INLINE());
 	}
 	else
 	{
 		pBombardCity->changeDefenseModifier(-(bombardRate() * std::max(0, 100 - pBombardCity->getBuildingBombardDefense())) / 100);
 
 		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DEFENSES_IN_CITY_REDUCED_TO", pBombardCity->getNameKey(), pBombardCity->getDefenseModifier(), GET_PLAYER(getOwnerINLINE()).getNameKey());
-		gDLL->UI().addPlayerMessage(pBombardCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pBombardCity->getX_INLINE(), pBombardCity->getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(pBombardCity->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", MESSAGE_TYPE_INFO, getButton(), COLOR_RED, pBombardCity->getX_INLINE(), pBombardCity->getY_INLINE(), true, true);
 
 		szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_REDUCE_CITY_DEFENSES", getNameOrProfessionKey(), pBombardCity->getNameKey(), pBombardCity->getDefenseModifier());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pBombardCity->getX_INLINE(), pBombardCity->getY_INLINE());
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARD", MESSAGE_TYPE_INFO, getButton(), COLOR_GREEN, pBombardCity->getX_INLINE(), pBombardCity->getY_INLINE());
 
 	}//super forts
 
@@ -7350,12 +7350,12 @@ bool CvUnit::pillage()
 				GET_PLAYER(getOwnerINLINE()).changeGold(iPillageGold);
 
 				szBuffer = gDLL->getText("TXT_KEY_MISC_PLUNDERED_GOLD_FROM_IMP", iPillageGold, GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide());
-				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX_INLINE(), pPlot->getY_INLINE());
+				gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), COLOR_GREEN, pPlot->getX_INLINE(), pPlot->getY_INLINE());
 
 				if (pPlot->isOwned())
 				{
 					szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameOrProfessionKey(), getVisualCivAdjective(pPlot->getTeam()));
-					gDLL->UI().addPlayerMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
+					gDLL->UI().addPlayerMessage(pPlot->getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), COLOR_RED, pPlot->getX_INLINE(), pPlot->getY_INLINE(), true, true);
 				}
 			}
 		}
@@ -7607,7 +7607,7 @@ void CvUnit::buyLandAfterAcquire()
 		{
 			GET_TEAM(GET_PLAYER(m_ePlayerToBuyLand).getTeam()).makePeace(getTeam());
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MAKE_PEACE_AFTER_ACQUIRE_CITY", GET_PLAYER(m_ePlayerToBuyLand).getNameKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), NULL, NULL);
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGameINLINE().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, COLOR_GREEN, NULL, NULL);
 		}
 
 		OOS_LOG("CvUnit::buyLandAfterAcquire", m_iMoneyToBuyLand);
@@ -10969,7 +10969,7 @@ void CvUnit::jumpTo(Coordinates toCoord, bool bGroup, bool bUpdate, bool bShow, 
 					if(isEnemy(pNewPlot->getTeam()) && !canCoexistWithEnemyUnit(pNewPlot->getTeam()) && canFight())
 					{
 						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_CAPTURED_BY", GC.getImprovementInfo(eImprovement).getText(), GET_PLAYER(getOwnerINLINE()).getCivilizationDescriptionKey());
-						gDLL->UI().addPlayerMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, GC.getImprovementInfo(eImprovement).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pNewPlot->getX_INLINE(), pNewPlot->getY_INLINE(), true, true);
+						gDLL->UI().addPlayerMessage(pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITYCAPTURED", MESSAGE_TYPE_MAJOR_EVENT, GC.getImprovementInfo(eImprovement).getButton(), COLOR_RED, pNewPlot->getX_INLINE(), pNewPlot->getY_INLINE(), true, true);
 						pNewPlot->setOwner(getOwnerINLINE(),true);
 					}
 				}
@@ -13592,7 +13592,7 @@ void CvUnit::acquireAnyNegativePromotion()
 	{
 		setHasRealPromotion(eNegativePromotionToGive, true);
 		CvWString szBuffer = gDLL->getText("TXT_KEY_UNIT_HAS_ACQUIRED_NEGATIVE_PROMOTION", getUnitInfo().getTextKeyWide(), GC.getPromotionInfo(eNegativePromotionToGive).getTextKeyWide());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getPromotionInfo(eNegativePromotionToGive).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX_INLINE(), getY_INLINE());
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getPromotionInfo(eNegativePromotionToGive).getButton(), COLOR_RED, getX_INLINE(), getY_INLINE());
 	}
 
 	return;
@@ -13621,7 +13621,7 @@ void CvUnit::cleanseAllNegativePromotions()
 	if (bNegativePromotionCleansed)
 	{
 		CvWString szBuffer = gDLL->getText("TXT_KEY_UNIT_WAS_CLEASED_OF_NEGATIVE_PROMOTIONS", getUnitInfo().getTextKeyWide());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, getUnitInfo().getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE());
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, getUnitInfo().getButton(), COLOR_GREEN, getX_INLINE(), getY_INLINE());
 	}
 
 	return;
@@ -14489,7 +14489,7 @@ void CvUnit::applyEvent(EventTypes eEvent)
 		iImmobileTurns /= 100;
 		changeImmobileTimer(iImmobileTurns);
 		CvWString szText = gDLL->getText("TXT_KEY_EVENT_UNIT_IMMOBILE", getNameOrProfessionKey(),iImmobileTurns);
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szText, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_UNIT_TEXT"), getX_INLINE(), getY_INLINE(), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szText, "AS2D_UNITGIFTED", MESSAGE_TYPE_INFO, getButton(), COLOR_UNIT_TEXT, getX_INLINE(), getY_INLINE(), true, true);
 	}
 
 	CvWString szNameKey(kEvent.getUnitNameKey());
@@ -15358,8 +15358,8 @@ bool CvUnit::raidWeapons(CvCity* pCity)
 			pCity->changeYieldStored(eYield, -aYields[eYield]);
 
 			CvWString szString = gDLL->getText("TXT_KEY_GOODS_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), aYields[eYield], GC.getYieldInfo(eYield).getTextKeyWide());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
-			gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE());
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE());
+			gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), COLOR_RED, pCity->getX_INLINE(), pCity->getY_INLINE());
 		}
 	}
 	return true;
@@ -15404,8 +15404,8 @@ bool CvUnit::raidWeapons(CvUnit* pUnit)
 		if (aYields[eYield] > 0)
 		{
 			CvWString szString = gDLL->getText("TXT_KEY_WEAPONS_CAPTURED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pUnit->getNameOrProfessionKey(), aYields[eYield], GC.getYieldInfo(eYield).getTextKeyWide());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAZE", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(eYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pUnit->getX_INLINE(), pUnit->getY_INLINE(), true, true);
-			gDLL->UI().addPlayerMessage(pUnit->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAZE", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(eYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pUnit->getX_INLINE(), pUnit->getY_INLINE(), true, true);
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAZE", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(eYield).getButton(), COLOR_GREEN, pUnit->getX_INLINE(), pUnit->getY_INLINE(), true, true);
+			gDLL->UI().addPlayerMessage(pUnit->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAZE", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(eYield).getButton(), COLOR_RED, pUnit->getX_INLINE(), pUnit->getY_INLINE(), true, true);
 		}
 	}
 
@@ -15469,8 +15469,8 @@ bool CvUnit::raidTreasury(CvCity* pCity)
 	}
 
 	CvWString szString = gDLL->getText("TXT_KEY_TREASURY_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), iNumTotalGold);
-	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("SCREEN_GOLD_PILE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("SCREEN_GOLD_PILE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("SCREEN_GOLD_PILE")->getPath(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("SCREEN_GOLD_PILE")->getPath(), COLOR_RED, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 
 	return true;
 }
@@ -15530,8 +15530,8 @@ bool CvUnit::raidBuilding(CvCity* pCity)
 	}
 
 	CvWString szString = gDLL->getText("TXT_KEY_BUILDING_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), GC.getBuildingInfo(eTargetBuilding).getTextKeyWide());
-	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTargetBuilding).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTargetBuilding).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTargetBuilding).getButton(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTargetBuilding).getButton(), COLOR_RED, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 
 	return true;
 }
@@ -15599,8 +15599,8 @@ bool CvUnit::raidProduction(CvCity* pCity)
 		}
 
 		CvWString szString = gDLL->getText(bOnlyPartialProductionRaided ? "TXT_KEY_PRODUCTION_RAIDED_PARTIAL" : "TXT_KEY_PRODUCTION_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), GC.getBuildingInfo(eTarget).getTextKeyWide());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTarget).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), true, true);
-		gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTarget).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTarget).getButton(), COLOR_GREEN, true, true);
+		gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eTarget).getButton(), COLOR_RED, true, true);
 	}
 	else if (pCity->isProductionUnit())
 	{
@@ -15640,8 +15640,8 @@ bool CvUnit::raidProduction(CvCity* pCity)
 		}
 
 		CvWString szString = gDLL->getText(bOnlyPartialProductionRaided ? "TXT_KEY_PRODUCTION_RAIDED_PARTIAL" : "TXT_KEY_PRODUCTION_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), GC.getUnitInfo(eTarget).getTextKeyWide());
-		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eTarget).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), true, true);
-		gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eTarget).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), true, true);
+		gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eTarget).getButton(), COLOR_GREEN, true, true);
+		gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, pCity, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eTarget).getButton(), COLOR_RED, true, true);
 	}
 
 	return true;
@@ -15702,8 +15702,8 @@ bool CvUnit::raidScalp(CvCity* pCity)
 	}
 
 	CvWString szString = gDLL->getText("TXT_KEY_SCALP_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), GC.getUnitInfo(pTargetUnit->getUnitType()).getTextKeyWide());
-	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), COLOR_RED, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 
 	GET_TEAM(getTeam()).AI_changeDamages(pCity->getTeam(), -pTargetUnit->getAsset());
 
@@ -15785,8 +15785,8 @@ bool CvUnit::raidHarbor(CvCity* pCity)
 	}
 
 	CvWString szString = gDLL->getText("TXT_KEY_HARBOR_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), GC.getUnitInfo(pTargetUnit->getUnitType()).getTextKeyWide());
-	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
-	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_CITYRAID", MESSAGE_TYPE_MINOR_EVENT, pTargetUnit->getButton(), COLOR_RED, pCity->getX_INLINE(), pCity->getY_INLINE(), true, true);
 
 	GET_TEAM(getTeam()).AI_changeDamages(pCity->getTeam(), -iDamage);
 
@@ -15833,13 +15833,13 @@ bool CvUnit::raidCity(CvCity* pCity)
 				CvUnit* SlaveUnit = kPlayer.initUnit(SlaveType, GC.getUnitInfo(SlaveType).getDefaultProfession(), pCity->getX_INLINE(), pCity->getY_INLINE(), NO_UNITAI);
 
 				CvWString szString = gDLL->getText("TXT_KEY_RAIDING_NATIVE_CAPTURED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey());
-				gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, SlaveUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
+				gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, SlaveUnit->getButton(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE());
 				bRaided = true;
 			}
 			else
 			{
 				CvWString szString = gDLL->getText("TXT_KEY_NOTHING_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey());
-				gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_REVOLTEND", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
+				gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_REVOLTEND", MESSAGE_TYPE_MINOR_EVENT, NULL, COLOR_GREEN);
 				bRaided = true;
 			}
 		}
@@ -15893,7 +15893,7 @@ bool CvUnit::raidCity(CvCity* pCity)
 	if (!bRaided)
 	{
 		CvWString szString = gDLL->getText("TXT_KEY_NOTHING_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey());
-		gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_REVOLTEND", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"));
+		gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_REVOLTEND", MESSAGE_TYPE_MINOR_EVENT, NULL, COLOR_GREEN);
 	}
 
 	return bRaided;
@@ -15957,8 +15957,8 @@ bool CvUnit::raidGoods(CvCity* pCity)
 	}
 
 	CvWString szString = gDLL->getText("TXT_KEY_GOODS_RAIDED", GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey(), pCity->getNameKey(), iYieldsStolen, GC.getYieldInfo(eYield).getTextKeyWide());
-	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pCity->getX_INLINE(), pCity->getY_INLINE());
-	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), pCity->getX_INLINE(), pCity->getY_INLINE());
+	gDLL->UI().addPlayerMessage(getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), COLOR_GREEN, pCity->getX_INLINE(), pCity->getY_INLINE());
+	gDLL->UI().addPlayerMessage(pCity->getOwnerINLINE(), true, GC.getEVENT_MESSAGE_TIME(), szString, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, GC.getYieldInfo(eYield).getButton(), COLOR_RED, pCity->getX_INLINE(), pCity->getY_INLINE());
 	return true;
 }
 
@@ -16313,12 +16313,12 @@ bool CvUnit::gatherResource()
 		if (isWhalingBoat())
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_WHALER_FULL", getNameKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS3D_UN_OCEAN_END1", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS3D_UN_OCEAN_END1", MESSAGE_TYPE_INFO, getButton(), COLOR_GREEN, getX_INLINE(), getY_INLINE(), true, true);
 		}
 		else
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_FISHER_FULL", getNameKey());
-			gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS3D_UN_OCEAN_END1", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
+			gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS3D_UN_OCEAN_END1", MESSAGE_TYPE_INFO, getButton(), COLOR_GREEN, getX_INLINE(), getY_INLINE(), true, true);
 		}
 		// R&R, ray, High Sea Fishing - END
 
@@ -16582,7 +16582,7 @@ void CvUnit::useProductionSupplies()
 		iProductionSuppliesToBeUsed /= 100;
 	}
 
-	gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_CITY_CONSTRUCTION_SUPPLIES_USED", pCity->getNameKey()), "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX_INLINE(), getY_INLINE(), true, true);
+	gDLL->UI().addPlayerMessage(getOwnerINLINE(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_CITY_CONSTRUCTION_SUPPLIES_USED", pCity->getNameKey()), "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), COLOR_GREEN, getX_INLINE(), getY_INLINE(), true, true);
 	pCity->changeProduction(iProductionSuppliesToBeUsed);
 	kill(true);
 

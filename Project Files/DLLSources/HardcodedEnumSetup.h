@@ -54,6 +54,11 @@ enum CivilizationTypes
 	CIVILIZATION_CHURCH,
 };
 
+enum ColorTypes
+{
+	COLOR_WHITE,
+};
+
 enum EffectTypes
 {
 	EFFECT_SETTLERSMOKE,

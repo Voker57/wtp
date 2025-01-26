@@ -5085,17 +5085,18 @@ void CvCityAI::AI_assignDesiredYield()
 
 	if (isNative())
 	{
+		CvGame& kGame = GC.getGameINLINE();
 		int iBestValue = 0;
-		for (int i = 0; i < NUM_YIELD_TYPES; ++i)
+		for (YieldTypes eYield = FIRST_YIELD; eYield < NUM_CARGO_YIELD_TYPES; ++eYield)
 		{
-			YieldTypes eYield = (YieldTypes) i;
-			int iValue = GC.getYieldInfo(eYield).getNativeBuyPrice();
+			const CvYieldInfo& kInfo = GC.getYieldInfo(eYield);
+			int iValue = kInfo.getNativeBuyPrice();
 			if (iValue > 0)
 			{
 				if ((getYieldStored(eYield) == 0) && !canProduceYield(eYield))
 				{
-					iValue += 10 + GC.getYieldInfo(eYield).getNativeHappy();
-					iValue *= 1 + GC.getGameINLINE().getSorenRandNum(100, "City Desired Yield");
+					iValue += 10 + kInfo.getNativeHappy();
+					iValue *= 1 + kGame.getSorenRandNum(100, "City Desired Yield");
 					if (iValue > iBestValue)
 					{
 						iBestValue = iValue;
@@ -5114,14 +5115,14 @@ void CvCityAI::AI_assignDesiredYield()
 		if (eBestYield != NO_YIELD)
 		{
 			CvWString szMessage = gDLL->getText("TXT_KEY_DESIRED_YIELD_CHANGE", GET_PLAYER(getOwnerINLINE()).getCivilizationAdjectiveKey(), getNameKey(), GC.getYieldInfo(eBestYield).getTextKeyWide());
-			for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+			for (PlayerTypes ePlayer = FIRST_PLAYER; ePlayer < NUM_PLAYER_TYPES; ++ePlayer)
 			{
-				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes) iPlayer);
+				CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 				if (kPlayer.isAlive() && kPlayer.getID() != getOwnerINLINE())
 				{
 					if (isScoutVisited(kPlayer.getTeam()))
 					{
-						gDLL->UI().addPlayerMessage((PlayerTypes) iPlayer, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(eBestYield).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX_INLINE(), getY_INLINE(), true, true);
+						gDLL->UI().addPlayerMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(eBestYield).getButton(), COLOR_WHITE, getX_INLINE(), getY_INLINE(), true, true);
 					}
 				}
 			}

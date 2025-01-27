@@ -3195,6 +3195,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_ADVISOR_TRADE_STATE_HELP</Tag>
 		<English>Sold: %d1[NEWLINE]Bought: %d2</English>
+		<Russian>Продано: %d1[NEWLINE]Куплено: %d2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GO_TO_CITY</Tag>

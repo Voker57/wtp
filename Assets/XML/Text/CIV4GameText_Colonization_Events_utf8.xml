@@ -438,7 +438,7 @@
 		<English>[COLOR_FONT_GOLD]His Majesty is not amused. Rumours report that He was asking for His smelling salts.[COLOR_REVERT]</English>
 		<French>[COLOR_FONT_GOLD]Le Roi n'apprécie pas votre humour. Il aurait même demandé sa fiole de salmiac pour se remonter.[COLOR_REVERT]</French>
 		<German>[COLOR_FONT_GOLD]Eure Antwort wurde Seiner Majestät zugetragen. Kammerdiener berichten, dass er nach seinem Riechsalz verlangte.[COLOR_REVERT]</German>
-		<Russian>[COLOR_FONT_GOLD]Его Величеству не до смеха. Ходят слухи, что Он просил Свою нюхательную соль.[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_FONT_GOLD]Его Величество в бешенстве. Ходят слухи, что Он расстрелял ваш портрет из мушкета.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FESTIVITY_2_HELP</Tag>
@@ -4278,14 +4278,14 @@
 		<English>The young man must surely have learned something during his time in the fort. Take care that he finishes basic training in the militia, arm him and put him into service.</English>
 		<French>Ce jeune homme a du surement apprendre deux-t^rois choses dans sa jeunesee au fort. Faites en sorte qu'il finisse ses classes dans la milice, équipez le et mettez le au service.</French>
 		<German>Der junge Mann wird sicher etwas während seiner Zeit im Fort gelernt haben. Stellt sicher, dass er zumindest eine grundlegende Ausbildung in der Miliz bekommt, gebt ihm Waffen und lasst ihn in unsere Dienste treten.</German>
-		<Russian>Молодой человек наверняка чему-то научился за время своего пребывания в форте. Позаботьтесь о том, чтобы он закончил базовую подготовку в ополчении, вооружите и назначьте на службу.</Russian>
+		<Russian>Парень наверняка чему-то научился за время своего пребывания в форте. Позаботьтесь о том, чтобы он закончил базовую подготовку в ополчении, вооружите и назначьте на службу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SOLDIERS_SON_IN_FORT_2</Tag>
 		<English>We should give the young man a chance for a normal life and let him make his own decisions once he is of age. Give him proper clothes and send him to one of our cities where he can choose a profession to his liking.</English>
 		<French>Nous devons donner à ce jeune homme une chance pour une vie normale, et le laisser prendre des décision une fois adulte. Donnez lui des vêtements civils et envoyez le dans une de nos villes, ou il pourra choisir une profession à son goût.</French>
 		<German>Wir sollten dem jungen Mann eine Chance auf ein normales Leben geben und darauf, seine eigenen Entscheidungen zu treffen. Gebt ihm saubere Kleidung, sendet ihn in eine unserer Städte und lasst ihn selbst einen Beruf wählen.</German>
-		<Russian>Мы должны дать молодому человеку шанс на нормальную жизнь и позволить ему принимать решения самостоятельно, когда он достигнет совершеннолетия. Дайте ему приличную одежду и отправьте в один из наших городов, где он сможет выбрать себе профессию по душе.</Russian>
+		<Russian>Мы должны дать юноше шанс на нормальную жизнь и позволить ему принимать решения самостоятельно, когда он достигнет совершеннолетия. Дайте ему приличную одежду и отправьте в один из наших городов, где он сможет выбрать себе профессию по душе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RABBLE</Tag>

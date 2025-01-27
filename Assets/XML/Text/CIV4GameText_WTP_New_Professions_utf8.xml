@@ -1368,7 +1368,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Обивщик мебели (Пух):Обивщики мебели (Пух)</Russian>
+		<Russian>Обивщик мебели (пух):Обивщики мебели (пух)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFESSION_PADDED_FURNITURE_MAKER_WILD_FEATHERS</Tag>
@@ -2448,7 +2448,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Russian>Сапожник (Пух):Сапожники (Пух)</Russian>
+		<Russian>Сапожник (пух):Сапожники (пух)</Russian>
 	</TEXT>	
 	<TEXT>
 	<Tag>TXT_KEY_PROFESSION_LEATHER_PADDER_BOOTS_WILD_FEATHERS</Tag>

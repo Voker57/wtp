@@ -892,7 +892,7 @@ class CvEventManager:
 		popup.setHeaderString(localText.getText("TXT_KEY_NAME_CITY", ()), CvUtil.FONT_CENTER_JUSTIFY)
 		popup.setBodyString(localText.getText("TXT_KEY_SETTLE_NEW_CITY_NAME", ()), CvUtil.FONT_CENTER_JUSTIFY)
 		popup.createEditBox(city.getName(), 0)
-		popup.setEditBoxMaxCharCount( 15, 32, 0 )
+		popup.setEditBoxMaxCharCount( 42, 42, 0 )
 		popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 	def __eventEditCityNameApply(self, playerID, userData, popupReturn):
@@ -903,8 +903,8 @@ class CvEventManager:
 		player = gc.getPlayer(playerID)
 		city = player.getCity(iCityID)
 		cityName = popupReturn.getEditBoxString(0)
-		if (len(cityName) > 30):
-			cityName = cityName[:30]
+		if (len(cityName) > 42):
+			cityName = cityName[:42]
 		city.setName(cityName, not bRename)
 
 	def __eventCreateTradeRouteBegin(self, PlayerID):

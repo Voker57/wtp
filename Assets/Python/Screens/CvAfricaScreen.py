@@ -431,7 +431,7 @@ class CvAfricaScreen:
 
 			if (YieldOnBoard):
 				screen.setImageButtonAt(self.getNextWidgetName(), "LoadingList", gc.getActionInfo(CommandTypes.COMMAND_YIELD_TRADE).getButton(), iX + self.INPORT_SHIP_W * 15 / 16 - self.CARGO_ICON_SIZE * 5 / 4, self.INPORT_SHIP_H * 9 / 20, self.CARGO_ICON_SIZE * 5 / 4, self.CARGO_ICON_SIZE * 5 / 4, WidgetTypes.WIDGET_GENERAL, self.SELL_ALL, unit.getID())
-			elif (iCargoCount == 0) and (gc.getUnitInfo(unit.getUnitType()).getEuropeCost() > 0) and (iSeaUnitCount > 1) and (self.iSellShip > 0):
+			elif (iCargoCount == 0) and (gc.getUnitInfo(unit.getUnitType()).getAfricaCost() > 0) and (iSeaUnitCount > 1) and (self.iSellShip > 0):
 				screen.setImageButtonAt(self.getNextWidgetName(), "LoadingList", ArtFileMgr.getInterfaceArtInfo("INTERFACE_EUROPE_PURCHASE_UNIT").getPath(), iX + self.INPORT_SHIP_W * 15 / 16 - self.CARGO_ICON_SIZE * 5 / 4, self.INPORT_SHIP_H * 9 / 20, self.CARGO_ICON_SIZE * 5 / 4, self.CARGO_ICON_SIZE * 5 / 4, WidgetTypes.WIDGET_GENERAL, self.SELL_SHIP, unit.getID())
 
 			if (not unit.isFull() and player.getNumAfricaUnits() > 0 and unit.specialCargo() == SpecialUnitTypes.NO_SPECIALUNIT):
@@ -1398,7 +1398,7 @@ class CvAfricaScreen:
 			player = self.player
 			iTrainPercent = gc.getGameSpeedInfo(CyGame().getGameSpeedType()).getTrainPercent()
 			if player.getUnit(iUnit).getUnitType() > -1:
-				iSellPrice = self.iSellShip * gc.getUnitInfo(player.getUnit(iUnit).getUnitType()).getEuropeCost() * iTrainPercent / 1200
+				iSellPrice = self.iSellShip * gc.getUnitInfo(player.getUnit(iUnit).getUnitType()).getAfricaCost() * iTrainPercent / 1200
 				iSellPrice -= iSellPrice * player.getTaxRate() / 100
 				if iSellPrice > 0:
 					return iSellPrice

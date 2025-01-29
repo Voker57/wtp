@@ -674,7 +674,15 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_UNIT_CARRIES", GC.getSpecialUnitInfo(pUnit->specialCargo()).getTextKeyWide()));
 			}
 			//End TAC Whaling, ray
+
+			if (pUnit->getUnitInfo().isOnlyDefensive())
+			{
+				szString.append(NEWLINE);
+				szString.append(gDLL->getText("TXT_KEY_UNIT_ONLY_DEFENSIVE"));
+			}
 		}
+
+		
 
 		// WTP, ray, new Harbour System - START
 		if (GLOBAL_DEFINE_ENABLE_NEW_HARBOUR_SYSTEM && pUnit->getUnitInfo().getHarbourSpaceNeeded() > 0)
@@ -5497,9 +5505,15 @@ void CvGameTextMgr::setBasicUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit,
 		// WTP, ray Troop Ship
 		if (kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT && !kUnitInfo.isGatherBoat() && !kUnitInfo.isSlaveShip() && !kUnitInfo.isTreasureShip() && !kUnitInfo.isTroopShip())
 		{
-			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes) kUnitInfo.getSpecialCargo()).getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_CARRIES", GC.getSpecialUnitInfo((SpecialUnitTypes)kUnitInfo.getSpecialCargo()).getTextKeyWide()));
 		}
 		//End TAC Whaling, ray
+	}
+
+	if (kUnitInfo.isOnlyDefensive())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_ONLY_DEFENSIVE"));
 	}
 
 	// WTP, ray, new Harbour System - START

@@ -23564,15 +23564,22 @@ UnitClassTypes CvPlayer::getRandomUsedShipClassTypeID() const
 
 	for (UnitClassTypes iI = FIRST_UNITCLASS; iI < NUM_UNITCLASS_TYPES; ++iI)
 	{
-		int iUnitClassCompareRand = aSyncRandom.get(836);
-		if (iUnitClassCompareRand > iBestLastCompareValue)
+		const UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI);
+		if (eUnit != NO_UNIT)
 		{
-			UnitTypes eUnit = (UnitTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI);
-			if (eUnit != NULL && GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_SEA && GC.getUnitInfo(eUnit).getEuropeCost() > 0 && getGold() > GC.getUnitInfo(eUnit).getEuropeCost())
+			const CvUnitInfo& UnitInfo = GC.getUnitInfo(eUnit);
+			if (UnitInfo.getDomainType() == DOMAIN_SEA && !UnitInfo.getTerrainImpassable(TERRAIN_OCEAN) && UnitInfo.getEuropeCost() > 0 && getGold() > UnitInfo.getEuropeCost())
 			{
-				eBestUnitClass = iI;
+				int iUnitClassCompareRand = aSyncRandom.get(836);
 				// we perfer weaker combat vessels, so we substract combat value so a Trade Vessel might get a better value
-				iBestLastCompareValue = iUnitClassCompareRand - (GC.getUnitInfo(eUnit).getCombat() / 2);
+				iUnitClassCompareRand = iUnitClassCompareRand - (UnitInfo.getCombat() / 2);
+
+				if (iUnitClassCompareRand > iBestLastCompareValue)
+				{
+					eBestUnitClass = iI;
+					iBestLastCompareValue = iUnitClassCompareRand;
+
+				}
 			}
 		}
 	}

@@ -11,63 +11,63 @@ class CvDLLWidgetData
 public:
 
 	DllExport static CvDLLWidgetData& getInstance();
-	DllExport static void freeInstance();
+	static void freeInstance();
 
-	DllExport void parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &widgetDataStruct);
+	void parseHelp(CvWStringBuffer &szBuffer, const CvWidgetDataStruct &widgetDataStruct);
 
-	DllExport bool executeAction( CvWidgetDataStruct &widgetDataStruct );
-	DllExport bool executeAltAction( CvWidgetDataStruct &widgetDataStruct );
-	DllExport bool executeDropOn(const CvWidgetDataStruct& destinationWidgetData, const CvWidgetDataStruct& sourceWidgetData);
-	DllExport bool executeDoubleClick(const CvWidgetDataStruct& destinationWidgetData);
+	bool executeAction(const CvWidgetDataStruct &widgetDataStruct);
+	bool executeAltAction(const CvWidgetDataStruct &widgetDataStruct);
+	bool executeDropOn(const CvWidgetDataStruct& destinationWidgetData, const CvWidgetDataStruct& sourceWidgetData);
+	bool executeDoubleClick(const CvWidgetDataStruct& destinationWidgetData);
 
-	DllExport bool isLink(const CvWidgetDataStruct &widgetDataStruct) const;
+	bool isLink(const CvWidgetDataStruct &widgetDataStruct) const;
 
 protected:
 	//	Actions to be executed
-	void doPlotList(CvWidgetDataStruct &widgetDataStruct);
+	void doPlotList(const CvWidgetDataStruct &widgetDataStruct);
 	void doLiberateCity();
 	void doRenameCity();
 	void doRenameUnit();
 	void doCreateGroup();
 	void doDeleteGroup();
-	void doTrain(CvWidgetDataStruct &widgetDataStruct);
-	void doConstruct(CvWidgetDataStruct &widgetDataStruct);
-	void doConvince(CvWidgetDataStruct &widgetDataStruct);
-	void doHurry(CvWidgetDataStruct &widgetDataStruct);
-	void doPlayerHurry(CvWidgetDataStruct &widgetDataStruct);
-	void doAction(CvWidgetDataStruct &widgetDataStruct);
-	void doContactCiv(CvWidgetDataStruct &widgetDataStruct);
-	void doAutomateCitizens(CvWidgetDataStruct &widgetDataStruct);
+	void doTrain(const CvWidgetDataStruct &widgetDataStruct);
+	void doConstruct(const CvWidgetDataStruct &widgetDataStruct);
+	void doConvince(const CvWidgetDataStruct &widgetDataStruct);
+	void doHurry(const CvWidgetDataStruct &widgetDataStruct);
+	void doPlayerHurry(const CvWidgetDataStruct &widgetDataStruct);
+	void doAction(const CvWidgetDataStruct &widgetDataStruct);
+	void doContactCiv(const CvWidgetDataStruct &widgetDataStruct);
+	void doAutomateCitizens(const CvWidgetDataStruct &widgetDataStruct);
 	void doAutomateProduction();
-	void doEmphasize(CvWidgetDataStruct &widgetDataStruct);
+	void doEmphasize(const CvWidgetDataStruct &widgetDataStruct);
 	void doCancelCivics();
 	void applyCityEdit();
 	void doUnitModel();
 	void doFlag();
-	void doSelected(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaUnitJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaProfessionJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaBuildingJump(CvWidgetDataStruct &widgetDataStruct);
+	void doSelected(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaUnitJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaProfessionJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaBuildingJump(const CvWidgetDataStruct &widgetDataStruct);
 	void doPediaBack();
 	void doPediaForward();
-	void doPediaBonusJump(CvWidgetDataStruct &widgetDataStruct, bool bData2 = false);
-	void doPediaTerrainJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaYieldJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaFeatureJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaFatherJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaMain(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaPromotionJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaImprovementJump(CvWidgetDataStruct &widgetDataStruct, bool bData2 = false);
-	void doPediaCivicJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaCivilizationJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaLeaderJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaDescription(CvWidgetDataStruct &widgetDataStruct);
-	void doGotoTurnEvent(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaConstructJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaTrainJump(CvWidgetDataStruct &widgetDataStruct);
-	void doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct);
-	void doDealKill(CvWidgetDataStruct &widgetDataStruct);
-	void doRefreshMilitaryAdvisor(CvWidgetDataStruct &widgetDataStruct);
+	void doPediaBonusJump(const CvWidgetDataStruct &widgetDataStruct, bool bData2 = false);
+	void doPediaTerrainJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaYieldJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaFeatureJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaFatherJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaMain(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaPromotionJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaImprovementJump(const CvWidgetDataStruct &widgetDataStruct, bool bData2 = false);
+	void doPediaCivicJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaCivilizationJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaLeaderJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaDescription(const CvWidgetDataStruct &widgetDataStruct);
+	void doGotoTurnEvent(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaConstructJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaTrainJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doPediaBuildJump(const CvWidgetDataStruct &widgetDataStruct);
+	void doDealKill(const CvWidgetDataStruct &widgetDataStruct);
+	void doRefreshMilitaryAdvisor(const CvWidgetDataStruct &widgetDataStruct);
 	void doCityUnitAssignCitizen(const CvWidgetDataStruct& destinationWidgetData, const CvWidgetDataStruct& sourceWidgetData);
 	void doMoveShipCargo(const CvWidgetDataStruct& destinationWidgetData, const CvWidgetDataStruct& sourceWidgetData);
 	void doMoveDockUnit(const CvWidgetDataStruct& destinationWidgetData, const CvWidgetDataStruct& sourceWidgetData);
@@ -100,75 +100,75 @@ protected:
 	void doDoubleClickDock(const CvWidgetDataStruct& widgetDataStruct);
 
 	//	Help parsing
-	void parsePlotListHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseLiberateCityHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCityNameHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseTrainHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseConstructHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseConvinceHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parsePlayerHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCityPlotHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // city plot mouse over help - inaiwae
-	void parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseScoreHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseImportExportHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCondensedImportExportHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);// R&R mod, vetiarvind, max yield import limit
-	void parseEjectCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bUseData2);
-	void parseConvertHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseAutomateCitizensHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseAutomateProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseEmphasizeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseTradeItem(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCityDefenseHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCityHarbourSystemHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // WTP, ray, Widgets for Harbour System and Barracks System - START
-	void parseCityBarracksSystemHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // WTP, ray, Widgets for Harbour System and Barracks System - START
-	void parseShowOrHideYieldsHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);
-	void parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parsePopulationHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseRebelHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseGreatGeneralHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseSelectedHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseBuildingHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseSpecialBuildingHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseTerrainHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseYieldHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseFeatureHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseFatherHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseShipCargoUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseEuropeUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseAfricaUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); /*** TRIANGLETRADE 10/28/08 by DPII ***/
-	void parsePortRoyalUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // R&R, ray, Port Royal
-	void parseProfessionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parsePediaBack(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parsePediaForward(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseBonusHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parsePromotionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseUnitPromotionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parsePlotListHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseLiberateCityHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCityNameHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseTrainHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseConstructHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseConvinceHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseHurryHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parsePlayerHurryHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseActionHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCitizenHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCityPlotHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // city plot mouse over help - inaiwae
+	void parseContactCivHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseScoreHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseImportExportHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCondensedImportExportHelp(const CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);// R&R mod, vetiarvind, max yield import limit
+	void parseEjectCitizenHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bUseData2);
+	void parseConvertHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseAutomateCitizensHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseAutomateProductionHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseEmphasizeHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseTradeItem(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseUnitModelHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCityDefenseHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCityHarbourSystemHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // WTP, ray, Widgets for Harbour System and Barracks System - START
+	void parseCityBarracksSystemHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // WTP, ray, Widgets for Harbour System and Barracks System - START
+	void parseShowOrHideYieldsHelp(const CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);
+	void parseFlagHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parsePopulationHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseRebelHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseGreatGeneralHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseSelectedHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseBuildingHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseSpecialBuildingHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseTerrainHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseYieldHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseFeatureHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseFatherHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseShipCargoUnitHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseEuropeUnitHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseAfricaUnitHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); /*** TRIANGLETRADE 10/28/08 by DPII ***/
+	void parsePortRoyalUnitHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // R&R, ray, Port Royal
+	void parseProfessionHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parsePediaBack(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parsePediaForward(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseBonusHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parsePromotionHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseUnitPromotionHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	// Teacher List - start - Nightinggale
-	void parseCityUnitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCityUnitHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	// Teacher List - end - Nightinggale
-	void parseCityYieldHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCityYieldHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	//Androrc Multiple Professions per Building
-	void parseTwoCityYieldsHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseTwoCityYieldsHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	//Androrc End
-	void parseAssignTradeRoute(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseReceiveMoveCargoToTransportHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseEventHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseImprovementHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCivicHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseCivilizationHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseLeaderHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseDescriptionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bMinimal);
+	void parseAssignTradeRoute(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseReceiveMoveCargoToTransportHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseEventHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseImprovementHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCivicHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseCivilizationHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseLeaderHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseDescriptionHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bMinimal);
 	void parseCloseScreenHelp(CvWStringBuffer &szBuffer);
-	void parseKillDealHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseProductionModHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseLeaderheadHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
-	void parseLeaderLineHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseKillDealHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseProductionModHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseLeaderheadHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseLeaderLineHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 
-	void parseHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseHelp(const CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 
 	EmphasizeTypes getNextEmphasis(CvCity* pCity, YieldTypes eYield);
 	void doAssignCitizenToPlot(CvCity* pCity, int iPlotIndex, int iUnitId);

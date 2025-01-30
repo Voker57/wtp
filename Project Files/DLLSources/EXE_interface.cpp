@@ -786,29 +786,47 @@ BOOST_STATIC_ASSERT(sizeof(EXE_CvDLLEntity) == sizeof(CvDLLEntity));
 class EXE_CvDLLWidgetData : public CvDLLWidgetData
 {
 public:
+	#pragma comment(linker, "/EXPORT:?executeAction@CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z=?executeAction@EXE_CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z")
+	DllExport bool executeAction(CvWidgetDataStruct &widgetDataStruct)
+	{
+		return CvDLLWidgetData::executeAction(widgetDataStruct);
+	}
+
+	#pragma comment(linker, "/EXPORT:?executeAltAction@CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z=?executeAltAction@EXE_CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z")
+	DllExport bool executeAltAction(CvWidgetDataStruct &widgetDataStruct)
+	{
+		return CvDLLWidgetData::executeAltAction(widgetDataStruct);
+	}
+
+	#pragma comment(linker, "/EXPORT:?executeDoubleClick@CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@@Z=?executeDoubleClick@EXE_CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@@Z")
+	DllExport bool executeDoubleClick(const CvWidgetDataStruct& destinationWidgetData)
+	{
+		return CvDLLWidgetData::executeDoubleClick(destinationWidgetData);
+	}
+
+	#pragma comment(linker, "/EXPORT:?executeDropOn@CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@0@Z=?executeDropOn@EXE_CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@0@Z")
+	DllExport bool executeDropOn(const CvWidgetDataStruct& destinationWidgetData, const CvWidgetDataStruct& sourceWidgetData)
+	{
+		return CvDLLWidgetData::executeDropOn(destinationWidgetData, sourceWidgetData);
+	}
+
+	#pragma comment(linker, "/EXPORT:?freeInstance@CvDLLWidgetData@@SAXXZ=?freeInstance@EXE_CvDLLWidgetData@@SAXXZ")
+	DllExport static void freeInstance()
+	{
+		CvDLLWidgetData::freeInstance();
+	}
+
 	/*
-		executeAction
-			?executeAction@CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z=?executeAction@EXE_CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z
-
-		executeAltAction
-			?executeAltAction@CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z=?executeAltAction@EXE_CvDLLWidgetData@@QAE_NAAUCvWidgetDataStruct@@@Z
-
-		executeDoubleClick
-			?executeDoubleClick@CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@@Z=?executeDoubleClick@EXE_CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@@Z
-
-		executeDropOn
-			?executeDropOn@CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@0@Z=?executeDropOn@EXE_CvDLLWidgetData@@QAE_NABUCvWidgetDataStruct@@0@Z
-
-		freeInstance
-			?freeInstance@CvDLLWidgetData@@SAXXZ=?freeInstance@EXE_CvDLLWidgetData@@SAXXZ
-
+	// this one is causing linker issues for unknown reasons. Let's just skip it as it isn't critical
 		getInstance
 			?getInstance@CvDLLWidgetData@@SAAAV1@XZ=?getInstance@EXE_CvDLLWidgetData@@SAAAV1@XZ
-
-		parseHelp
-			?parseHelp@CvDLLWidgetData@@QAEXAAVCvWStringBuffer@@AAUCvWidgetDataStruct@@@Z=?parseHelp@EXE_CvDLLWidgetData@@QAEXAAVCvWStringBuffer@@AAUCvWidgetDataStruct@@@Z
-
 	*/
+
+	#pragma comment(linker, "/EXPORT:?parseHelp@CvDLLWidgetData@@QAEXAAVCvWStringBuffer@@AAUCvWidgetDataStruct@@@Z=?parseHelp@EXE_CvDLLWidgetData@@QAEXAAVCvWStringBuffer@@AAUCvWidgetDataStruct@@@Z")
+	DllExport void parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &widgetDataStruct)
+	{
+		CvDLLWidgetData::parseHelp(szBuffer, widgetDataStruct);
+	}
 };
 BOOST_STATIC_ASSERT(sizeof(EXE_CvDLLWidgetData) == sizeof(CvDLLWidgetData));
 

@@ -355,13 +355,12 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 			{
 				break;
 			}
-			widgetDataStruct.m_iData1 = widgetDataStruct.m_iData2;
-			widgetDataStruct.m_iData2 = 1;
+			parseEjectCitizenHelp(widgetDataStruct, szBuffer, true);
 		}
-		// fallthrough
+		break;
 
 	case WIDGET_EJECT_CITIZEN:
-		parseEjectCitizenHelp(widgetDataStruct, szBuffer);
+		parseEjectCitizenHelp(widgetDataStruct, szBuffer, false);
 		break;
 
 	case WIDGET_SHIP_CARGO:
@@ -4720,12 +4719,12 @@ void CvDLLWidgetData::parseCondensedImportExportHelp(CvWidgetDataStruct& widgetD
 // R&R mod, vetiarvind, max yield import limit - end
 
 
-void CvDLLWidgetData::parseEjectCitizenHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer)
+void CvDLLWidgetData::parseEjectCitizenHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer, bool bUseData2)
 {
 	CvCity* pCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 	if (pCity != NULL)
 	{
-		CvUnit* pUnit = GET_PLAYER(pCity->getOwnerINLINE()).getUnit(widgetDataStruct.m_iData1);
+		CvUnit* pUnit = GET_PLAYER(pCity->getOwnerINLINE()).getUnit(bUseData2 ? widgetDataStruct.m_iData2 : widgetDataStruct.m_iData1);
 		if (pUnit != NULL)
 		{
 			GAMETEXT.setUnitHelp(szBuffer, pUnit, false, false);

@@ -115,7 +115,7 @@ protected:
 	void parseScoreHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseImportExportHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseCondensedImportExportHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);// R&R mod, vetiarvind, max yield import limit
-	void parseEjectCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseEjectCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bUseData2);
 	void parseConvertHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseAutomateCitizensHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 	void parseAutomateProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);

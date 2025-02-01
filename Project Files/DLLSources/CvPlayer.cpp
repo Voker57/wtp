@@ -6798,83 +6798,283 @@ void CvPlayer::processFather(FatherTypes eFather, int iChange)
 
 void CvPlayer::processFatherOnce(FatherTypes eFather)
 {
-	CvFatherInfo& kFatherInfo = GC.getFatherInfo(eFather);
+	const CvFatherInfo& kFatherInfo = GC.getFatherInfo(eFather);
 
 	CivEffect().applyCivEffect(kFatherInfo.getCivEffect());
 
-	for (int iUnitClass = 0; iUnitClass < GC.getNumUnitClassInfos(); ++iUnitClass)
+	for (UnitClassTypes eUnitClass = FIRST_UNITCLASS; eUnitClass < NUM_UNITCLASS_TYPES; ++eUnitClass)
 	{
-		UnitTypes eUnit = (UnitTypes) GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iUnitClass);
-		if (eUnit != NO_UNIT)
+		if (kFatherInfo.getFreeUnits(eUnitClass) == 0)
 		{
-			CvPlot* pPlot = NULL;
-			int iLoop;
-			for (CvCity* pCity = firstCity(&iLoop); pCity != NULL && pPlot == NULL; pCity = nextCity(&iLoop))
-			{
-				CvPlot* pCityPlot = pCity->plot();
-				if (pCityPlot->isValidDomainForAction(eUnit))
-				{
-					pPlot = pCityPlot;
-				}
-			}
+			continue;
+		}
 
-			//WTP, ray fix for issue Free Water Units - START
-			CvPlot* pPortPlot = NULL;
-			int iLoopWater;
-			for (CvCity* pPortCity = firstCity(&iLoopWater); pPortCity != NULL && pPortPlot == NULL; pPortCity = nextCity(&iLoopWater))
-			{
-				CvPlot* pPortCityPlot = pPortCity->plot();
-				if (pPortCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) && pPortCityPlot->isEuropeAccessable() && pPortCityPlot->hasDeepWaterCoast())
-				{
-					pPortPlot = pPortCityPlot;
-				}
-			}
-			//WTP, ray fix for issue Free Water Units - END
+		UnitTypes eUnit = (UnitTypes) GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(eUnitClass);
 
-			for (CvUnit* pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL && pPlot == NULL; pLoopUnit = nextUnit(&iLoop))
-			{
-				CvPlot* pUnitPlot = pLoopUnit->plot();
-				if (pUnitPlot != NULL && pUnitPlot->isValidDomainForAction(eUnit))
-				{
-					pPlot = pUnitPlot;
-				}
-			}
+		if (eUnit == NO_UNIT)
+		{
+			continue;
+		}
 
-			for (int i = 0; i < kFatherInfo.getFreeUnits(iUnitClass); ++i)
+		const CvUnitInfo& UnitInfo = GC.getUnitInfo(eUnit);
+
+		// add the units one by one. This is the least CPU efficient approach, but it is also the least likely solution to break something.
+		// adding FFs is so rare that performance doesn't matter at all. We just need to get the right result here.
+		//    Nightinggale
+		for (int i = 0; i < kFatherInfo.getFreeUnits(eUnitClass); ++i)
+		{
+			// units spawns in the following locations
+			// 1 city with available harbor/barrack space (skipped for units not using this)
+			// 2 any city
+			// 3 (ships only) a valid plot close to the first city (see below how it picks a plot)
+			// 4 Europe
+			// 5 Port Royal (during WOI only)
+			// ships can only spawn in cities with movable terrain next to them, so shallow/deep coast, not landlocked etc
+			// Europe and Port Royal can't spawn ships, which can't cross enter ocean (in extremely rare cases those ships can theoretically fail to spawn)
+
+			switch (UnitInfo.getDomainType())
 			{
-				//WTP, ray fix for issue Free Water Units - START
-				if (pPlot != NULL && GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_LAND)
-				// if (pPlot != NULL)
-				//WTP, ray fix for issue Free Water Units - END
+			case DOMAIN_SEA:
+			{
+				const int iHarborSpaceNeeded = UnitInfo.getHarbourSpaceNeeded();
+
+				CvPlot* pPlot = NULL;
+				int iLoop;
+
+				int iIteration = iHarborSpaceNeeded > 0 ? 0 : 1; // skip first iteration if no harbor space is needed
+				for (; iIteration < 2; ++iIteration)
 				{
-					OOS_LOG("Adding father unit", getTypeStr(eUnit));
-					initUnit(eUnit, GC.getUnitInfo(eUnit).getDefaultProfession(), pPlot->coord());
-				}
-				//WTP, ray fix for issue Free Water Units - START
-				else if (pPortPlot != NULL && GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_SEA)
-				{
-					OOS_LOG("Adding father unit", getTypeStr(eUnit));
-					initUnit(eUnit, GC.getUnitInfo(eUnit).getDefaultProfession(), pPortPlot->getX_INLINE(), pPortPlot->getY_INLINE());
-				}
-				//WTP, ray fix for issue Free Water Units - END
-				else if (canTradeWithEurope())
-				{
-					CvPlot* pStartingPlot = getStartingPlot();
-					if (GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_SEA && pStartingPlot != NULL)
+					for (CvCity* pCity = firstCity(&iLoop); pCity != NULL && pPlot == NULL; pCity = nextCity(&iLoop))
 					{
-						CvUnit* pUnit = initUnit(eUnit, GC.getUnitInfo(eUnit).getDefaultProfession(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-						if (pUnit != NULL)
+						CvPlot* pCityPlot = pCity->plot();
+
+						if (!pCityPlot->isEuropeAccessable())
 						{
-							pUnit->setUnitTravelState(UNIT_TRAVEL_STATE_IN_EUROPE, false);
-							//add unit to map after setting Europe state so that it doesn't bump enemy units
-							pUnit->addToMap(pStartingPlot->coord());
+							continue;
 						}
+
+						if (iIteration == 0)
+						{
+							// only test this during first iteration
+							// during second iteration we know no colony has room, so we will ignore harbor space
+							if ((pCity->getCityHarbourSpace() - pCity->getCityHarbourSpaceUsed()) < iHarborSpaceNeeded)
+							{
+								continue;
+							}
+						}
+
+						bool bLandlocked = true;
+
+						for (DirectionTypes iI = FIRST_DIRECTION; bLandlocked && iI < NUM_DIRECTION_TYPES; ++iI)
+						{
+							CvPlot* pAdjacentPlot = plotDirection(pCityPlot->getX_INLINE(), pCityPlot->getY_INLINE(), iI);
+
+							if (pAdjacentPlot != NULL && pAdjacentPlot->isWater())
+							{
+								bLandlocked = UnitInfo.getTerrainImpassable(pAdjacentPlot->getTerrainType());
+							}
+						}
+						if (bLandlocked)
+						{
+							continue;
+						}
+
+						pPlot = pCityPlot;
+					}
+				}
+
+				if (pPlot == NULL)
+				{
+					CvCity* pCity = firstCity(&iLoop);
+					CvPlot* pStartingPlot = pCity != NULL ? pCity->plot() : getStartingPlot();
+
+					if (pStartingPlot != NULL)
+					{
+						// no suitable city found. Try to locate a plot instead
+
+						CvPlot* pOwnedPlot = NULL;
+						int iDist = MAX_INT;
+						int iDistManhattan = MAX_INT;
+						int iDistOwned = MAX_INT;
+						int iDistManhattanOwned = MAX_INT;
+						TeamTypes eTeam = getTeam();
+
+						const CvMap& map = GC.getMap();
+
+						const PlayerTypes ePlayerID = getID();
+						for (int i = 0; i < map.numPlotsINLINE(); ++i)
+						{
+							CvPlot* pLoopPlot = map.plotByIndexINLINE(i);
+
+							if (!pLoopPlot->isWater())
+							{
+								continue;
+							}
+
+							if (!pLoopPlot->isRevealed(eTeam, false))
+							{
+								continue;
+							}
+
+							if (!pLoopPlot->isEuropeAccessable())
+							{
+								continue;
+							}
+
+							if (pLoopPlot->getVisibleEnemyDefender(ePlayerID) > 0)
+							{
+								continue;
+							}
+
+							if (UnitInfo.getTerrainImpassable(pLoopPlot->getTerrainType()))
+							{
+								continue;
+							}
+
+							{
+								// trying to determine which plot is the closest
+								// only use unowned plots if no owned plots are valid
+								// find one, which has the closest distance to the first city (or starting point if no cities)
+								// allow movement in 8 directions for this, but do not look at plots in between. It's (x,y) math, not pathfinding
+								// if more than one plot has the same distance, use the one with the shortest Manhattan distance (no diagnonal, so movement in 4 directions)
+								// if there are still more than one closest, use the plot with the lowest ID
+
+								PlayerTypes PlotOwner = pLoopPlot->getOwnerINLINE();
+								if (ePlayerID == PlotOwner)
+								{
+									const int iTempDist = pLoopPlot->getDistance(pStartingPlot);
+									const int iTempDistHanhattan = pLoopPlot->getDistanceManhattan(pStartingPlot);
+
+									if (iTempDist < iDistOwned || (iTempDist == iDistOwned && iTempDistHanhattan < iDistManhattanOwned))
+									{
+										iDistOwned = iTempDist;
+										iDistManhattan = iTempDist;
+										pOwnedPlot = pLoopPlot;
+									}
+									if (iTempDist < iDist || (iTempDist == iDist && iTempDistHanhattan < iDistManhattan))
+									{
+										iDist = iTempDist;
+										iDistManhattan = iTempDistHanhattan;
+										pPlot = pLoopPlot;
+									}
+								}
+								else if (PlotOwner == NO_PLAYER)
+								{
+									const int iTempDist = pLoopPlot->getDistance(pStartingPlot);
+									const int iTempDistHanhattan = pLoopPlot->getDistanceManhattan(pStartingPlot);
+
+									if (iTempDist < iDist || (iTempDist == iDist && iTempDistHanhattan < iDistManhattan))
+									{
+										iDist = iTempDist;
+										iDistManhattan = iTempDistHanhattan;
+										pPlot = pLoopPlot;
+									}
+								}
+							}
+
+							// loop done
+							if (pOwnedPlot != NULL)
+							{
+								pPlot = pOwnedPlot;
+							}
+						}
+					}
+
+					// deep water ship
+					if (pPlot == NULL && !UnitInfo.getTerrainImpassable(TERRAIN_OCEAN))
+					{
+						// ocean going ships can spawn in Europe if needed
+						if (canTradeWithEurope())
+						{
+							OOS_LOG("Adding father unit", getTypeStr(eUnit));
+							initEuropeUnit(eUnit);
+							continue;
+						}
+						else
+						{
+							// WOI is ongoing. Spawn in Port Royal instead
+							OOS_LOG("Adding father unit", getTypeStr(eUnit));
+							initPortRoyalUnit(eUnit);
+							continue;
+						}
+					}
+				}
+
+				if (pPlot != NULL)
+				{
+					OOS_LOG("Adding father unit", getTypeStr(eUnit));
+					initUnit(eUnit, UnitInfo.getDefaultProfession(), pPlot->coord());
+				}
+			}
+			break;
+			case DOMAIN_LAND:
+			{
+				CvPlot* pPlot = NULL;
+
+				int iBarrackSpaceNeeded = UnitInfo.getBarracksSpaceNeeded();
+				const ProfessionTypes eProfession = UnitInfo.getDefaultProfession();
+				if (eProfession != NO_PROFESSION)
+				{
+					iBarrackSpaceNeeded += GC.getProfessionInfo(eProfession).getBarracksSpaceNeededChange();
+				}
+
+				int iIteration = iBarrackSpaceNeeded > 0 ? 0 : 1; // skip first iteration if no barrack space is needed
+				for (; iIteration < 2; ++iIteration)
+				{
+					int iLoop;
+					for (CvCity* pCity = firstCity(&iLoop); pCity != NULL && pPlot == NULL; pCity = nextCity(&iLoop))
+					{
+						CvPlot* pCityPlot = pCity->plot();
+						if (!pCityPlot->isValidDomainForAction(eUnit))
+						{
+							continue;
+						}
+
+						if (iIteration == 0 && ((pCity->getCityBarracksSpace() - pCity->getCityBarracksSpaceUsed()) < iBarrackSpaceNeeded))
+						{
+							continue;
+						}
+
+						pPlot = pCityPlot;
+					}
+				}
+
+				FAssertMsg(pPlot != NULL, "failed to find city for new land unit");
+				if (pPlot == NULL)
+				{
+					int iLoop;
+					CvCity* pCity = firstCity(&iLoop);
+					if (pCity != NULL)
+					{
+						// dirty fallback. If there is nowhere to place the unit, just use the first city
+						// odds are that this will never happen, but code is here just in case
+						pPlot = pCity->plot();
+					}
+				}
+
+
+				if (pPlot != NULL)
+				{
+					OOS_LOG("Adding father unit", getTypeStr(eUnit));
+					initUnit(eUnit, eProfession, pPlot->coord());
+				}
+				else
+				{
+					if (canTradeWithEurope())
+					{
+						OOS_LOG("Adding father unit", getTypeStr(eUnit));
+						initEuropeUnit(eUnit);
 					}
 					else
 					{
-						initEuropeUnit(eUnit);
+						OOS_LOG("Adding father unit", getTypeStr(eUnit));
+						initPortRoyalUnit(eUnit);
 					}
 				}
+			}
+			break;
+			default:
+				FAssert(false);
 			}
 		}
 	}

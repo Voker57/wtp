@@ -5527,6 +5527,15 @@ bool CvPlayer::canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* p
 
 void CvPlayer::receiveRandomGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 {
+	if (pPlot == NULL || eGoody == NO_GOODY || pUnit == NULL)
+	{
+		// this should never happen, but just to be 100% sure any current or future bug won't crash the game
+		FAssert(pPlot != NULL);
+		FAssert(eGoody != NO_GOODY);
+		FAssert(pUnit != NULL);
+		return;
+	}
+
 	int iTotalWeight = 0;
 	GoodyTypes eBestGoody = NO_GOODY;
 	for (int i = 0; i < GC.getNumGoodyInfos(); ++i)

@@ -28,7 +28,11 @@ Planned changes:
 * * Charcoal: replace with lumber
 * * Peat
 * * Flax
-
+* Simplfy remaining chains:
+* * Provisions: Made from food (lossy), made into food (lossy).
+* * Food cannot be transported
+* * Ships are made of lumber + riggery
+* * Empty places are taken by similar goods, produced at worse rates.
 
 
 ## Important Installation Instructions

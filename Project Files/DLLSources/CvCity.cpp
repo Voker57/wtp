@@ -940,8 +940,6 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 	case TASK_IMPORT_CHANGES:
 		if(bOption)
 			handleDemandedImport();
-		if(bAlt)
-			handleConstructionImport();
 		break;
 
 	case TASK_CLEAR_SPECIALTY:
@@ -12554,57 +12552,6 @@ void CvCity::handleAutoTraderouteSetup(bool bReset, bool bImportAll, bool bAutoE
 			}
 		}
 	}
-}
-
-void CvCity::handleConstructionImport()
-{
-	bool bImport = true;
-	bool bExport = isExport(YIELD_LUMBER);
-	bool bMaintainImport = getImportsMaintain(YIELD_LUMBER);
-	bool bAutoExport = isAutoExport(YIELD_LUMBER);
-	int iMaintainLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_LUMBER_IMPORT_LIMIT_AMOUNT;
-	int iImportLimitLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_LUMBER_IMPORT_LIMIT_AMOUNT * 1.5;
-
-	int iBuffer = iMaintainLevel & 0xFFFF; // lowest 16 bits
-	iBuffer |= (iImportLimitLevel & 0xFFFF) << 16; // next 16 bits
-
-	doTask(TASK_YIELD_TRADEROUTE, YIELD_LUMBER, iBuffer, bImport, bExport, bMaintainImport, bAutoExport);
-
-	bImport = true;
-	bExport = isExport(YIELD_STONE);
-	bMaintainImport = getImportsMaintain(YIELD_STONE);
-	bAutoExport = isAutoExport(YIELD_STONE);
-	iMaintainLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_STONE_IMPORT_LIMIT_AMOUNT;
-	iImportLimitLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_STONE_IMPORT_LIMIT_AMOUNT * 1.5;
-
-	iBuffer = iMaintainLevel & 0xFFFF; // lowest 16 bits
-	iBuffer |= (iImportLimitLevel & 0xFFFF) << 16; // next 16 bits
-
-	doTask(TASK_YIELD_TRADEROUTE, YIELD_STONE, iBuffer, bImport, bExport, bMaintainImport, bAutoExport);
-
-	bImport = true;
-	bExport = isExport(YIELD_CLAY);
-	bMaintainImport = getImportsMaintain(YIELD_CLAY);
-	bAutoExport = isAutoExport(YIELD_CLAY);
-	iMaintainLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_CLAY_IMPORT_LIMIT_AMOUNT;
-	iImportLimitLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_CLAY_IMPORT_LIMIT_AMOUNT * 1.5;
-
-	iBuffer = iMaintainLevel & 0xFFFF; // lowest 16 bits
-	iBuffer |= (iImportLimitLevel & 0xFFFF) << 16; // next 16 bits
-
-	doTask(TASK_YIELD_TRADEROUTE, YIELD_CLAY, iBuffer, bImport, bExport, bMaintainImport, bAutoExport);
-
-	bImport = true;
-	bExport = isExport(YIELD_TOOLS);
-	bMaintainImport = getImportsMaintain(YIELD_TOOLS);
-	bAutoExport = isAutoExport(YIELD_TOOLS);
-	iMaintainLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_TOOLS_IMPORT_LIMIT_AMOUNT;
-	iImportLimitLevel = GLOBAL_DEFINE_IMPORT_CONSTRUCTION_TOOLS_IMPORT_LIMIT_AMOUNT * 1.5;
-
-	iBuffer = iMaintainLevel & 0xFFFF; // lowest 16 bits
-	iBuffer |= (iImportLimitLevel & 0xFFFF) << 16; // next 16 bits
-
-	doTask(TASK_YIELD_TRADEROUTE, YIELD_TOOLS, iBuffer, bImport, bExport, bMaintainImport, bAutoExport);
 }
 
 void CvCity::handleDemandedImport()

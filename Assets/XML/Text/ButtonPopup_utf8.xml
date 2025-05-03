@@ -74,15 +74,6 @@
 		<Russian>Импортируйте все востребованные товары</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_IMPORT_CONSTRUCTION_GOODS</Tag>
-		<English>Import construction goods</English>
-		<French>Importer des biens de construction</French>
-		<German>Bauwaren importieren</German>
-		<Italian>Importare beni da costruzione</Italian>
-		<Spanish>importar bienes de construccion</Spanish>
-		<Russian>Импорт строительных товаров</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_IMPORT_IMPORT</Tag>
 		<English>Import</English>
 		<French>Importer</French>

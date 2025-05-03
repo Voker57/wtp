@@ -1035,7 +1035,6 @@ protected:
 
 	//bobisback import mod
 	void handleDemandedImport();
-	void handleConstructionImport();
 
 public:
 	int getMarketModifier() const { return m_iCacheMarketModifier; }

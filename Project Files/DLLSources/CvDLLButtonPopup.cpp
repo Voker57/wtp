@@ -1217,12 +1217,11 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			// auto traderoute - end - Nightinggale
 
 			//bobisback import changes
-			if (pPopupReturn->getButtonClicked() == 3 || pPopupReturn->getButtonClicked() == 4)
+			if (pPopupReturn->getButtonClicked() == 3)
 			{
 				bool importDemandedGoods = pPopupReturn->getButtonClicked() == 3;
-				bool importConstructionGoods = pPopupReturn->getButtonClicked() == 4;
-
-				gDLL->sendDoTask(info.getData1(), TASK_IMPORT_CHANGES, 0, 0, importDemandedGoods, importConstructionGoods, false, false);
+				
+				gDLL->sendDoTask(info.getData1(), TASK_IMPORT_CHANGES, 0, 0, importDemandedGoods, 0, false, false);
 			}
 		}
 		break;
@@ -3378,8 +3377,6 @@ bool CvDLLButtonPopup::launchYieldImportExportPopup(CvPopup* pPopup, CvPopupInfo
 
 	//bobisback demanded goods
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_IMPORT_DEMANDED_GOODS").c_str(), NULL, 3);
-	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_IMPORT_CONSTRUCTION_GOODS").c_str(), NULL, 4);
-
 
 	for (YieldTypes eYield = FIRST_YIELD; eYield < NUM_YIELD_TYPES; ++eYield)
 	{

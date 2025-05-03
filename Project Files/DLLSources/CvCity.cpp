@@ -12545,10 +12545,11 @@ void CvCity::handleAutoTraderouteSetup(bool bReset, bool bImportAll, bool bAutoE
 				int iMaintainLevel   = getMaintainLevel(eYield);
 				int iImportLimitLevel= getImportsLimit(eYield);
 
-				int iBuffer = iMaintainLevel & 0xFFFF; // lowest 16 bits
-				iBuffer |= (iImportLimitLevel & 0xFFFF) << 16; // next 16 bits
-
-				doTask(TASK_YIELD_TRADEROUTE, eYield, iBuffer, bImport, bExport, bMaintainImport, bAutoExport);
+				NetworkDataTradeRouteInts buffer;
+				buffer.iImportLimitLevel = iImportLimitLevel;
+				buffer.iMaintainLevel    = iMaintainLevel;
+				
+				doTask(TASK_YIELD_TRADEROUTE, eYield, buffer.iNetwork, bImport, bExport, bMaintainImport, bAutoExport);
 			}
 		}
 	}
@@ -12575,10 +12576,11 @@ void CvCity::handleDemandedImport()
 			int iMaintainLevel = std::max(iAmount * GLOBAL_DEFINE_IMPORT_DEMANDED_GOODS_MAINTAIN_AMOUNT, 100);
 			int iImportLimitLevel = std::max(iAmount * GLOBAL_DEFINE_IMPORT_DEMANDED_GOODS_IMPORT_LIMIT_AMOUNT, 200);
 
-			int iBuffer = iMaintainLevel & 0xFFFF; // lowest 16 bits
-			iBuffer |= (iImportLimitLevel & 0xFFFF) << 16; // next 16 bits
+			NetworkDataTradeRouteInts buffer;
+			buffer.iImportLimitLevel = iImportLimitLevel;
+			buffer.iMaintainLevel    = iMaintainLevel;
 
-			doTask(TASK_YIELD_TRADEROUTE, eYield, iBuffer, bImport, bExport, bMaintainImport, bAutoExport);
+			doTask(TASK_YIELD_TRADEROUTE, eYield, buffer.iNetwork, bImport, bExport, bMaintainImport, bAutoExport);
 		}
 	}
 }

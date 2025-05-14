@@ -5,29 +5,30 @@ Fork of We The People, intended to keep expectations from ages old engine and bu
 Planned changes:
 
 * Cut down the number of resources to the minumum. To be removed:
-* * Logwood
-* * Fruit, Fruit brandy -> Food
-* * Luxury fur -> just more fur
-* * Vanilla pods
-* * Rapeseed/oil
-* * Pottery
-* * Cochineal -> Dyes
-* * Indigo -> Dyes
-* * Yerba leaves/mate
-* * Peanuts -> Food
-* * Roasted Peanuts
-* * Wild Bird Feathers
-* * Hardwood -> More lumber
-* * Rice -> Food
 * * Cassava -> Food
+* * Charcoal -> Lumber
+* * Cochineal -> Dyes
+* * Flax
+* * Fruit, Fruit brandy -> Food
 * * Geese + Chicken -> Poultry
 * * Goats
+* * Hardwood -> More lumber
+* * Indigo -> Dyes
+* * Logwood
+* * Luxury fur -> just more fur
+* * Luxury goods
+* * Peanuts -> Food
+* * Peat
+* * Pigs -> Cattle
+* * Pottery
+* * Rapeseed/oil
+* * Rice -> Food
+* * Roasted Peanuts
 * * Ropes -> Riggery?
 * * Trade goods: replace w/household goods
-* * Luxury goods
-* * Charcoal: replace with lumber
-* * Peat
-* * Flax
+* * Vanilla pods
+* * Wild Bird Feathers
+* * Yerba leaves/mate
 * Simplfy remaining chains:
 * * Provisions: Made from food (lossy), made into food (lossy).
 * * Food cannot be transported

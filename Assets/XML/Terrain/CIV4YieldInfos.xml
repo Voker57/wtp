@@ -1103,9 +1103,9 @@
 			<Button>Art/interface/buttons/New_Yields_Buttons/Bakery_Goods_Button.dds</Button>
 		</YieldInfo>
 		<YieldInfo>
-			<Type>YIELD_ROPE</Type>
-			<Description>TXT_KEY_YIELD_ROPE</Description>
-			<Civilopedia>TXT_KEY_YIELD_ROPE_PEDIA</Civilopedia>
+			<Type>YIELD_SAILCLOTH</Type>
+			<Description>TXT_KEY_YIELD_SAILCLOTH</Description>
+			<Civilopedia>TXT_KEY_YIELD_SAILCLOTH_PEDIA</Civilopedia>
 			<bCargo>1</bCargo>
 			<bIsExportYield>1</bIsExportYield>
 			<Prices>
@@ -1159,13 +1159,13 @@
 			<iPower>0</iPower>
 			<iAsset>1</iAsset>
 			<ColorType>COLOR_YIELD_FOOD</ColorType>
-			<UnitClass>UNITCLASS_ROPE</UnitClass>
+			<UnitClass>UNITCLASS_SAILCLOTH</UnitClass>
 			<iTextureIndex>-1</iTextureIndex>
 			<iWaterTextureIndex>-1</iWaterTextureIndex>
-			<Icon>,Art/colonization_atlas_resources.dds,8,13</Icon>
+			<Icon>,Art/colonization_atlas_resources.dds,1,14</Icon>
 			<CombiIcon>,Art/colonization_atlas_resources.dds,5,9</CombiIcon>
 			<HighlightIcon>,Art/Interface/Screens/City_Management/Colonization_Yield_Highlight_Icon_Atlas.dds,1,2</HighlightIcon>
-			<Button>,Art/colonization_atlas_resources.dds,8,4</Button>
+			<Button>,Art/colonization_atlas_resources.dds,1,5</Button>
 		</YieldInfo>
 		<YieldInfo>
 			<Type>YIELD_TOOLS</Type>

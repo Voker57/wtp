@@ -2942,10 +2942,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>0</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>0</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>0</iChange>
 				</YieldChange>
@@ -3629,10 +3625,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>0</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>0</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>0</iChange>
 				</YieldChange>
@@ -4343,10 +4335,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>2</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>2</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>2</iChange>
 				</YieldChange>
@@ -5018,10 +5006,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>1</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>1</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>1</iChange>
 				</YieldChange>
@@ -5482,10 +5466,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>2</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>2</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>2</iChange>
 				</YieldChange>
@@ -6160,10 +6140,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>1</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>1</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>1</iChange>
 				</YieldChange>
@@ -25522,10 +25498,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>-3</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>-3</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>-3</iChange>
 				</YieldChange>
@@ -52852,10 +52824,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>-1</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>-1</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>-1</iChange>
 				</YieldChange>
@@ -53269,10 +53237,6 @@
 					<YieldType>YIELD_COCA_LEAVES</YieldType>
 					<iChange>-3</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>-3</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>-3</iChange>
 				</YieldChange>
@@ -57678,10 +57642,6 @@
 					<YieldType>YIELD_COFFEE_BERRIES</YieldType>
 					<iChange>-1</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>-1</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>-1</iChange>
 				</YieldChange>
@@ -59076,10 +59036,6 @@
 					<YieldType>YIELD_COFFEE_BERRIES</YieldType>
 					<iChange>-1</iChange>
 				</YieldChange><YieldChange>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
-					<iChange>-1</iChange>
-				</YieldChange>
-				<YieldChange>
 					<YieldType>YIELD_MAPLE_SIRUP</YieldType>
 					<iChange>-1</iChange>
 				</YieldChange>
@@ -60312,10 +60268,6 @@
                     <YieldType>YIELD_COCA_LEAVES</YieldType>
                     <iChange>5</iChange>
                 </YieldChange><YieldChange>
-                    <YieldType>YIELD_KAUTSCHUK</YieldType>
-                    <iChange>5</iChange>
-                </YieldChange>
-                <YieldChange>
                     <YieldType>YIELD_SILVER</YieldType>
                     <iChange>4</iChange>
                 </YieldChange>
@@ -61607,11 +61559,7 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>10</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>10</iCost>
+					<iCost>20</iCost>
 				</YieldCost>
 				<YieldCost>
 					<YieldType>YIELD_HAMMERS</YieldType>
@@ -61794,11 +61742,7 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>20</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>20</iCost>
+					<iCost>40</iCost>
 				</YieldCost>
 				<YieldCost>
 					<YieldType>YIELD_HAMMERS</YieldType>
@@ -61981,14 +61925,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>30</iCost>
+					<iCost>60</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>30</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>30</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -62189,14 +62129,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>40</iCost>
+					<iCost>80</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>40</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>40</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -62395,14 +62331,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>40</iCost>
+					<iCost>80</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>50</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>40</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -62603,14 +62535,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>50</iCost>
+					<iCost>100</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>40</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>40</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -62809,14 +62737,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>50</iCost>
+					<iCost>90</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>40</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>40</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -63015,14 +62939,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>50</iCost>
+					<iCost>100</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>50</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>50</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -63243,14 +63163,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>55</iCost>
+					<iCost>110</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>55</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>55</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -63473,14 +63389,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>60</iCost>
+					<iCost>120</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>60</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>60</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -63847,14 +63759,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>70</iCost>
+					<iCost>140</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>70</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>70</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -64061,14 +63969,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>30</iCost>
+					<iCost>60</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>30</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>30</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -64236,14 +64140,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>35</iCost>
+					<iCost>70</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>35</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>35</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -64487,14 +64387,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>50</iCost>
+					<iCost>100</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>50</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>50</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -65172,14 +65068,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>70</iCost>
+					<iCost>140</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>70</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>70</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -65374,14 +65266,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>75</iCost>
+					<iCost>150</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>75</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>75</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -65572,14 +65460,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>80</iCost>
+					<iCost>160</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>80</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>80</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -65929,14 +65813,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>90</iCost>
+					<iCost>180</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>90</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>90</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -66286,14 +66166,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>100</iCost>
+					<iCost>200</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>100</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>100</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -66638,14 +66514,10 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>30</iCost>
+					<iCost>60</iCost>
 				</YieldCost>
 				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>30</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_HARDWOOD</YieldType>
+					<YieldType>YIELD_LUMBER</YieldType>
 					<iCost>30</iCost>
 				</YieldCost>
 				<YieldCost>
@@ -66854,11 +66726,7 @@
 			<YieldCosts>
 				<YieldCost>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
-					<iCost>20</iCost>
-				</YieldCost>
-				<YieldCost>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iCost>10</iCost>
+					<iCost>30</iCost>
 				</YieldCost>
 				<YieldCost>
 					<YieldType>YIELD_HAMMERS</YieldType>

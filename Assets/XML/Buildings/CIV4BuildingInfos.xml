@@ -3395,10 +3395,6 @@
 			<YieldChanges/>
 			<YieldModifiers>
 				<YieldModifier>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iModifier>20</iModifier>
-				</YieldModifier>
-				<YieldModifier>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
 					<iModifier>20</iModifier>
 				</YieldModifier>
@@ -3518,12 +3514,7 @@
 			</SeaPlotYieldChanges>
 			<RiverPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<YieldModifier>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+			<YieldModifiers><YieldModifier>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
 					<iModifier>25</iModifier>
 				</YieldModifier>
@@ -3643,12 +3634,7 @@
 			</SeaPlotYieldChanges>
 			<RiverPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<YieldModifier>
-					<YieldType>YIELD_ROPE</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+			<YieldModifiers><YieldModifier>
 					<YieldType>YIELD_SAILCLOTH</YieldType>
 					<iModifier>50</iModifier>
 				</YieldModifier>
@@ -4931,12 +4917,7 @@
 				<YieldModifier>
 					<YieldType>YIELD_LEATHER</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_PIG_LEATHER</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -5546,12 +5527,7 @@
 				<YieldModifier>
 					<YieldType>YIELD_RUM</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_HOOCH</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -6155,12 +6131,7 @@
 				<YieldModifier>
 					<YieldType>YIELD_CIGARS</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_YERBA_TEA</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -7901,12 +7872,7 @@
 			<SeaPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<YieldModifier>
-					<YieldType>YIELD_CHAR_COAL</YieldType>
-					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+			<YieldModifiers><YieldModifier>
 					<YieldType>YIELD_BLACK_POWDER</YieldType>
 					<iModifier>25</iModifier>
 				</YieldModifier>
@@ -8005,20 +7971,10 @@
 				<YieldModifier>
 					<YieldType>YIELD_SHEEP</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GOATS</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CATTLE</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_PIGS</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_HORSES</YieldType>
 					<iModifier>50</iModifier>
 				</YieldModifier>
@@ -8098,32 +8054,17 @@
 				<YieldModifier>
 					<YieldType>YIELD_SHEEP</YieldType>
 					<iModifier>20</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GOATS</YieldType>
-					<iModifier>20</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CATTLE</YieldType>
 					<iModifier>20</iModifier>
 				</YieldModifier>
 				<YieldModifier>
 					<YieldType>YIELD_HORSES</YieldType>
 					<iModifier>20</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_PIGS</YieldType>
-					<iModifier>20</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CHICKEN</YieldType>
 					<iModifier>20</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GEESE</YieldType>
-					<iModifier>20</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -8222,32 +8163,17 @@
 				<YieldModifier>
 					<YieldType>YIELD_SHEEP</YieldType>
 					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GOATS</YieldType>
-					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CATTLE</YieldType>
 					<iModifier>25</iModifier>
 				</YieldModifier>
 				<YieldModifier>
 					<YieldType>YIELD_HORSES</YieldType>
 					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_PIGS</YieldType>
-					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CHICKEN</YieldType>
 					<iModifier>25</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GEESE</YieldType>
-					<iModifier>25</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -8350,32 +8276,17 @@
 				<YieldModifier>
 					<YieldType>YIELD_SHEEP</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GOATS</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CATTLE</YieldType>
 					<iModifier>50</iModifier>
 				</YieldModifier>
 				<YieldModifier>
 					<YieldType>YIELD_HORSES</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_PIGS</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_CHICKEN</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GEESE</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+				</YieldModifier><YieldModifier>
 					<YieldType>YIELD_MILK</YieldType>
 					<iModifier>50</iModifier>
 				</YieldModifier>
@@ -12416,16 +12327,7 @@
 			<SeaPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<YieldModifier>
-					<YieldType>YIELD_CHOCOLATE</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_VANILLA</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+			<YieldModifiers></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -12743,12 +12645,7 @@
 				<YieldModifier>
 					<YieldType>YIELD_PADDED_LEATHER_COATS</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_GOAT_HIDE_BOOTS</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -13061,12 +12958,7 @@
 				<YieldModifier>
 					<YieldType>YIELD_OLIVE_OIL</YieldType>
 					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_RAPE_OIL</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+				</YieldModifier></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>
@@ -13384,16 +13276,7 @@
 			<SeaPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<YieldModifier>
-					<YieldType>YIELD_ROASTED_PEANUTS</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
-					<YieldType>YIELD_COCOA</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-				<YieldModifier>
+			<YieldModifiers><YieldModifier>
 					<YieldType>YIELD_COFFEE</YieldType>
 					<iModifier>50</iModifier>
 				</YieldModifier>
@@ -13702,12 +13585,7 @@
 			<SeaPlotYieldChanges/>
 			<RiverPlotYieldChanges/>
 			<YieldChanges/>
-			<YieldModifiers>
-				<YieldModifier>
-					<YieldType>YIELD_POTTERY</YieldType>
-					<iModifier>50</iModifier>
-				</YieldModifier>
-			</YieldModifiers>
+			<YieldModifiers></YieldModifiers>
 			<ConstructSound/>
 			<UnitCombatFreeExperiences/>
 			<DomainFreeExperiences/>

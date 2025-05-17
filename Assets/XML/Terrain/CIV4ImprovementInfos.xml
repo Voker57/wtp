@@ -1493,7 +1493,7 @@
 					<iDiscoverRand>0</iDiscoverRand>
 					<YieldChanges>
 						<YieldIntegerPair>
-							<YieldType>YIELD_RICE</YieldType>
+							<YieldType>YIELD_FOOD</YieldType>
 							<iValue>1</iValue>
 						</YieldIntegerPair>
 					</YieldChanges>
@@ -1504,7 +1504,7 @@
 					<iDiscoverRand>0</iDiscoverRand>
 					<YieldChanges>
 						<YieldIntegerPair>
-							<YieldType>YIELD_CASSAVA</YieldType>
+							<YieldType>YIELD_FOOD</YieldType>
 							<iValue>1</iValue>
 						</YieldIntegerPair>
 					</YieldChanges>

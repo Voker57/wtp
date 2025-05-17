@@ -1022,45 +1022,6 @@
 			<iLbDLearnLevel>2</iLbDLearnLevel>
 		</ProfessionInfo>
 		<ProfessionInfo>
-			<Type>PROFESSION_PEANUT_PLANTER</Type>
-			<Description>TXT_KEY_PROFESSION_PEANUT_PLANTER</Description>
-			<Civilopedia>TXT_KEY_PROFESSION_PEANUT_PLANTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_PROFESSION_PEANUT_PLANTER_STRATEGY</Strategy>
-			<Help>TXT_KEY_PROFESSION_PEANUT_PLANTER_HELP</Help>
-			<Combat>NONE</Combat>
-			<DefaultUnitAI>NONE</DefaultUnitAI>
-			<SpecialBuilding>NONE</SpecialBuilding>
-			<bWorkPlot>1</bWorkPlot>
-			<bCitizen>1</bCitizen>
-			<bWater>0</bWater>
-			<bScout>0</bScout>
-			<bCanCrossLargeRivers>0</bCanCrossLargeRivers>
-			<bCityDefender>0</bCityDefender>
-			<bCanFound>0</bCanFound>
-			<bUnarmed>0</bUnarmed>
-			<bNoDefensiveBonus>0</bNoDefensiveBonus>
-			<iCombatChange>0</iCombatChange>
-			<iMovesChange>0</iMovesChange>
-			<bMoveIntoPeak>0</bMoveIntoPeak>
-			<iWorkRate>0</iWorkRate>
-			<iMissionaryRate>0</iMissionaryRate>
-			<iNativeTradeRate>0</iNativeTradeRate>
-			<iPower>0</iPower>
-			<iAsset>200</iAsset>
-			<YieldEquipedNums/>
-			<FreePromotions/>
-			<YieldsProduced>
-				<YieldType>YIELD_PEANUTS</YieldType>
-			</YieldsProduced>
-			<YieldsConsumed>
-				<YieldType>NONE</YieldType>
-			</YieldsConsumed>
-			<Button>Art/interface/buttons/New_Profession_Buttons/Peanut_Planter.dds</Button>
-			<bUseLbD>1</bUseLbD>
-			<ExpertUnit>UNITCLASS_PEANUT_PLANTER</ExpertUnit>
-			<iLbDLearnLevel>2</iLbDLearnLevel>
-		</ProfessionInfo>
-		<ProfessionInfo>
 			<Type>PROFESSION_RED_PEPPER_PLANTER</Type>
 			<Description>TXT_KEY_PROFESSION_RED_PEPPER_PLANTER</Description>
 			<Civilopedia>TXT_KEY_PROFESSION_RED_PEPPER_PLANTER_PEDIA</Civilopedia>

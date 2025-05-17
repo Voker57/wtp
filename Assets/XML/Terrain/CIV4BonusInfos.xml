@@ -11592,7 +11592,7 @@
 			<BuildingType>BUILDING_BONUS_KAUTSCHUK</BuildingType>
 			<YieldChanges>
 				<YieldIntegerPair>
-					<YieldType>YIELD_KAUTSCHUK</YieldType>
+					<YieldType>YIELD_COFFEE_BERRIES</YieldType>
 					<iValue>2</iValue>
 				</YieldIntegerPair>
 			</YieldChanges>

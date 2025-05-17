@@ -3006,10 +3006,6 @@
 					<iValue>-3</iValue>
 				</YieldIntegerPair>
 				<YieldIntegerPair>
-					<YieldType>YIELD_RAPE</YieldType>
-					<iValue>-3</iValue>
-				</YieldIntegerPair>
-				<YieldIntegerPair>
 					<YieldType>YIELD_SUGAR</YieldType>
 					<iValue>-3</iValue>
 				</YieldIntegerPair>
@@ -3417,10 +3413,6 @@
 				</YieldIntegerPair>
 				<YieldIntegerPair>
 					<YieldType>YIELD_SHEEP</YieldType>
-					<iValue>-4</iValue>
-				</YieldIntegerPair>
-				<YieldIntegerPair>
-					<YieldType>YIELD_PIGS</YieldType>
 					<iValue>-4</iValue>
 				</YieldIntegerPair>
 				<YieldIntegerPair>
